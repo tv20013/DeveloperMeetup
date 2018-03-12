@@ -72,20 +72,32 @@ function checkIn(sys_id){
 	data.attendee.sys_id=attendee.sys_id.getDisplayValue();
 	data.attendee.guests=attendee.guests.getDisplayValue();
 
+	var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', 'POST Attendance');
+ r.setStringParameterNoEscape('member', attendee.developer.id.getDisplayValue());
+ r.setStringParameterNoEscape('guests', attendee.guests.getDisplayValue());
+ r.setStringParameterNoEscape('urlname', attendee.meetup.name.getDisplayValue());
+ r.setStringParameterNoEscape('status', 'attended');
+	r.setStringParameterNoEscape('key', gs.getProperty('x_snc_dev_meet.key'));
+ r.setStringParameterNoEscape('id', attendee.meetup.id.getDisplayValue());
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+	
 }]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-11 20:56:29</sys_created_on>
         <sys_id>f08efb99db3053047e0ef2131f96194b</sys_id>
-        <sys_mod_count>125</sys_mod_count>
+        <sys_mod_count>127</sys_mod_count>
         <sys_name>Checkin</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sp_widget_f08efb99db3053047e0ef2131f96194b</sys_update_name>
         <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-12 01:37:16</sys_updated_on>
+        <sys_updated_on>2018-03-12 02:22:21</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-xs-3"><img ng-src="{{data.attendee.picture}}"  class="item-image" /></div>

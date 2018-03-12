@@ -20,17 +20,19 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>GET</name>
+        <name>Sync</name>
         <onclick/>
         <order>100</order>
         <script><![CDATA[gs.setProperty('x_snc_dev_meet.current_event',current.id);
-action.setRedirectURL(current);
 syncEvent(current.id,current.name);
+action.setRedirectURL(current);
+
 
 function syncEvent(id,urlname){
 	var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', 'GET Event');
 	r.setStringParameterNoEscape('id', id);
 	r.setStringParameterNoEscape('urlname', urlname);
+	r.setStringParameterNoEscape('key', gs.getProperty('x_snc_dev_meet.key'));
 	var response = r.execute();
 	var responseBody = response.getBody();
 	var httpStatus = response.getStatusCode();
@@ -41,6 +43,7 @@ function syncEvent(id,urlname){
 
 	} else {
 		responseBody = JSON.parse(responseBody);
+		gs.addInfoMessage(responseBody);
 		current.link = responseBody.link;
 		current.description = responseBody.description;
 		current.status = responseBody.status;
@@ -49,6 +52,7 @@ function syncEvent(id,urlname){
 		gs.addInfoMessage("Meeting Synced");
 		action.setRedirectURL(current);
 	}
+	return;
 }
 
 function syncAttendees(id,urlname){
@@ -57,6 +61,7 @@ function syncAttendees(id,urlname){
 	var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', 'GET Attendees');
 	r.setStringParameterNoEscape('id', id);
 	r.setStringParameterNoEscape('urlname', urlname);
+	r.setStringParameterNoEscape('key', gs.getProperty('x_snc_dev_meet.key'));
 	var response = r.execute();
 	var responseBody = response.getBody();
 	var httpStatus = response.getStatusCode();
@@ -68,7 +73,7 @@ function syncAttendees(id,urlname){
 	} else {
 		responseBody = JSON.parse(responseBody);
 		responseBody.forEach(function(body){
-			gs.addInfoMessage('Syncing '+body.member.name);
+			//gs.addInfoMessage('Syncing '+body.member.name);
 			var pic = 'https://secure.meetupstatic.com/img/noPhoto_50.png';
 			if(body.member.hasOwnProperty('photo')){
 				pic = body.member.photo.thumb;
@@ -84,21 +89,22 @@ function syncAttendees(id,urlname){
 			attendee.addQuery('developer',dev);
 			attendee.addQuery('meetup',meetup.sys_id);
 			attendee.query();
-			gs.addInfoMessage(attendee.getRowCount());
+			//gs.addInfoMessage(attendee.getRowCount());
 			attendee.meetup=meetup.sys_id;
 			attendee.developer=dev;
 			attendee.rsvp=rsvp;
 			attendee.guests=guests;
 			attendee.status=body.status;
-			gs.addInfoMessage(attendee.getRowCount());
+			//gs.addInfoMessage(attendee.getRowCount());
 			if (attendee.getRowCount() > 0){
 				attendee.updateMultiple();
 			} else {
-				gs.addInfoMessage(JSON.stringify(attendee));
+				//gs.addInfoMessage(JSON.stringify(attendee));
 				attendee.insert();
 			}
 		});
 	}
+	return;
 }
 
 function syncDeveloper(id,name,photo) {
@@ -127,15 +133,15 @@ function syncDeveloper(id,name,photo) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bed00d69db3453047e0ef2131f96195b</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>GET</sys_name>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Sync</sys_name>
         <sys_overrides/>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_ui_action_bed00d69db3453047e0ef2131f96195b</sys_update_name>
         <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-12 02:00:55</sys_updated_on>
+        <sys_updated_on>2018-03-12 03:35:22</sys_updated_on>
         <table>x_snc_dev_meet_meetup</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

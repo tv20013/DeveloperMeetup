@@ -4,77 +4,92 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4525c811dbb013047e0ef2131f9619b0</list_id>
+            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6d3ad9e5dbb453047e0ef2131f9619e0</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:46:57</sys_created_on>
-            <sys_id>0125c811dbb013047e0ef2131f9619b1</sys_id>
+            <sys_created_on>2018-03-12 03:37:06</sys_created_on>
+            <sys_id>a93ad9e5dbb453047e0ef2131f9619e1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:46:57</sys_updated_on>
+            <sys_updated_on>2018-03-12 03:37:06</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>description</element>
-            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4525c811dbb013047e0ef2131f9619b0</list_id>
+            <element>date</element>
+            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6d3ad9e5dbb453047e0ef2131f9619e0</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:46:57</sys_created_on>
-            <sys_id>8525c811dbb013047e0ef2131f9619b1</sys_id>
+            <sys_created_on>2018-03-12 03:37:06</sys_created_on>
+            <sys_id>613ad9e5dbb453047e0ef2131f9619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:46:57</sys_updated_on>
+            <sys_updated_on>2018-03-12 03:37:06</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>id</element>
-            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4525c811dbb013047e0ef2131f9619b0</list_id>
+            <element>description</element>
+            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6d3ad9e5dbb453047e0ef2131f9619e0</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:46:57</sys_created_on>
-            <sys_id>0925c811dbb013047e0ef2131f9619b1</sys_id>
+            <sys_created_on>2018-03-12 03:37:06</sys_created_on>
+            <sys_id>e13ad9e5dbb453047e0ef2131f9619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:46:57</sys_updated_on>
+            <sys_updated_on>2018-03-12 03:37:06</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>link</element>
-            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4525c811dbb013047e0ef2131f9619b0</list_id>
+            <element>id</element>
+            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6d3ad9e5dbb453047e0ef2131f9619e0</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:46:57</sys_created_on>
-            <sys_id>8925c811dbb013047e0ef2131f9619b1</sys_id>
+            <sys_created_on>2018-03-12 03:37:06</sys_created_on>
+            <sys_id>653ad9e5dbb453047e0ef2131f9619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:46:57</sys_updated_on>
+            <sys_updated_on>2018-03-12 03:37:06</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>status</element>
-            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4525c811dbb013047e0ef2131f9619b0</list_id>
+            <element>link</element>
+            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6d3ad9e5dbb453047e0ef2131f9619e0</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:46:57</sys_created_on>
-            <sys_id>0d25c811dbb013047e0ef2131f9619b1</sys_id>
+            <sys_created_on>2018-03-12 03:37:06</sys_created_on>
+            <sys_id>e53ad9e5dbb453047e0ef2131f9619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:46:57</sys_updated_on>
+            <sys_updated_on>2018-03-12 03:37:06</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>status</element>
+            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6d3ad9e5dbb453047e0ef2131f9619e0</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>alex</sys_created_by>
+            <sys_created_on>2018-03-12 03:37:06</sys_created_on>
+            <sys_id>693ad9e5dbb453047e0ef2131f9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>alex</sys_updated_by>
+            <sys_updated_on>2018-03-12 03:37:06</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -88,10 +103,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:46:57</sys_created_on>
+            <sys_created_on>2018-03-12 03:37:06</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>4525c811dbb013047e0ef2131f9619b0</sys_id>
+            <sys_id>6d3ad9e5dbb453047e0ef2131f9619e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_snc_dev_meet_meetup</sys_name>
             <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
@@ -99,7 +114,7 @@
             <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
             <sys_update_name>sys_ui_list_x_snc_dev_meet_meetup_null</sys_update_name>
             <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:46:57</sys_updated_on>
+            <sys_updated_on>2018-03-12 03:37:06</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

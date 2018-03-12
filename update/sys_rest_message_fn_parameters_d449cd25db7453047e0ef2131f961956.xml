@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_rest_message_fn_param_defs">
-    <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
+<record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
         <name>key</name>
-        <order>100</order>
         <rest_message_function display_value="POST Attendance">befcdf95dbbc13047e0ef2131f961918</rest_message_function>
-        <sys_class_name>sys_rest_message_fn_param_defs</sys_class_name>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
         <sys_created_by>alex</sys_created_by>
-        <sys_created_on>2018-03-11 18:32:52</sys_created_on>
-        <sys_id>6ffcdf95dbbc13047e0ef2131f96191c</sys_id>
+        <sys_created_on>2018-03-12 02:23:01</sys_created_on>
+        <sys_id>d449cd25db7453047e0ef2131f961956</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>key</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
-        <sys_update_name>sys_rest_message_fn_param_defs_6ffcdf95dbbc13047e0ef2131f96191c</sys_update_name>
+        <sys_update_name>sys_rest_message_fn_parameters_d449cd25db7453047e0ef2131f961956</sys_update_name>
         <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-12 02:23:01</sys_updated_on>
-        <value>${key}</value>
-    </sys_rest_message_fn_param_defs>
+        <sys_updated_on>2018-03-12 02:23:15</sys_updated_on>
+        <type>string</type>
+        <value>4e564044522e234028360262caa</value>
+    </sys_rest_message_fn_parameters>
 </record_update>
