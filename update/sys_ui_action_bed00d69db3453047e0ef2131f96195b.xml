@@ -43,7 +43,6 @@ function syncEvent(id,urlname){
 
 	} else {
 		responseBody = JSON.parse(responseBody);
-		gs.addInfoMessage(responseBody);
 		current.link = responseBody.link;
 		current.description = responseBody.description;
 		current.status = responseBody.status;
@@ -133,7 +132,7 @@ function syncDeveloper(id,name,photo) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bed00d69db3453047e0ef2131f96195b</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Sync</sys_name>
         <sys_overrides/>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
@@ -141,7 +140,7 @@ function syncDeveloper(id,name,photo) {
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_ui_action_bed00d69db3453047e0ef2131f96195b</sys_update_name>
         <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-12 03:35:22</sys_updated_on>
+        <sys_updated_on>2018-03-12 03:39:32</sys_updated_on>
         <table>x_snc_dev_meet_meetup</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

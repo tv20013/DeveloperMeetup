@@ -37,17 +37,18 @@
 data.isLoaded = false;
 
 
+if ($sp.getParameter("sys_id") && data.isLoaded){
+	loadAttendee($sp.getParameter("sys_id"));
+}
 if ($sp.getParameter("sys_id") && !input && !data.isLoaded) {
 	loadAttendee($sp.getParameter("sys_id"));
 } 
 
-if ($sp.getParameter("sys_id") && data.isLoaded){
-	loadAttendee($sp.getParameter("sys_id"));
-}
-
-if ($sp.getParameter("sys_id") && input.attendee.status=="Attended") {
+if ($sp.getParameter("sys_id") && data.isLoaded && input.attendee.status=="Attended" ) {
 	checkIn($sp.getParameter("sys_id"));
 } 
+
+
 
 function loadAttendee(sys_id){
 	var attendee = new GlideRecord('x_snc_dev_meet_attendees');
@@ -90,14 +91,14 @@ function checkIn(sys_id){
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-11 20:56:29</sys_created_on>
         <sys_id>f08efb99db3053047e0ef2131f96194b</sys_id>
-        <sys_mod_count>127</sys_mod_count>
+        <sys_mod_count>132</sys_mod_count>
         <sys_name>Checkin</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sp_widget_f08efb99db3053047e0ef2131f96194b</sys_update_name>
         <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-12 02:22:21</sys_updated_on>
+        <sys_updated_on>2018-03-12 17:11:37</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-xs-3"><img ng-src="{{data.attendee.picture}}"  class="item-image" /></div>
