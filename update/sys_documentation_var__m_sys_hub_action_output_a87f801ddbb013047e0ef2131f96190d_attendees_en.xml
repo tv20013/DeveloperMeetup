@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="attendees" label="attendees" language="en" table="var__m_sys_hub_action_output_a87f801ddbb013047e0ef2131f96190d">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>attendees</element>
+            <help/>
+            <hint/>
+            <label>attendees</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_output_a87f801ddbb013047e0ef2131f96190d</name>
+            <plural>attendees</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>alex</sys_created_by>
+            <sys_created_on>2018-03-11 03:32:01</sys_created_on>
+            <sys_id>d57f801ddbb013047e0ef2131f9619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>attendees</sys_name>
+            <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_action_output_a87f801ddbb013047e0ef2131f96190d_attendees_en</sys_update_name>
+            <sys_updated_by>alex</sys_updated_by>
+            <sys_updated_on>2018-03-11 03:32:01</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Meetup" max_length="40" name="x_snc_dev_meet_meetup" type="collection">
+        <element label="Description" max_length="1000" name="description" type="html"/>
+        <element label="ID" mandatory="true" max_length="12" name="id" type="string"/>
+        <element label="Link" max_length="256" name="link" type="url"/>
+        <element display="true" label="Name" mandatory="true" max_length="256" name="name" type="string"/>
+        <element choice="1" label="Status" max_length="32" name="status" type="string">
+            <choice>
+                <element label="Draft" sequence="100" value="draft"/>
+                <element label="Suggested" sequence="200" value="suggested"/>
+                <element label="Proposed" sequence="300" value="proposed"/>
+                <element label="Upcoming" sequence="400" value="upcoming"/>
+                <element label="Past" sequence="500" value="past"/>
+                <element label="Cancelled" sequence="600" value="cancelled"/>
+            </choice>
+        </element>
+    </element>
+</database>

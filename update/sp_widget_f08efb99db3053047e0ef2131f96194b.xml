@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($filter, $location,$rootScope,$scope,$timeout,spUtil,$window) {
+  /* widget controller */
+  var c = this;
+	
+	$scope.checkIn = function(){
+		//spUtil.addTrivialMessage(c.data.attendee.sys_id);
+		c.data.attendee.status='Attended';
+		c.server.update();
+	}
+	
+		$scope.returnSearch = function() {
+		$window.location = '/checkin';
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>img {
+    border-radius: 50%;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>checkin</id>
+        <internal>false</internal>
+        <link/>
+        <name>Checkin</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[data.attendee={};
+data.isLoaded = false;
+
+
+if ($sp.getParameter("sys_id") && !input && !data.isLoaded) {
+	loadAttendee($sp.getParameter("sys_id"));
+} 
+
+if ($sp.getParameter("sys_id") && data.isLoaded){
+	loadAttendee($sp.getParameter("sys_id"));
+}
+
+if ($sp.getParameter("sys_id") && input.attendee.status=="Attended") {
+	checkIn($sp.getParameter("sys_id"));
+} 
+
+function loadAttendee(sys_id){
+	var attendee = new GlideRecord('x_snc_dev_meet_attendees');
+	attendee.get(sys_id);
+	data.attendee.name=attendee.developer.name.getDisplayValue();
+	data.attendee.picture=attendee.developer.photo.getDisplayValue();
+	data.attendee.status=attendee.status.getDisplayValue();
+	data.attendee.sys_id=attendee.sys_id.getDisplayValue();
+	data.attendee.guests=attendee.guests.getDisplayValue();
+	data.isLoaded = true;
+}
+
+function checkIn(sys_id){
+	var attendee = new GlideRecord('x_snc_dev_meet_attendees');
+	attendee.get(sys_id);
+	attendee.status='attended';
+	attendee.guests=input.attendee.guests;
+	attendee.update();
+	data.attendee.name=attendee.developer.name.getDisplayValue();
+	data.attendee.picture=attendee.developer.photo.getDisplayValue();
+	data.attendee.status=attendee.status.getDisplayValue();
+	data.attendee.sys_id=attendee.sys_id.getDisplayValue();
+	data.attendee.guests=attendee.guests.getDisplayValue();
+
+}]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 20:56:29</sys_created_on>
+        <sys_id>f08efb99db3053047e0ef2131f96194b</sys_id>
+        <sys_mod_count>125</sys_mod_count>
+        <sys_name>Checkin</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sp_widget_f08efb99db3053047e0ef2131f96194b</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-12 01:37:16</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-xs-3"><img ng-src="{{data.attendee.picture}}"  class="item-image" /></div>
+    <div class="col-xs-9 h1 text-center">{{data.attendee.name}}</div>
+    <div class="col-xs-12 h3 text-center">
+      Additional Guests: <input type="number" min=0 max=5 ng-value="{{data.attendee.guests}}" ng-model="data.attendee.guests">
+    </div>
+    
+    <div ng-show="data.attendee.status != 'Attended'" class="col-xs-12  text-center">
+      <div class="btn btn-primary btn-lg text-center" ng-click="checkIn()">
+        Click here to check in <i class="fa fa-check-circle"></i>
+      </div>
+    </div>
+    <div ng-show="data.attendee.status == 'Attended'" class="col-xs-12  text-center">
+      <button class="btn btn-success btn-lg disabled text-center">
+        Already checked in <i class="fa fa-check-circle"></i>
+      </button>
+    </div>
+    <div class="col-xs-12 text-center">
+      <button class="btn btn-warning btn-lg text-center" ng-click="returnSearch()">
+        Return to search <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

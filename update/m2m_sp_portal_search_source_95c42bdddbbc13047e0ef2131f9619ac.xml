@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="m2m_sp_portal_search_source">
+    <m2m_sp_portal_search_source action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sp_portal display_value="Meetup Checkin">5c242f9ddbbc13047e0ef2131f9619eb</sp_portal>
+        <sp_search_source display_value="Attendees">7174e3dddbbc13047e0ef2131f9619b7</sp_search_source>
+        <sys_class_name>m2m_sp_portal_search_source</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 19:04:00</sys_created_on>
+        <sys_id>95c42bdddbbc13047e0ef2131f9619ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meetup Checkin.Attendees</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>m2m_sp_portal_search_source_95c42bdddbbc13047e0ef2131f9619ac</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 19:04:00</sys_updated_on>
+    </m2m_sp_portal_search_source>
+</record_update>

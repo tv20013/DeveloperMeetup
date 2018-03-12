@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Attendees" max_length="40" name="x_snc_dev_meet_attendees" type="collection">
+        <element display="true" label="Developer" mandatory="true" max_length="32" name="developer" reference="x_snc_dev_meet_developers" type="reference"/>
+        <element default="0" label="Guests" max_length="40" name="guests" type="integer"/>
+        <element label="Meetup" mandatory="true" max_length="32" name="meetup" reference="x_snc_dev_meet_meetup" type="reference"/>
+        <element choice="3" default="no" label="RSVP" mandatory="true" max_length="10" name="rsvp" type="string">
+            <choice>
+                <element label="No" sequence="100" value="no"/>
+                <element label="Yes" sequence="200" value="yes"/>
+            </choice>
+        </element>
+        <element choice="3" default="absent" label="Status" mandatory="true" max_length="32" name="status" type="string">
+            <choice>
+                <element label="Noshow" sequence="100" value="noshow"/>
+                <element label="Absent" sequence="200" value="absent"/>
+                <element label="Attended" sequence="300" value="attended"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="developer"/>
+        </index>
+        <index name="index2">
+            <element name="meetup"/>
+        </index>
+    </element>
+</database>

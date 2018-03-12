@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_search_source">
+    <sp_search_source action="INSERT_OR_UPDATE">
+        <advanced_typeahead_config>true</advanced_typeahead_config>
+        <condition table="x_snc_dev_meet_attendees">meetup=e9460091dbb013047e0ef2131f961944^EQ<item display_table="x_snc_dev_meet_meetup" display_value="South-Florida-ServiceNow-Developer-Meetup" endquery="false" field="meetup" goto="false" newquery="false" operator="=" or="false" value="e9460091dbb013047e0ef2131f961944"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <data_fetch_script><![CDATA[(function(query) {
+	var results = [];
+	var attendee = new GlideRecord('x_snc_dev_meet_attendees');
+	attendee.addQuery('developer.name','CONTAINS', query);
+	//attendee.addQuery('rsvp','yes');
+	attendee.addQuery('meetup.id',gs.getProperty('x_snc_dev_meet.current_event'));
+	attendee.query();
+	while (attendee.next()) {
+		var item = {};
+		item.sys_id=attendee.sys_id.getDisplayValue();
+		item.label = attendee.developer.name.getDisplayValue();
+		item.picture=attendee.developer.photo.getDisplayValue();
+		results.push(item);
+	}
+
+	return results;
+})(query);]]></data_fetch_script>
+        <display_fields>rsvp,status</display_fields>
+        <enable_typeahead>true</enable_typeahead>
+        <id>attendees</id>
+        <is_scripted_source>true</is_scripted_source>
+        <name>Attendees</name>
+        <page display_value="checkin">e26eff99db3053047e0ef2131f96194c</page>
+        <primary_display_field>developer</primary_display_field>
+        <roles/>
+        <search_page_template><![CDATA[<div>
+  <a href="?id=checkin&amp;sys_id={{item.sys_id}}" class="h4 text-primary m-b-sm block">
+    <i class="ta-img" style="border-radius: 50%;background-image:url('item.picture')"></i>
+    <span ng-bind-html="highlight(item.label, data.q)"></span></a>
+  
+</div>]]></search_page_template>
+        <source_table>x_snc_dev_meet_attendees</source_table>
+        <sys_class_name>sp_search_source</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 19:04:00</sys_created_on>
+        <sys_id>7174e3dddbbc13047e0ef2131f9619b7</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name>Attendees</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sp_search_source_7174e3dddbbc13047e0ef2131f9619b7</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-12 01:58:15</sys_updated_on>
+        <typeahead_glyph>user</typeahead_glyph>
+        <typeahead_template><![CDATA[<i class="ta-img" style="border-radius: 50%;background-image:url('{{match.model.picture}}')"></i>
+<span ng-bind-html="match.model.label | uibTypeaheadHighlight:query"></span>
+]]></typeahead_template>
+    </sp_search_source>
+    <sys_translated_text action="delete_multiple" query="documentkey=7174e3dddbbc13047e0ef2131f9619b7"/>
+</record_update>

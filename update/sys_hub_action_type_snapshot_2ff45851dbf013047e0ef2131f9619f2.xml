@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_action_type_snapshot">
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <annotation>Get the Attendees from the Meetup.com API</annotation>
+        <category/>
+        <description/>
+        <label_cache>[{"name":"{{action.ah_meetup}}","label":"action➛meetup","type":"action","ref":""},{"name":"{{action.ah_meetup.name}}","label":"action➛meetup➛Name","type":"action","ref":""},{"name":"{{action.ah_meetup.id}}","label":"action➛meetup➛ID","type":"action","ref":""},{"name":"{{step[155e2ae8-c03e-449b-aec2-bf5589e6b971].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[155e2ae8-c03e-449b-aec2-bf5589e6b971].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].status}}","label":"step➛Parse Response➛status","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].i}}","label":"step➛Parse Response➛i","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].id}}","label":"step➛Parse Response➛id","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].n}}","label":"step➛Parse Response➛n","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].na}}","label":"step➛Parse Response➛na","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].nam}}","label":"step➛Parse Response➛nam","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].name}}","label":"step➛Parse Response➛name","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].r}}","label":"step➛Parse Response➛r","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].rs}}","label":"step➛Parse Response➛rs","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].rsv}}","label":"step➛Parse Response➛rsv","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].rsvp}}","label":"step➛Parse Response➛rsvp","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].g}}","label":"step➛Parse Response➛g","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].gu}}","label":"step➛Parse Response➛gu","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].gue}}","label":"step➛Parse Response➛gue","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].gues}}","label":"step➛Parse Response➛gues","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].guest}}","label":"step➛Parse Response➛guest","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].guests}}","label":"step➛Parse Response➛guests","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].p}}","label":"step➛Parse Response➛p","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].ph}}","label":"step➛Parse Response➛ph","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].pho}}","label":"step➛Parse Response➛pho","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].phot}}","label":"step➛Parse Response➛phot","type":"step","ref":""},{"name":"{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].photo}}","label":"step➛Parse Response➛photo","type":"step","ref":""}]</label_cache>
+        <name>Get Attendees</name>
+        <outputs/>
+        <outputs/>
+        <parent_action/>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:13</sys_created_on>
+        <sys_id>2ff45851dbf013047e0ef2131f9619f2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Get Attendees</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_action_type_snapshot_2ff45851dbf013047e0ef2131f9619f2</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <system_level>false</system_level>
+    </sys_hub_action_type_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=2ff45851dbf013047e0ef2131f9619f2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>2ff45851dbf013047e0ef2131f9619f2</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:19</sys_created_on>
+        <sys_id>1905d851dbf013047e0ef2131f961986</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <value/>
+        <variable display_value="">9505d851dbf013047e0ef2131f96196c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2ff45851dbf013047e0ef2131f9619f2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>guests</field>
+        <id>2ff45851dbf013047e0ef2131f9619f2</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:19</sys_created_on>
+        <sys_id>d505d851dbf013047e0ef2131f961985</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2ff45851dbf013047e0ef2131f9619f2</table>
+        <value>{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].guests}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>id</field>
+        <id>2ff45851dbf013047e0ef2131f9619f2</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:19</sys_created_on>
+        <sys_id>1105d851dbf013047e0ef2131f961986</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2ff45851dbf013047e0ef2131f9619f2</table>
+        <value>{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>name</field>
+        <id>2ff45851dbf013047e0ef2131f9619f2</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:19</sys_created_on>
+        <sys_id>9905d851dbf013047e0ef2131f961985</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2ff45851dbf013047e0ef2131f9619f2</table>
+        <value>{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>photo</field>
+        <id>2ff45851dbf013047e0ef2131f9619f2</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:19</sys_created_on>
+        <sys_id>5d05d851dbf013047e0ef2131f961985</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2ff45851dbf013047e0ef2131f9619f2</table>
+        <value>{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].photo}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>rsvp</field>
+        <id>2ff45851dbf013047e0ef2131f9619f2</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:19</sys_created_on>
+        <sys_id>d105d851dbf013047e0ef2131f961986</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2ff45851dbf013047e0ef2131f9619f2</table>
+        <value>{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].rsvp}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>2ff45851dbf013047e0ef2131f9619f2</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:56:19</sys_created_on>
+        <sys_id>9505d851dbf013047e0ef2131f961986</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:56:19</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2ff45851dbf013047e0ef2131f9619f2</table>
+        <value>{{step[cdc730e4-88a4-4d8a-8349-f2347c59fcff].status}}</value>
+    </sys_element_mapping>
+</record_update>

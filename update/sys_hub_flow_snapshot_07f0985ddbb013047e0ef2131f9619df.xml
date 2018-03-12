@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_flow_snapshot">
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <label_cache>[{"name":"Created or Updated_1.current","label":"Trigger➛Meetup Record","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup","type":"reference","base_type":"reference"},{"name":"c7a3f237-eb2b-45c8-8dc2-9a864a67df91.attendees","label":"1➛attendees","reference_display":"attendees"},{"name":"c7a3f237-eb2b-45c8-8dc2-9a864a67df91.status","label":"1➛status","reference_display":"status"}]</label_cache>
+        <name>Get Attendees</name>
+        <parent_flow/>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 03:38:42</sys_created_on>
+        <sys_id>07f0985ddbb013047e0ef2131f9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Attendees</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_flow_snapshot_07f0985ddbb013047e0ef2131f9619df</sys_update_name>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:38:42</sys_updated_on>
+    </sys_hub_flow_snapshot>
+</record_update>
