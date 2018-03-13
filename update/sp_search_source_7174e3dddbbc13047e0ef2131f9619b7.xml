@@ -2,7 +2,7 @@
 <record_update table="sp_search_source">
     <sp_search_source action="INSERT_OR_UPDATE">
         <advanced_typeahead_config>true</advanced_typeahead_config>
-        <condition table="x_snc_dev_meet_attendees">meetup=e9460091dbb013047e0ef2131f961944^EQ<item display_table="x_snc_dev_meet_meetup" display_value="South-Florida-ServiceNow-Developer-Meetup" endquery="false" field="meetup" goto="false" newquery="false" operator="=" or="false" value="e9460091dbb013047e0ef2131f961944"/>
+        <condition table="x_snc_dev_meet_attendees">meetup=e9460091dbb013047e0ef2131f961944^EQ<item endquery="false" field="meetup" goto="false" newquery="false" operator="=" or="false" value="e9460091dbb013047e0ef2131f961944"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <data_fetch_script><![CDATA[(function(query) {

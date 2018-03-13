@@ -47,17 +47,21 @@ function syncEvent(id,urlname){
 		current.description = responseBody.description;
 		current.status = responseBody.status;
 		current.update();
-		syncAttendees(current.id,current.name);
+		syncAttendees(current.id,current.name,current.state);
 		gs.addInfoMessage("Meeting Synced");
 		action.setRedirectURL(current);
 	}
 	return;
 }
 
-function syncAttendees(id,urlname){
+function syncAttendees(id,urlname,state){
 	var meetup = new GlideRecord('x_snc_dev_meet_meetup');
 	meetup.get('id',id);
-	var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', 'GET Attendees');
+	var api = 'GET RSVP';
+	if (state == 'past'){
+		api = 'GET Attendees';
+	}
+	var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', api);
 	r.setStringParameterNoEscape('id', id);
 	r.setStringParameterNoEscape('urlname', urlname);
 	r.setStringParameterNoEscape('key', gs.getProperty('x_snc_dev_meet.key'));
@@ -75,13 +79,22 @@ function syncAttendees(id,urlname){
 			//gs.addInfoMessage('Syncing '+body.member.name);
 			var pic = 'https://secure.meetupstatic.com/img/noPhoto_50.png';
 			if(body.member.hasOwnProperty('photo')){
+				if(body.member.photo.hasOwnProperty('thumb')){
 				pic = body.member.photo.thumb;
+				}
+				if(body.member.photo.hasOwnProperty('thumb_link')){
+				pic = body.member.photo.thumb_link;
+				}
 			} 
 			var rsvp = 'no';
 			var guests = 0;
 			if(body.hasOwnProperty('rsvp')){
 				rsvp = body.rsvp.response;
 				guests = body.rsvp.guests;
+			}
+			if(body.hasOwnProperty('response')){
+				rsvp = body.response;
+				guests = body.guests;
 			}
 			var dev = syncDeveloper(body.member.id,body.member.name,pic);
 			var attendee = new GlideRecord('x_snc_dev_meet_attendees');
@@ -132,7 +145,7 @@ function syncDeveloper(id,name,photo) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bed00d69db3453047e0ef2131f96195b</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Sync</sys_name>
         <sys_overrides/>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
@@ -140,7 +153,7 @@ function syncDeveloper(id,name,photo) {
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_ui_action_bed00d69db3453047e0ef2131f96195b</sys_update_name>
         <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-12 03:39:32</sys_updated_on>
+        <sys_updated_on>2018-03-13 13:10:03</sys_updated_on>
         <table>x_snc_dev_meet_meetup</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
