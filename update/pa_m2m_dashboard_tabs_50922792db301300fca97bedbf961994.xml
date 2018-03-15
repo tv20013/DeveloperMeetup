@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="Meetup">1482af92db301300fca97bedbf961916</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>toddv</sys_created_by>
+        <sys_created_on>2018-03-14 21:28:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>50922792db301300fca97bedbf961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1482af92db301300fca97bedbf961916</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_50922792db301300fca97bedbf961994</sys_update_name>
+        <sys_updated_by>toddv</sys_updated_by>
+        <sys_updated_on>2018-03-14 21:28:19</sys_updated_on>
+        <tab display_value="New Tab">90922792db301300fca97bedbf961992</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>

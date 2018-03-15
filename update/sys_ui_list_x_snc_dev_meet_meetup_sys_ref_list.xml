@@ -4,7 +4,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="4bbf0073db3332007e0ef2131f961974">a7a4e7dddbbc13047e0ef2131f961988</list_id>
+            <list_id display_value="x_snc_dev_meet_meetup" element="NULL" name="x_snc_dev_meet_meetup" parent="NULL" relationship="NULL" sys_domain="global" view="4d713272791203006517636e4f534989">a7a4e7dddbbc13047e0ef2131f961988</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -41,7 +41,7 @@
             <sys_updated_by>alex</sys_updated_by>
             <sys_updated_on>2018-03-11 19:03:37</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">4bbf0073db3332007e0ef2131f961974</view>
+            <view display_value="Reference List" name="sys_ref_list">4d713272791203006517636e4f534989</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

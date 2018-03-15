@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="PA New Tab">10922792db301300fca97bedbf961990</grid_canvas>
+        <height>9</height>
+        <portal_widget display_value="Created 2018-03-14 14:28:39">95a2ef92db301300fca97bedbf96194e</portal_widget>
+        <posx>0</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>toddv</sys_created_by>
+        <sys_created_on>2018-03-14 21:28:40</sys_created_on>
+        <sys_id>ada2ef92db301300fca97bedbf96194f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>10922792db301300fca97bedbf961990</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_ada2ef92db301300fca97bedbf96194f</sys_update_name>
+        <sys_updated_by>toddv</sys_updated_by>
+        <sys_updated_on>2018-03-14 21:34:50</sys_updated_on>
+        <width>8</width>
+    </sys_grid_canvas_pane>
+</record_update>
