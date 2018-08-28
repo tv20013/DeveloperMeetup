@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Member to Group M2M" max_length="40" name="x_snc_dev_meet_m2m_member_group" type="collection">
+        <element label="Group" max_length="32" name="group" reference="x_snc_dev_meet_group" type="reference"/>
+        <element label="Members" max_length="32" name="members" reference="x_snc_dev_meet_developers" type="reference"/>
+        <index name="index">
+            <element name="members"/>
+        </index>
+        <index name="index2">
+            <element name="group"/>
+        </index>
+    </element>
+</database>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Members" max_length="40" name="x_snc_dev_meet_developers" type="collection">
         <element label="ID" mandatory="true" max_length="12" name="id" type="string"/>
         <element display="true" label="Name" mandatory="true" max_length="32" name="name" type="string"/>

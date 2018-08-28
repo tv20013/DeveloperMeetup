@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_hub_flow_block">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_block">
     <sys_hub_flow_block action="INSERT_OR_UPDATE">
         <label_cache/>
         <name/>

@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_hub_flow_logic">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_logic">
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">a2e0585ddbb013047e0ef2131f9619b0</block>
+        <comment/>
         <connected_to/>
         <display_text/>
         <flow display_value="Get Attendees">66e0905ddbb013047e0ef2131f961980</flow>
         <inputs/>
         <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
         <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>alex</sys_created_by>
@@ -22,6 +24,8 @@
         <sys_updated_by>alex</sys_updated_by>
         <sys_updated_on>2018-03-11 03:38:24</sys_updated_on>
         <ui_id>10f354e3-61a7-4e23-a7bc-0e0f2c5d3aba</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
     </sys_hub_flow_logic>
     <sys_variable_value action="delete_multiple" query="document_key=aee0585ddbb013047e0ef2131f9619b1"/>
 </record_update>

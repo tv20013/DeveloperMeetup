@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_hub_action_instance">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
         <action_type display_value="Get Attendees">2ff45851dbf013047e0ef2131f9619f2</action_type>
+        <action_type_parent/>
         <comment/>
         <compiled_snapshot display_value="Get Attendees">2ff45851dbf013047e0ef2131f9619f2</compiled_snapshot>
         <display_text/>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="status" label="status" language="en" table="var__m_sys_hub_step_ext_output_a1f35811dbf013047e0ef2131f961965">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>status</element>

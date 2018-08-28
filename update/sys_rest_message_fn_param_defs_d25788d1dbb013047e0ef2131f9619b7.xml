@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_rest_message_fn_param_defs">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_param_defs">
     <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
         <name>key</name>
         <order>100</order>

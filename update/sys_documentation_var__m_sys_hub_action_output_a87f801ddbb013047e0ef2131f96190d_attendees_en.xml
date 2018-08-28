@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="attendees" label="attendees" language="en" table="var__m_sys_hub_action_output_a87f801ddbb013047e0ef2131f96190d">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>attendees</element>

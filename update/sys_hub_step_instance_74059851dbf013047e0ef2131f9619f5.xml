@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_hub_step_instance">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_step_instance">
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Get Attendees">2ff45851dbf013047e0ef2131f9619f2</action>
         <cid>cdc730e4-88a4-4d8a-8349-f2347c59fcff</cid>
