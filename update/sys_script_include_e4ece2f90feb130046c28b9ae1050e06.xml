@@ -24,8 +24,8 @@ MeetupREST.prototype = {
 		var httpStatus = response.getStatusCode();
 		
 		if(httpStatus!=200){
-			gs.addErrorMessage(responseObj.errors[0].message);			
-//			gs.addErrorMessage(responseBody.errors[0].message);			
+			gs.debug(responseObj.errors[0].message);			
+			gs.debug(responseBody.errors[0].message);			
 
 		} else {
 			responseBody = JSON.parse(responseBody);
@@ -54,8 +54,8 @@ MeetupREST.prototype = {
 		var httpStatus = response.getStatusCode();
 		
 		if(httpStatus!=200){
-			gs.addErrorMessage(responseBody.error.message);
-			gs.addErrorMessage(responseBody.error.detail);
+			gs.debug(responseBody.error.message);
+			gs.debug(responseBody.error.detail);
 			
 		} else {
 			responseBody = JSON.parse(responseBody);
@@ -122,6 +122,115 @@ MeetupREST.prototype = {
 		
 	},
 	
+	updateEventsForAllGroups: function() {
+		var gr = new GlideRecord("x_snc_dev_meet_group");
+		gr.addActiveQuery();
+		gr.query();
+		while (gr.next()) {
+		   this.getEventsForGroup(gr.getUniqueValue(), gr.getValue("url"));
+		}
+	},
+	
+	createOrUpdateEvent: function(id, name, description, status, date, link, group_sysid){
+		var gr = new GlideRecord("x_snc_dev_meet_meetup");
+		var existingRecord = gr.get("id", id);
+		
+		if (!existingRecord) {
+			gr.newRecord();
+			gr.setValue('id', id);
+		}
+		gr.setValue('name', name);
+		gr.setValue('description', description);
+		gr.setValue('status', status);
+		gr.setValue('date', date);
+		gr.setValue('link', link);
+		gr.setValue('group', group_sysid);
+
+		if (existingRecord) {
+			gr.update();
+		} else {
+			gr.insert();
+		}			
+	},
+	
+	getEventsForGroup: function(group_sysid, urlname) {
+		var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', "GET Events");
+		r.setStringParameterNoEscape('urlname',  urlname);
+		r.setStringParameterNoEscape('key', gs.getProperty('x_snc_dev_meet.key'));
+		r.setStringParameterNoEscape('status', 'upcoming');
+		
+		var mu = new MeetupREST();
+		
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var responseObj = JSON.parse(responseBody);
+		var httpStatus = response.getStatusCode();		
+		
+		if(httpStatus!=200){
+			gs.debug(responseObj.errors[0].message);
+//			gs.debug(responseObj.errors[0].code);
+			
+		} else {
+			responseObj.forEach(function(body){
+				gs.debug(body.id);
+				gs.debug(body.name);
+				gs.debug(body.status);
+
+				mu.createOrUpdateEvent(body.id, body.name, body.description, body.status, body.local_date, body.link, group_sysid);
+			});
+		}
+	},
+
+	getGroups: function() {
+		var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', "GET Groups");
+		r.setStringParameterNoEscape('urlname',  gs.getProperty('x_snc_dev_meet.urlname'));
+		r.setStringParameterNoEscape('key', gs.getProperty('x_snc_dev_meet.key'));
+		
+		var mu = new MeetupREST();
+		
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var responseObj = JSON.parse(responseBody);
+		var httpStatus = response.getStatusCode();
+		
+		if(httpStatus!=200){
+			gs.debug(responseBody.error.message);
+			gs.debug(responseBody.error.detail);
+			
+		} else {
+			responseObj.forEach(function(body){
+				gs.debug(body.id);
+				gs.debug(body.name);
+				gs.debug(body.status);
+				gs.debug(body.urlname);
+
+				mu.createOrUpdateGroup(body.id, body.name, body.urlname, body.status);
+			});
+		}
+	},
+	
+	createOrUpdateGroup: function(id, name, urlname, status) {
+		var gr = new GlideRecord("x_snc_dev_meet_group");
+		gr.addQuery("id", id);
+		gr.query();
+		
+		var existingRecord = gr.next();
+		if (!existingRecord) {
+			gr.newRecord();
+			gr.setValue('id', id);
+		}
+		gr.setValue('name', name);
+		gr.setValue('url', urlname);
+		gr.setValue(status, status == 'Active');
+		if (existingRecord) {
+			gr.update();
+		} else {
+			gr.insert();
+		}
+		
+	},
+	
+
 	
 	type: 'MeetupREST'
 };
@@ -135,13 +244,13 @@ MeetupREST.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-27 21:13:42</sys_created_on>
         <sys_id>e4ece2f90feb130046c28b9ae1050e06</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>MeetupREST</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_e4ece2f90feb130046c28b9ae1050e06</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-08-24 21:22:37</sys_updated_on>
+        <sys_updated_on>2018-08-31 20:50:21</sys_updated_on>
     </sys_script_include>
 </record_update>

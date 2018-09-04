@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>GET Groups</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Meetup.com API [ GET Groups ]</qualified_name>
+        <rest_endpoint>https://api.meetup.com/pro/${urlname}/groups</rest_endpoint>
+        <rest_message display_value="Meetup.com API">00668891dbb013047e0ef2131f961949</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-08-28 20:33:35</sys_created_on>
+        <sys_id>9a27130c0f10630046c28b9ae1050e83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GET Groups</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_rest_message_fn_9a27130c0f10630046c28b9ae1050e83</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-08-28 20:33:35</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>
