@@ -19,6 +19,8 @@
         <query>/system_properties_ui.do?sysparm_title=Meetup%20Properties&amp;sysparm_category=Meetup%20Properties</query>
         <report/>
         <roles/>
+        <survey/>
+        <survey_overwrite>false</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-12 01:54:44</sys_created_on>

@@ -28,7 +28,6 @@
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
-    <sys_translated_text action="delete_multiple" query="documentkey=60f59c91dbf013047e0ef2131f9619e1"/>
     <sys_variable_value action="delete_multiple" query="document_key=60f59c91dbf013047e0ef2131f9619e1"/>
     <sys_element_mapping action="delete_multiple" query="id=60f59c91dbf013047e0ef2131f9619e1"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">

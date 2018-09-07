@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>true</actions_access>
+        <alter_access>true</alter_access>
+        <client_scripts_access>true</client_scripts_access>
+        <configuration_access>true</configuration_access>
+        <create_access>true</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>true</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Reimbursement</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_snc_dev_meet_reimbursement</name>
+        <number_ref display_value="REI">fc3fbedbdb58e740e3a95421cf96195a</number_ref>
+        <provider_class/>
+        <read_access>true</read_access>
+        <super_class display_value="Task" name="task">e7b838555820130059a6b831cdd54e12</super_class>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>sklein</sys_created_by>
+        <sys_created_on>2018-09-07 21:07:25</sys_created_on>
+        <sys_id>b9aeba9bdb58e740e3a95421cf9619d0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Reimbursement</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_db_object_b9aeba9bdb58e740e3a95421cf9619d0</sys_update_name>
+        <sys_updated_by>sklein</sys_updated_by>
+        <sys_updated_on>2018-09-07 21:07:27</sys_updated_on>
+        <update_access>true</update_access>
+        <user_role display_value="x_snc_dev_meet.user" name="x_snc_dev_meet.user">0febff85db7013047e0ef2131f9619ec</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>

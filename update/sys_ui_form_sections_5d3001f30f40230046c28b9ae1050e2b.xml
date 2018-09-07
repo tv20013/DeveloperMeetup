@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_application_product_model" name="cmdb_application_product_model" sys_domain="global" view="Default view">5d3001f30f40230046c28b9ae1050e2b</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="cmdb_application_product_model" sys_domain="global" view="Default view">5930c9f30f40230046c28b9ae1050e51</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="cmdb_application_product_model" sys_domain="global" view="Default view">d394259237812000fceabfc8bcbe5df4</sys_ui_section>
             <sys_updated_by>daveslusher-sn</sys_updated_by>
             <sys_updated_on>2018-08-27 14:53:54</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_application_product_model" name="cmdb_application_product_model" sys_domain="global" view="Default view">5d3001f30f40230046c28b9ae1050e2b</sys_ui_form>
-            <sys_ui_section caption="General" display_value="General" name="cmdb_application_product_model" sys_domain="global" view="Default view">1d30c9f30f40230046c28b9ae1050e54</sys_ui_section>
+            <sys_ui_section caption="General" display_value="General" name="cmdb_application_product_model" sys_domain="global" view="Default view">9683ed5237812000fceabfc8bcbe5df9</sys_ui_section>
             <sys_updated_by>daveslusher-sn</sys_updated_by>
             <sys_updated_on>2018-08-27 14:53:54</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_application_product_model" name="cmdb_application_product_model" sys_domain="global" view="Default view">5d3001f30f40230046c28b9ae1050e2b</sys_ui_form>
-            <sys_ui_section caption="Compatibles" display_value="Compatibles" name="cmdb_application_product_model" sys_domain="global" view="Default view">d530c9f30f40230046c28b9ae1050e53</sys_ui_section>
+            <sys_ui_section display_value="">d530c9f30f40230046c28b9ae1050e53</sys_ui_section>
             <sys_updated_by>daveslusher-sn</sys_updated_by>
             <sys_updated_on>2018-08-27 14:53:54</sys_updated_on>
         </sys_ui_form_section>
@@ -52,7 +52,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_application_product_model" name="cmdb_application_product_model" sys_domain="global" view="Default view">5d3001f30f40230046c28b9ae1050e2b</sys_ui_form>
-            <sys_ui_section caption="Assets" display_value="Assets" name="cmdb_application_product_model" sys_domain="global" view="Default view">dd3001f30f40230046c28b9ae1050e2e</sys_ui_section>
+            <sys_ui_section caption="Assets" display_value="Assets" name="cmdb_application_product_model" sys_domain="global" view="Default view">d043195b37492000fceabfc8bcbe5d54</sys_ui_section>
             <sys_updated_by>daveslusher-sn</sys_updated_by>
             <sys_updated_on>2018-08-27 14:53:54</sys_updated_on>
         </sys_ui_form_section>
@@ -66,7 +66,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_application_product_model" name="cmdb_application_product_model" sys_domain="global" view="Default view">5d3001f30f40230046c28b9ae1050e2b</sys_ui_form>
-            <sys_ui_section caption="Configuration items" display_value="Configuration items" name="cmdb_application_product_model" sys_domain="global" view="Default view">d530c9f30f40230046c28b9ae1050e58</sys_ui_section>
+            <sys_ui_section caption="Configuration items" display_value="Configuration items" name="cmdb_application_product_model" sys_domain="global" view="Default view">56c0f15237012000fceabfc8bcbe5de3</sys_ui_section>
             <sys_updated_by>daveslusher-sn</sys_updated_by>
             <sys_updated_on>2018-08-27 14:53:54</sys_updated_on>
         </sys_ui_form_section>
