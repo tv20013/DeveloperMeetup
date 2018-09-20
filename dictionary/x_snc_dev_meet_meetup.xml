@@ -2,8 +2,10 @@
     <element label="Meetup event" max_length="40" name="x_snc_dev_meet_meetup" type="collection">
         <element label="Date" max_length="40" name="date" type="glide_date"/>
         <element label="Description" max_length="1000" name="description" type="html"/>
+        <element label="Event time" max_length="40" name="event_time" type="glide_date_time"/>
         <element label="Group" max_length="32" name="group" reference="x_snc_dev_meet_group" type="reference"/>
         <element label="ID" mandatory="true" max_length="12" name="id" type="string"/>
+        <element label="Last sync time" max_length="40" name="last_sync_time" type="glide_date_time"/>
         <element label="Link" max_length="256" name="link" type="url"/>
         <element display="true" label="Name" mandatory="true" max_length="256" name="name" type="string"/>
         <element choice="1" label="Status" max_length="32" name="status" type="string">

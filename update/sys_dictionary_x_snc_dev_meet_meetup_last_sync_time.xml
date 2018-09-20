@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="max_reimbursement_amount" table="x_snc_dev_meet_reimbursement">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="last_sync_time" table="x_snc_dev_meet_meetup">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Max reimbursement amount</column_label>
+        <column_label>Last sync time</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,15 +27,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>max_reimbursement_amount</element>
+        <element>last_sync_time</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Currency">currency</internal_type>
+        <internal_type display_value="">glide_date_time</internal_type>
         <mandatory>false</mandatory>
-        <max_length>20</max_length>
-        <name>x_snc_dev_meet_reimbursement</name>
+        <max_length>40</max_length>
+        <name>x_snc_dev_meet_meetup</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -51,17 +51,17 @@
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
-        <sys_created_by>sklein</sys_created_by>
-        <sys_created_on>2018-09-07 22:57:53</sys_created_on>
-        <sys_id>51e746b60f20230046c28b9ae1050ec2</sys_id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-09-19 00:59:37</sys_created_on>
+        <sys_id>3bf2bfb60f24230046c28b9ae1050edc</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Max reimbursement amount</sys_name>
+        <sys_name>Last sync time</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
-        <sys_update_name>sys_dictionary_x_snc_dev_meet_reimbursement_max_reimbursement_amount</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-09-18 14:04:42</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_snc_dev_meet_meetup_last_sync_time</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-09-19 00:59:37</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

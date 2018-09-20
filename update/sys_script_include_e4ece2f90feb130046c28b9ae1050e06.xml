@@ -32,6 +32,7 @@ MeetupREST.prototype = {
 			eventGR.link = responseBody.link;
 			eventGR.description = responseBody.description;
 			eventGR.status = responseBody.status;
+			eventGR.last_sync_time = new GlideDateTime();
 			eventGR.update();
 			this.syncAttendees(eventGR.id, urlname, eventGR.status);
 		}
@@ -131,7 +132,7 @@ MeetupREST.prototype = {
 		}
 	},
 	
-	createOrUpdateEvent: function(id, name, description, status, date, link, group_sysid){
+	createOrUpdateEvent: function(id, name, description, status, date, link, group_sysid, time_milliseconds){
 		var gr = new GlideRecord("x_snc_dev_meet_meetup");
 		var existingRecord = gr.get("id", id);
 		
@@ -139,12 +140,15 @@ MeetupREST.prototype = {
 			gr.newRecord();
 			gr.setValue('id', id);
 		}
+		var utcDate = new GlideDateTime();
+		utcDate.setValue(time_milliseconds);
 		gr.setValue('name', name);
 		gr.setValue('description', description);
 		gr.setValue('status', status);
 		gr.setValue('date', date);
 		gr.setValue('link', link);
 		gr.setValue('group', group_sysid);
+		gr.setValue('event_time', utcDate);
 
 		if (existingRecord) {
 			gr.update();
@@ -176,7 +180,7 @@ MeetupREST.prototype = {
 				gs.debug(body.name);
 				gs.debug(body.status);
 
-				mu.createOrUpdateEvent(body.id, body.name, body.description, body.status, body.local_date, body.link, group_sysid);
+				mu.createOrUpdateEvent(body.id, body.name, body.description, body.status, body.local_date, body.link, group_sysid, body.time);
 			});
 		}
 	},
@@ -244,13 +248,13 @@ MeetupREST.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-27 21:13:42</sys_created_on>
         <sys_id>e4ece2f90feb130046c28b9ae1050e06</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>MeetupREST</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_e4ece2f90feb130046c28b9ae1050e06</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-08-31 20:50:21</sys_updated_on>
+        <sys_updated_on>2018-09-19 03:51:39</sys_updated_on>
     </sys_script_include>
 </record_update>

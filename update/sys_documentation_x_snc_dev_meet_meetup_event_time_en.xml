@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="event_time" label="Event time" language="en" table="x_snc_dev_meet_meetup">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>event_time</element>
+            <help/>
+            <hint/>
+            <label>Event time</label>
+            <language>en</language>
+            <name>x_snc_dev_meet_meetup</name>
+            <plural>Event times</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>daveslusher-sn</sys_created_by>
+            <sys_created_on>2018-09-18 21:52:24</sys_created_on>
+            <sys_id>9af273fa0f24230046c28b9ae1050e9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Event time</sys_name>
+            <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_dev_meet_meetup_event_time_en</sys_update_name>
+            <sys_updated_by>daveslusher-sn</sys_updated_by>
+            <sys_updated_on>2018-09-18 21:52:24</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
