@@ -68,6 +68,43 @@ MeetupUtils.prototype = {
 		
 		return answer;
 	},
+	
+	/* Given a Reimbursement Glide Record, return an array of sys_ids of other 
+	   reimbursement records in that same quarter for that same group
+	*/
+	getOtherReimbursementsInQuarter: function(reimbursementGR){
+		var reimbursementArray = [];
+		var meetupTime = new GlideDateTime(reimbursementGR.event.getRefRecord().event_time);
+		var group = reimbursementGR.event.getRefRecord().group;
+		var beginningOfQuarter = gs.beginningOfThisQuarter();
+		var endOfQuarter = gs.endOfThisQuarter();
+		var quartersAgo = 0;
+		
+		do {	   
+			beginningOfQuarter = new GlideDateTime( gs.quartersAgoStart(quartersAgo));
+			endOfQuarter = new GlideDateTime(gs.quartersAgoEnd(quartersAgo));
+			quartersAgo++;
+			if (quartersAgo > 8) {
+				return [];
+			}
+		} while ( !( beginningOfQuarter.before(meetupTime) 
+				 && meetupTime.before(endOfQuarter )) );
+		
+		var gr = new GlideRecord('x_snc_dev_meet_reimbursement');
+		gr.addQuery('event.event_time', '>', beginningOfQuarter);
+		gr.addQuery('event.event_time', '<', endOfQuarter);
+		gr.addQuery('sys_id', '!=', reimbursementGR.getUniqueValue());
+		
+		gr.addQuery('event.group', group);
+		gr.query();
+		
+		while (gr.next() ) {
+			reimbursementArray.push(gr.getUniqueValue());
+		}
+				
+		return reimbursementArray;
+		
+	},
 
     type: 'MeetupUtils'
 };]]></script>
@@ -75,13 +112,13 @@ MeetupUtils.prototype = {
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-09-18 22:11:33</sys_created_on>
         <sys_id>8ac67f3e0f24230046c28b9ae1050eb2</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>MeetupUtils</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_8ac67f3e0f24230046c28b9ae1050eb2</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-09-19 01:51:59</sys_updated_on>
+        <sys_updated_on>2018-09-26 04:04:55</sys_updated_on>
     </sys_script_include>
 </record_update>
