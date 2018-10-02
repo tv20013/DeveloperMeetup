@@ -28,7 +28,7 @@
         <sys_updated_on>2018-09-25 19:44:09</sys_updated_on>
         <template/>
         <trackable>true</trackable>
-        <user_role display_value="x_snc_dev_meet.user" name="x_snc_dev_meet.user">0febff85db7013047e0ef2131f9619ec</user_role>
+        <user_role display_value="x_snc_dev_meet.organizer" name="x_snc_dev_meet.organizer">0febff85db7013047e0ef2131f9619ec</user_role>
         <vendor/>
         <vendor_prefix/>
         <version>0.1.0</version>
