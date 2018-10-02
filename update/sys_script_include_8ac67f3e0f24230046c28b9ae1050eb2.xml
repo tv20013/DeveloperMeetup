@@ -8,9 +8,9 @@
         <name>MeetupUtils</name>
         <script><![CDATA[var MeetupUtils = Class.create();
 MeetupUtils.prototype = {
-    initialize: function() {
-    },
-	
+	initialize: function() {
+	},
+
 	getDuration: function(event_time, compare_time) {
 		var regexDays = /(\d+) Days?/;
 		var regexHours = /(\d+) Hours?/;
@@ -18,7 +18,7 @@ MeetupUtils.prototype = {
 
 		var results= {"days": 0, "hours": 0, "minutes":0};
 		var matches;
-		
+
 		var eventTimeGDT = new GlideDateTime(event_time);
 		var compareTimeGDT = new GlideDateTime(compare_time);
 		var duration = GlideDateTime.subtract(compareTimeGDT, eventTimeGDT);
@@ -35,16 +35,16 @@ MeetupUtils.prototype = {
 		if (matches) {		
 			results.minutes = matches[1];
 		} 
-		
-		
+
+
 		return results;
-		
+
 	},
-	
+
 	isItTimeToSyncEvent: function(eventJSON, last_sync_time){
 		var answer = false;
 		var now = new GlideDateTime();
-		
+
 		var lastSyncJSON = this.getDuration(now.getDisplayValue(), last_sync_time);
 		if (typeof eventJSON.days === "undefined" ) {
 			answer = true;
@@ -65,10 +65,10 @@ MeetupUtils.prototype = {
 				answer = true;
 			}
 		}
-		
+
 		return answer;
 	},
-	
+
 	/* Given a Reimbursement Glide Record, return an array of sys_ids of other 
 	   reimbursement records in that same quarter for that same group
 	*/
@@ -79,7 +79,7 @@ MeetupUtils.prototype = {
 		var beginningOfQuarter = gs.beginningOfThisQuarter();
 		var endOfQuarter = gs.endOfThisQuarter();
 		var quartersAgo = 0;
-		
+
 		do {	   
 			beginningOfQuarter = new GlideDateTime( gs.quartersAgoStart(quartersAgo));
 			endOfQuarter = new GlideDateTime(gs.quartersAgoEnd(quartersAgo));
@@ -88,37 +88,65 @@ MeetupUtils.prototype = {
 				return [];
 			}
 		} while ( !( beginningOfQuarter.before(meetupTime) 
-				 && meetupTime.before(endOfQuarter )) );
-		
+					&& meetupTime.before(endOfQuarter )) );
+
 		var gr = new GlideRecord('x_snc_dev_meet_reimbursement');
 		gr.addQuery('event.event_time', '>', beginningOfQuarter);
 		gr.addQuery('event.event_time', '<', endOfQuarter);
 		gr.addQuery('sys_id', '!=', reimbursementGR.getUniqueValue());
-		
+
 		gr.addQuery('event.group', group);
 		gr.query();
-		
+
 		while (gr.next() ) {
 			reimbursementArray.push(gr.getUniqueValue());
 		}
-				
+
 		return reimbursementArray;
-		
+
 	},
 
-    type: 'MeetupUtils'
+	calcMaxReimbursement: function(reimbursementGR){
+		// maxQuarterly is Maximum Quarterly reimbursement and defined in property
+		var maxQuarterly = gs.getProperty("x_snc_dev_meet.max_reimbursement.quarterly");
+
+		// perPerson is Maximum Per Person and defined in property
+		var perPerson = gs.getProperty("x_snc_dev_meet.max_reimbursement.per_person");
+		var maxByAttendees = perPerson * reimbursementGR.attendees;
+
+		var otherReimbursements = this.getOtherReimbursementsInQuarter(reimbursementGR).toString();
+
+		var otherReimbursementSUM = new GlideAggregate("x_snc_dev_meet_reimbursement");
+		otherReimbursementSUM.addAggregate('SUM','reimbursement_amount');
+		otherReimbursementSUM.groupBy('event.group');
+		otherReimbursementSUM.addQuery('sys_id','IN',otherReimbursements);
+		otherReimbursementSUM.query();
+
+		var sumReimbursementThisQuarter = 0;
+		if(otherReimbursementSUM.next()){
+			sumReimbursementThisQuarter = otherReimbursementSUM.getAggregate('SUM','reimbursement_amount');
+		}
+
+		var quarterlyRemaining = maxQuarterly - sumReimbursementThisQuarter;
+
+		// reimbursementAmount is max reimbursement amount
+		var reimbursementAmount = Math.min(reimbursementGR.reimbursement_requested, maxByAttendees, quarterlyRemaining);
+		return reimbursementAmount;
+	},
+
+	type: 'MeetupUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-09-18 22:11:33</sys_created_on>
         <sys_id>8ac67f3e0f24230046c28b9ae1050eb2</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>MeetupUtils</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_8ac67f3e0f24230046c28b9ae1050eb2</sys_update_name>
-        <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-09-26 04:04:55</sys_updated_on>
+        <sys_updated_by>sklein</sys_updated_by>
+        <sys_updated_on>2018-10-02 19:08:14</sys_updated_on>
     </sys_script_include>
 </record_update>

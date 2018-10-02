@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_snc_dev_meet.user" name="x_snc_dev_meet.user">0febff85db7013047e0ef2131f9619ec</contains>
+        <role display_value="x_snc_dev_meet.admin" name="x_snc_dev_meet.admin">6d911fdfdb7c2300e3a95421cf96192f</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>sklein</sys_created_by>
+        <sys_created_on>2018-10-02 19:01:32</sys_created_on>
+        <sys_id>cc22d713dbbc2300e3a95421cf9619a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_dev_meet.user.x_snc_dev_meet.admin</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_user_role_contains_cc22d713dbbc2300e3a95421cf9619a7</sys_update_name>
+        <sys_updated_by>sklein</sys_updated_by>
+        <sys_updated_on>2018-10-02 19:01:32</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

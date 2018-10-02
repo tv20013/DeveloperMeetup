@@ -28,7 +28,7 @@
         <dynamic_default_value/>
         <dynamic_ref_qual/>
         <element>attendees</element>
-        <element_prototype display_value="Response Body" element="response_body" name="var__m_sys_flow_step_definition_output_07a762fb47222200b4fad7527c9a7129">a804c77347622200b4fad7527c9a7119</element_prototype>
+        <element_prototype display_value="">a804c77347622200b4fad7527c9a7119</element_prototype>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
