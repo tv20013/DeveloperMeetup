@@ -134,19 +134,31 @@ MeetupUtils.prototype = {
 		return reimbursementAmount;
 	},
 
+	hasAttachments: function(reimbursementGR) {
+		var attachmentGR = new GlideRecord('sys_attachment');
+		attachmentGR.addQuery('table_sys_id',reimbursementGR.sys_id);
+		attachmentGR.setLimit(1); // limit query to one record, since we are just looking for a true/false
+		attachmentGR.query();
+
+		if(attachmentGR.next()){
+			return true;
+		}
+		return false;
+	},
+	
 	type: 'MeetupUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-09-18 22:11:33</sys_created_on>
         <sys_id>8ac67f3e0f24230046c28b9ae1050eb2</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>MeetupUtils</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_8ac67f3e0f24230046c28b9ae1050eb2</sys_update_name>
         <sys_updated_by>sklein</sys_updated_by>
-        <sys_updated_on>2018-10-02 19:08:14</sys_updated_on>
+        <sys_updated_on>2018-10-16 20:52:04</sys_updated_on>
     </sys_script_include>
 </record_update>
