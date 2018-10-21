@@ -5,11 +5,19 @@
   /* widget controller */
   var c = this;
 	
-	this.checkIn = function(attendee_sys_id, guests) {
+	this.checkIn = function(attendee_sys_id, member_sys_id, guests, rsvp) {
 		c.data.attendee_sys_id = attendee_sys_id;
+		c.data.member_sys_id = member_sys_id;
 		c.data.guests = guests;
+		c.data.rsvp = rsvp;
 		c.server.update();
 	}
+	
+	this.submitSearch = function() {
+		c.data.searchTerm = c.searchTerm;
+		c.server.update();
+	}
+	
 	
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -27,6 +35,16 @@
 .chunk &gt; div {
   flex: 1; /*grow*/
   margin: 10px;
+}
+
+.controls {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+#searchText {
+  width:90%
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -46,74 +64,122 @@
 	var updateAttendee = new GlideRecord('x_snc_dev_meet_attendees');
 
 	if (input) {
-		if (input.attendee_sys_id) {
-			if (updateAttendee.get(input.attendee_sys_id) ) {
-				updateAttendee.setValue('guests', input.guests);
-				updateAttendee.setValue('status', 'attended');
-				updateAttendee.update();
-			}
-		}	
 		if (input.meetup_id) {
 			data.meetup_id = input.meetup_id;
 		}
-		
-	}
-
-		if (!data.meetup_id) {
-			data.meetup_list = [];
-			var meetups = new GlideRecord('x_snc_dev_meet_meetup');
-			meetups.addEncodedQuery('event_time>=javascript:gs.beginningOfYesterday()^event_time<=javascript:gs.endOfNextWeek()');
-			meetups.addEncodedQuery('status!=past^ORstatus=NULL');
-			meetups.query();
-			while (meetups.next()){
-				var meetup = {};
-				meetup.sys_id = meetups.getUniqueValue();
-				meetup.title = meetups.getValue('name');
-				meetup.group_name = meetups.group.getRefRecord().getValue('name');
-				data.meetup_list.push(meetup);
-			}
+		if (input.searchTerm) {
+			data.searchTerm = input.searchTerm;
+		}		
+		if (input.attendee_sys_id|| input.member_sys_id) {
+			if (input.rsvp == true) {
+				if (updateAttendee.get(input.attendee_sys_id) ) {
+					updateAttendee.setValue('guests', input.guests);
+					updateAttendee.setValue('status', 'attended');
+					updateAttendee.update();
+				}
+			} else {
+				updateAttendee.initialize();
+				updateAttendee.meetup = data.meetup_id;
+				updateAttendee.developer = input.member_sys_id;
+				updateAttendee.setValue('guests', input.guests);
+				updateAttendee.setValue('rsvp', 'yes');
+				updateAttendee.setValue('status', 'attended');
+				updateAttendee.insert();				
+			}	
 		}
-	
-	
-	var gr = new GlideRecord('x_snc_dev_meet_attendees');
 
+	}
+	
+	if (!data.meetup_id) {
+		data.meetup_list = [];
+		var meetups = new GlideRecord('x_snc_dev_meet_meetup');
+		meetups.addEncodedQuery('event_time>=javascript:gs.beginningOfYesterday()^event_time<=javascript:gs.endOfNextWeek()');
+		meetups.addEncodedQuery('status!=past^ORstatus=NULL');
+		meetups.query();
+		while (meetups.next()){
+			var meetup = {};
+			meetup.sys_id = meetups.getUniqueValue();
+			meetup.title = meetups.getValue('name');
+			meetup.group_name = meetups.group.getRefRecord().getValue('name');
+			data.meetup_list.push(meetup);
+		}
+	}
+	
 	data.attendees = [];
 
+	if (data.searchTerm) {
+		var members = new GlideRecord('x_snc_dev_meet_developers');
+		members.addQuery('name', 'CONTAINS', data.searchTerm);
+		members.orderBy('name');
+		members.query();
+		while (members.next()) {
+			var attendee = {};
+			attendee.status = 'absent';
+			attendee.guests = 0 ;
+			attendee.name =		members.getValue('name');
+			attendee.member_sys_id = members.getUniqueValue();
+			attendee.avatar_url = members.getValue('photo');
+			attendee.rsvp = false;
+			data.attendees.push(attendee);
+		}
+	}
+	
+	var gr = new GlideRecord('x_snc_dev_meet_attendees');
 	gr.addQuery('meetup', data.meetup_id);
 	gr.orderBy('developer.name');
-	
 	gr.query();
 	
 	while (gr.next() ) {
 		var attendee = {};
 		var developer = gr.developer.getRefRecord();
-
-		
-		
 		
 		attendee.status = gr.getValue('status');
-		attendee.guests = gr.getValue('guests');
+		attendee.guests = parseInt(gr.getValue('guests').toString(), 10);
 		attendee.name =		developer.getValue('name');
 		attendee.sys_id = gr.getUniqueValue();
+		attendee.member_sys_id = developer.getUniqueValue();
 		attendee.avatar_url = developer.getValue('photo');
+		attendee.rsvp = true;
+		
+		// while adding the RSVP'd attendees, if any are already in the list from 
+		// searching by name, remove the search version because we only want to show
+		// non-RSVP users via search
+		var index = findAttendee(data.attendees, attendee.member_sys_id);
+		console.log("For " + attendee.name+ "["+attendee.sys_id+"] index was " +index);
+		if (index != -1) {
+			data.attendees.splice(index, 1);
+			console.log("removing " +index + " " +attendee.name);
+		}
+		
 		data.attendees.push(attendee);
 	}
 	
 
-})();]]></script>
+})();
+
+function findAttendee(array, sys_id) {
+	var i = 0;
+	for (i; i < array.length; i++) {
+		var item = array[i];
+		if (item.member_sys_id == sys_id) {
+			return i;
+		}
+	}
+	return -1;
+}]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-10-20 21:03:49</sys_created_on>
         <sys_id>2eba10d50f15270046c28b9ae1050e38</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>122</sys_mod_count>
         <sys_name>Meetup Attendee Checkin</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sp_widget_2eba10d50f15270046c28b9ae1050e38</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-10-21 02:53:01</sys_updated_on>
+        <sys_updated_on>2018-10-21 14:16:59</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div ng-if="!data.meetup_id" >
     <div class="h1">
@@ -121,41 +187,51 @@
     </div>
     <select  ng-model="data.meetup_id" ng-change="c.server.update()">
       <option ng-repeat="meetup in data.meetup_list" value="{{meetup.sys_id}}">{{meetup.title}} - {{meetup.group_name}}</option>
-  </select>
+    </select>
   </div>
     
   <div ng-if="data.meetup_id">
-    <div>
-      Click to hide already checked in members  
-  <input type="checkbox" ng-model="hideCheckedIn" />
-    </div>  
-    <div class="row" data-ng-class-odd="'odd'" data-ng-class-even="'even'"  ng-repeat="attendee in data.attendees track by $index" ng-if="!hideCheckedIn||attendee.status!='attended'">
-		<div class="chunk">
-      
-      <div><img ng-src="{{attendee.avatar_url}}"  class="item-image" /></div><div class="h1">{{attendee.name}}</div>
-    </div>
-
-    <div class="chunk">
-      
-      <div class="h3">
-      Additional Guests: <input ng-disabled="attendee.status == 'attended'"  type="number" min=0 max=5 ng-value="{{attendee.guests}}" ng-model="attendee.guests">
-    </div>
-    
-    <div ng-show="attendee.status != 'attended'" class="text-center">
-      <div class="btn btn-primary btn-lg text-center" ng-click="c.checkIn(attendee.sys_id, attendee.guests)">
-        Click here to check in <i class="fa fa-check-circle"></i>
+    <div class="controls">
+      <form ng-submit="c.submitSearch()">
+        <div>
+          
+        <input id="searchText" type="text" placeholder="Search non-RSVP members" ng-model="c.searchTerm" />
+        </div>
+        <div>          
+        <button name="search" type="submit" class="btn btn-success"
+              title="Search Members" >Search Members
+        </button>
+        <button class="btn btn-success"
+              ng-click="c.searchTerm=''; c.submitSearch()" >Clear Search
+        </button>
+        </div>
+      </form>
+      <div>
+      Click to hide already checked in members
+        <input type="checkbox" ng-model="hideCheckedIn" />
       </div>
     </div>
-    <div ng-show="attendee.status == 'attended'" class="text-center">
-      <button class="btn btn-success btn-lg disabled text-center">
-        Already checked in <i class="fa fa-check-circle"></i>
-      </button>
-    </div>
+    
+    <div class="row" data-ng-class-odd="'odd'" data-ng-class-even="'even'"  ng-repeat="attendee in data.attendees track by $index" ng-if="!hideCheckedIn||attendee.status!='attended'">
+      <div class="chunk">
+        <div><img ng-src="{{attendee.avatar_url}}"  class="item-image" /></div><div class="h1">{{attendee.name}}</div>
+      </div>
+      <div class="chunk">
+        <div class="h3">Additional Guests: <input ng-disabled="attendee.status == 'attended'"  type="number" min=0 max=5 ng-value="{{attendee.guests}}" ng-model="attendee.guests">
+        </div>
+        <div ng-show="attendee.status != 'attended'" class="text-center">
+          <div class="btn btn-primary btn-lg text-center" ng-click="c.checkIn(attendee.sys_id, attendee.member_sys_id,  attendee.guests, attendee.rsvp)">
+            Click here to check in <i class="fa fa-check-circle"></i>
           </div>
+        </div>
+        <div ng-show="attendee.status == 'attended'" class="text-center">
+          <button class="btn btn-success btn-lg disabled text-center">
+            Already checked in <i class="fa fa-check-circle"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-</div>  
-
-  ]]></template>
+</div>  ]]></template>
     </sp_widget>
 </record_update>
