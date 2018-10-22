@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="Reimbursement" max_length="40" name="x_snc_dev_meet_reimbursement" type="collection">
+    <element audit="true" extends="task" label="Reimbursement" max_length="40" name="x_snc_dev_meet_reimbursement" sizeclass="14" type="collection">
         <element label="Number of Attendees" max_length="40" name="attendees" type="integer"/>
         <element label="Event" max_length="32" name="event" reference="x_snc_dev_meet_meetup" type="reference"/>
         <element label="Reimbursement amount" max_length="20" name="reimbursement_amount" read_only="true" type="currency"/>
