@@ -4,7 +4,7 @@
         <active>true</active>
         <api_name>x_snc_dev_meet.MeetupREST</api_name>
         <client_callable>false</client_callable>
-        <description/>
+        <description>e4ece2f90feb130046c28b9ae1050e06</description>
         <name>MeetupREST</name>
         <script><![CDATA[var MeetupREST = Class.create();
 MeetupREST.prototype = {
@@ -65,11 +65,8 @@ MeetupREST.prototype = {
 				//gs.addInfoMessage('Syncing '+body.member.name);
 				var pic = 'https://secure.meetupstatic.com/img/noPhoto_50.png';
 				if(body.member.hasOwnProperty('photo')){
-					if(body.member.photo.hasOwnProperty('thumb')){
-						pic = body.member.photo.thumb;
-					}
-					if(body.member.photo.hasOwnProperty('thumb_link')){
-						pic = body.member.photo.thumb_link;
+					if(body.member.photo.hasOwnProperty('photo_link')){
+						pic = body.member.photo.photo_link;
 					}
 				}
 				var rsvp = 'no';
@@ -254,6 +251,107 @@ MeetupREST.prototype = {
 		
 	},
 	
+	syncMembersForGroup: function(groupId, lastSyncTime) {
+		gs.debug("In syncMembersForGroup {0} {1}", groupId, lastSyncTime);
+		var lastSyncTimeEpoch = 0;
+		try {
+			lastSyncTimeEpoch = lastSyncTime.getNumericValue();
+		} catch (err) {
+			
+		}
+		var page = 200;
+		var offset = 0;
+		var keepGoing = true;
+		
+		var mu = new MeetupREST();
+		
+		while (keepGoing) {
+			var r = new sn_ws.RESTMessageV2('x_snc_dev_meet.Meetup.com API', "GET Members for Group");
+			r.setStringParameterNoEscape('group_id',  groupId);
+			r.setStringParameterNoEscape('key', gs.getProperty('x_snc_dev_meet.key'));
+			r.setStringParameterNoEscape('order',  "joined");
+			r.setLogLevel('all');			r.setStringParameterNoEscape('offset', offset.toString());
+			r.setStringParameterNoEscape('page', page);
+			
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var responseObj = JSON.parse(responseBody);
+			var httpStatus = response.getStatusCode();
+			
+			if(httpStatus!=200){
+				gs.debug(responseBody.error.message);
+				gs.debug(responseBody.error.detail);
+				keepGoing = false;
+				
+			} else {
+				if (responseObj.meta.count == 0 ) {
+					keepGoing = false;
+				} else {
+					responseObj.results.forEach(function(body){
+					var pic = 'https://secure.meetupstatic.com/img/noPhoto_50.png';
+				if(body.hasOwnProperty('photo')){
+					if(body.photo.hasOwnProperty('photo_link')){
+						pic = body.photo.photo_link;
+					}
+				}						
+						mu.createOrUpdateMember(body.id, body.name, pic);
+						if (lastSyncTimeEpoch > body.joined) {
+							keepGoing = false;
+						}
+					});
+				}
+			}
+			offset ++;
+		}
+		mu.updateGroupLastSyncTimeToNow(groupId);
+
+	},
+	
+	createOrUpdateMember: function(id, name, photo) {
+		var gr = new GlideRecord("x_snc_dev_meet_developers");
+		gr.addQuery("id", id);
+		gr.query();
+		
+		var existingRecord = gr.next();
+		if (!existingRecord) {
+			gr.newRecord();
+			gr.setValue('id', id);
+		}
+		var originalName = gr.getValue('name');
+		var originalPhoto = gr.getValue('photo');
+		gr.setValue('name', name);
+		gr.setValue('photo', photo);
+		if (existingRecord) {
+			if (originalName != name || originalPhoto != photo ) {
+				gs.debug("Updating member record for "+ id +" old name =" + originalName +" new name = "+ name +" old photo =" + originalPhoto + " new photo = " + photo);
+				gr.update();
+			}
+		} else {
+			gr.insert();
+		}
+	},
+	
+	updateGroupLastSyncTimeToNow: function(groupId) {
+		var gr = new GlideRecord('x_snc_dev_meet_group');
+		gr.addQuery('id', groupId);
+		gr.query();
+		if (gr.next()){
+			gr.setValue('last_sync_time', new GlideDateTime());
+			gr.update();
+		}
+	},
+	
+	syncMembersForAllGroups: function() {
+		var mu = new MeetupREST();
+		var gr = new GlideRecord('x_snc_dev_meet_group');
+		gr.orderBy('last_sync_time');
+		gr.query();
+		
+		while (gr.next() ){
+			gs.debug("About to sync {0} {1} {2}", gr.name, gr.id, gr.last_sync_time);
+			mu.syncMembersForGroup(gr.id, gr.last_sync_time);
+		}
+	},
 	
 	
 	type: 'MeetupREST'
@@ -268,13 +366,13 @@ MeetupREST.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-27 21:13:42</sys_created_on>
         <sys_id>e4ece2f90feb130046c28b9ae1050e06</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name>MeetupREST</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_e4ece2f90feb130046c28b9ae1050e06</sys_update_name>
-        <sys_updated_by>ajb</sys_updated_by>
-        <sys_updated_on>2018-10-24 11:28:30</sys_updated_on>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-10-24 20:30:26</sys_updated_on>
     </sys_script_include>
 </record_update>

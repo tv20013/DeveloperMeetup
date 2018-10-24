@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" extends="task" table="x_snc_dev_meet_reimbursement">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="rsvp_count" table="x_snc_dev_meet_meetup">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
         <attributes/>
-        <audit>true</audit>
+        <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
@@ -14,10 +14,10 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label/>
+        <column_label>RSVP Count</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>0</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -27,15 +27,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element/>
+        <element>rsvp_count</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Collection">collection</internal_type>
+        <internal_type display_value="Integer">integer</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_snc_dev_meet_reimbursement</name>
+        <name>x_snc_dev_meet_meetup</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -47,21 +47,21 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass>15</sizeclass>
+        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
-        <sys_created_by>sklein</sys_created_by>
-        <sys_created_on>2018-09-07 21:07:26</sys_created_on>
-        <sys_id>ab2c72da0f91e70046c28b9ae1050e19</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_snc_dev_meet_reimbursement</sys_name>
+        <sys_created_by>ajb</sys_created_by>
+        <sys_created_on>2018-10-24 12:47:31</sys_created_on>
+        <sys_id>f76f8b1e0fd1e70046c28b9ae1050e9e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>RSVP Count</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
-        <sys_update_name>sys_dictionary_x_snc_dev_meet_reimbursement_NULL</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-10-24 11:23:17</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_snc_dev_meet_meetup_rsvp_count</sys_update_name>
+        <sys_updated_by>ajb</sys_updated_by>
+        <sys_updated_on>2018-10-24 12:48:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

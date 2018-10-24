@@ -9,6 +9,7 @@
         <element label="Last sync time" max_length="40" name="last_sync_time" type="glide_date_time"/>
         <element label="Link" max_length="256" name="link" type="url"/>
         <element display="true" label="Name" mandatory="true" max_length="256" name="name" type="string"/>
+        <element default="0" label="RSVP Count" max_length="40" name="rsvp_count" type="integer"/>
         <element choice="1" label="Status" max_length="32" name="status" type="string">
             <choice>
                 <element inactive_on_update="false" label="Draft" sequence="100" value="draft"/>

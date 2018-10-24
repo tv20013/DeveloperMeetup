@@ -126,6 +126,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_sync_time</element>
+            <position>9</position>
+            <sys_created_by>daveslusher-sn</sys_created_by>
+            <sys_created_on>2018-10-24 13:34:07</sys_created_on>
+            <sys_id>d62a17160f15e70046c28b9ae1050e98</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>daveslusher-sn</sys_updated_by>
+            <sys_updated_on>2018-10-24 13:34:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

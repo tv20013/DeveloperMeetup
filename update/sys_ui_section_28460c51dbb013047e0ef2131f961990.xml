@@ -3,182 +3,196 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
             <position>0</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>28468091dbb013047e0ef2131f961983</sys_id>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>9200db5e0fd1e70046c28b9ae1050ee4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>1</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>a8468091dbb013047e0ef2131f961983</sys_id>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>1600db5e0fd1e70046c28b9ae1050ee4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>id</element>
             <position>2</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>2c468091dbb013047e0ef2131f961983</sys_id>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>9600db5e0fd1e70046c28b9ae1050ee4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>3</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>ac468091dbb013047e0ef2131f961983</sys_id>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>1a00db5e0fd1e70046c28b9ae1050ee4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>status</element>
             <position>4</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>20468091dbb013047e0ef2131f961984</sys_id>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>9a00db5e0fd1e70046c28b9ae1050ee4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>5</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>a0468091dbb013047e0ef2131f961984</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
-            <sys_user/>
-            <type>.end_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>link</element>
-            <position>6</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>24468091dbb013047e0ef2131f961984</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>description</element>
-            <position>7</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-11 02:51:50</sys_created_on>
-            <sys_id>a4468091dbb013047e0ef2131f961984</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-11 02:51:50</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>date</element>
-            <position>8</position>
-            <sys_created_by>alex</sys_created_by>
-            <sys_created_on>2018-03-12 02:55:56</sys_created_on>
-            <sys_id>d2c0d56ddb7453047e0ef2131f961908</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>alex</sys_updated_by>
-            <sys_updated_on>2018-03-12 02:55:56</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>group</element>
-            <position>9</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-07-27 20:44:27</sys_created_on>
-            <sys_id>5227aa390feb130046c28b9ae1050e16</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-07-27 20:44:27</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>event_time</element>
-            <position>10</position>
-            <sys_created_by>daveslusher-sn</sys_created_by>
-            <sys_created_on>2018-09-18 21:52:23</sys_created_on>
-            <sys_id>c2f273fa0f24230046c28b9ae1050e96</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>daveslusher-sn</sys_updated_by>
-            <sys_updated_on>2018-09-18 21:52:23</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>last_sync_time</element>
-            <position>11</position>
-            <sys_created_by>daveslusher-sn</sys_created_by>
-            <sys_created_on>2018-09-19 00:59:37</sys_created_on>
-            <sys_id>b8dd9c470fa4230046c28b9ae1050eae</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
-            <sys_updated_by>daveslusher-sn</sys_updated_by>
-            <sys_updated_on>2018-09-19 00:59:37</sys_updated_on>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>attendee_count</element>
-            <position>12</position>
+            <position>5</position>
             <sys_created_by>ajb</sys_created_by>
-            <sys_created_on>2018-10-24 11:30:58</sys_created_on>
-            <sys_id>defdb29e0f91e70046c28b9ae1050e8e</sys_id>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>1e00db5e0fd1e70046c28b9ae1050ee4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
             <sys_updated_by>ajb</sys_updated_by>
-            <sys_updated_on>2018-10-24 11:30:58</sys_updated_on>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>rsvp_count</element>
+            <position>6</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>9e00db5e0fd1e70046c28b9ae1050ee4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>1200db5e0fd1e70046c28b9ae1050ee5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>link</element>
+            <position>8</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>9200db5e0fd1e70046c28b9ae1050ee5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>9</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>1600db5e0fd1e70046c28b9ae1050ee5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date</element>
+            <position>10</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>9600db5e0fd1e70046c28b9ae1050ee5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>group</element>
+            <position>11</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>1a00db5e0fd1e70046c28b9ae1050ee5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>event_time</element>
+            <position>12</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>9a00db5e0fd1e70046c28b9ae1050ee5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_sync_time</element>
+            <position>13</position>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:49:53</sys_created_on>
+            <sys_id>1e00db5e0fd1e70046c28b9ae1050ee5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_meetup" sys_domain="global" view="Default view">28460c51dbb013047e0ef2131f961990</sys_ui_section>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:49:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
