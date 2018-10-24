@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>sklein</sys_created_by>
         <sys_created_on>2018-09-07 22:55:20</sys_created_on>
-        <sys_id>bafcef86db112300e3a95421cf961936</sys_id>
+        <sys_id>672c72da0f91e70046c28b9ae1050e20</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Number of Attendees</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_dev_meet_reimbursement_attendees</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-10-23 20:17:59</sys_updated_on>
+        <sys_updated_on>2018-10-24 11:23:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Meetup event" max_length="40" name="x_snc_dev_meet_meetup" type="collection">
+        <element default="0" label="Attendee Count" max_length="40" name="attendee_count" type="integer"/>
         <element label="Date" max_length="40" name="date" type="glide_date"/>
         <element label="Description" max_length="1000" name="description" type="html"/>
         <element label="Event time" max_length="40" name="event_time" type="glide_date_time"/>

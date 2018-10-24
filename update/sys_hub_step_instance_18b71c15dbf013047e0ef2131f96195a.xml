@@ -6,10 +6,11 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
+        <inputs/>
         <label>REST step</label>
         <order>1</order>
         <outputs/>
-        <step_type display_value="">07a762fb47222200b4fad7527c9a7129</step_type>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
         <sys_class_name>sys_hub_step_instance</sys_class_name>
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-11 04:08:00</sys_created_on>
@@ -66,4 +67,53 @@
         <value>013d8c59dbb013047e0ef2131f96194d</value>
         <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
     </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=18b71c15dbf013047e0ef2131f96195a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>18b71c15dbf013047e0ef2131f96195a</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 04:08:00</sys_created_on>
+        <sys_id>54b71c15dbf013047e0ef2131f961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 04:08:00</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>18b71c15dbf013047e0ef2131f96195a</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 04:08:00</sys_created_on>
+        <sys_id>1cb71c15dbf013047e0ef2131f961963</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 04:08:00</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>18b71c15dbf013047e0ef2131f96195a</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 04:08:00</sys_created_on>
+        <sys_id>dcb71c15dbf013047e0ef2131f961963</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 04:08:00</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resource_path</field>
+        <id>18b71c15dbf013047e0ef2131f96195a</id>
+        <sys_created_by>alex</sys_created_by>
+        <sys_created_on>2018-03-11 04:08:00</sys_created_on>
+        <sys_id>90b71c15dbf013047e0ef2131f961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex</sys_updated_by>
+        <sys_updated_on>2018-03-11 04:08:00</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>/{{action.ah_meetup.name}}/events/{{action.ah_meetup.id}}/attendance</value>
+    </sys_element_mapping>
 </record_update>
