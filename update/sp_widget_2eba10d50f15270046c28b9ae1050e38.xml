@@ -11,12 +11,12 @@
 		c.data.guests = guests;
 		c.data.rsvp = rsvp;
 		c.server.update();
-	}
+	};
 	
 	this.submitSearch = function() {
 		c.data.searchTerm = c.searchTerm;
 		c.server.update();
-	}
+	};
 	
 	
 }]]></client_script>
@@ -172,22 +172,22 @@ function findAttendee(array, sys_id) {
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-10-20 21:03:49</sys_created_on>
         <sys_id>2eba10d50f15270046c28b9ae1050e38</sys_id>
-        <sys_mod_count>122</sys_mod_count>
+        <sys_mod_count>126</sys_mod_count>
         <sys_name>Meetup Attendee Checkin</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sp_widget_2eba10d50f15270046c28b9ae1050e38</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-10-21 14:16:59</sys_updated_on>
+        <sys_updated_on>2018-10-29 16:21:27</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div ng-if="!data.meetup_id" >
     <div class="h1">
       Choose a Meetup Event for Check-in
     </div>
-    <select  ng-model="data.meetup_id" ng-change="c.server.update()">
-      <option ng-repeat="meetup in data.meetup_list" value="{{meetup.sys_id}}">{{meetup.title}} - {{meetup.group_name}}</option>
-    </select>
+    <select  ng-model="data.meetup_id" ng-change="c.server.update()" >
+      <option ng-repeat="meetup in data.meetup_list | orderBy: 'group_name' " value="{{meetup.sys_id}}">{{meetup.group_name}} - {{meetup.title}}</option>
+    </select
   </div>
     
   <div ng-if="data.meetup_id">
