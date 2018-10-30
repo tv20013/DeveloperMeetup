@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Meetup Properties">a75145a9db3453047e0ef2131f9619bf</category>
+        <order>300</order>
+        <property display_value="x_snc_dev_meet.max_reimbursement.quarterly" name="x_snc_dev_meet.max_reimbursement.quarterly">51191b9fdb98e740e3a95421cf961938</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-10-30 12:02:14</sys_created_on>
+        <sys_id>baae7d180fe9230046c28b9ae1050e7d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_snc_dev_meet.max_reimbursement.quarterly.Meetup Properties</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_baae7d180fe9230046c28b9ae1050e7d</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-10-30 12:07:35</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

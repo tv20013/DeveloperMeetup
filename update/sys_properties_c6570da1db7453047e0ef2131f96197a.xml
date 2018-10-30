@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>Obtain on https://secure.meetup.com/meetup_api/key/</description>
+        <description>Get your Meetup.com API key from https://secure.meetup.com/meetup_api/key/ </description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
         <name>x_snc_dev_meet.key</name>
@@ -11,16 +11,16 @@
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-12 02:15:10</sys_created_on>
         <sys_id>c6570da1db7453047e0ef2131f96197a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>x_snc_dev_meet.key</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_properties_c6570da1db7453047e0ef2131f96197a</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-08-24 19:13:36</sys_updated_on>
+        <sys_updated_on>2018-10-30 12:06:10</sys_updated_on>
         <type>string</type>
-        <value>7301175726d286419b65431c7b7a26</value>
+        <value>API-KEY</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=c6570da1db7453047e0ef2131f96197a"/>
