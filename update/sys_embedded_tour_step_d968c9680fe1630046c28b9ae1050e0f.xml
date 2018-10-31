@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_step">
+    <sys_embedded_tour_step action="INSERT_OR_UPDATE">
+        <action>true</action>
+        <action_event>click</action_event>
+        <action_target/>
+        <action_target_ref/>
+        <active>true</active>
+        <content><![CDATA[Hello! If you are creating your first Reimbursement Request, this will show you the necessary pieces to create a valid request. There are a few steps that may not be obvious so we will walk you through them.]]></content>
+        <guide display_value="Meetup Reimbursement Intro">dee7c5280fe1630046c28b9ae1050e5e</guide>
+        <implicit>false</implicit>
+        <link/>
+        <name>Introduction</name>
+        <options/>
+        <order>-200</order>
+        <placement>bottom</placement>
+        <step_type>intro</step_type>
+        <sys_class_name>sys_embedded_tour_step</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-10-31 02:43:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d968c9680fe1630046c28b9ae1050e0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Introduction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_embedded_tour_step_d968c9680fe1630046c28b9ae1050e0f</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-10-31 02:43:35</sys_updated_on>
+        <target/>
+        <target_ref/>
+        <title><![CDATA[Creating Reimbursement Requests for Meetups]]></title>
+        <ui_version>dynamic</ui_version>
+        <view/>
+        <window/>
+    </sys_embedded_tour_step>
+    <sys_translated_text action="delete_multiple" query="documentkey=d968c9680fe1630046c28b9ae1050e0f"/>
+</record_update>

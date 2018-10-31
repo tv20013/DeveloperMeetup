@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_step">
+    <sys_embedded_tour_step action="INSERT_OR_UPDATE">
+        <action>false</action>
+        <action_event>click</action_event>
+        <action_target/>
+        <action_target_ref/>
+        <active>true</active>
+        <content><![CDATA[Thank you for your efforts in organizing ServiceNow Developer Meetups. As we grow, we need to implement more controls and policy around the reimbursements. This is to help manage our budget and to keep the pending requests organized. It is why we use ServiceNow in our businesses, and we aim to do the same with our Meetups.
+
+Best of luck, and if you have any problems reach out to Developer.Meetups&#64;servicenow.com]]></content>
+        <guide display_value="Meetup Reimbursement Intro">dee7c5280fe1630046c28b9ae1050e5e</guide>
+        <implicit>false</implicit>
+        <link/>
+        <name>Conclusion</name>
+        <options/>
+        <order>-100</order>
+        <placement>bottom</placement>
+        <step_type>concl</step_type>
+        <sys_class_name>sys_embedded_tour_step</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-10-31 03:02:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>14cc01ac0fe1630046c28b9ae1050e86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Conclusion</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_embedded_tour_step_14cc01ac0fe1630046c28b9ae1050e86</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-10-31 03:02:38</sys_updated_on>
+        <target/>
+        <target_ref/>
+        <title/>
+        <ui_version>dynamic</ui_version>
+        <view/>
+        <window/>
+    </sys_embedded_tour_step>
+    <sys_translated_text action="delete_multiple" query="documentkey=14cc01ac0fe1630046c28b9ae1050e86"/>
+</record_update>
