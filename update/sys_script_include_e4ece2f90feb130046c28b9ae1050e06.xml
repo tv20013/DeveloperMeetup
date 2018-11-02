@@ -146,6 +146,7 @@ MeetupREST.prototype = {
 		gr.query();
 		while (gr.next()) {
 			this.getEventsForGroup(gr.getUniqueValue(), gr.getValue("url"));
+			this.sleep(5000);
 		}
 	},
 	
@@ -302,6 +303,7 @@ MeetupREST.prototype = {
 				}
 			}
 			offset ++;
+			this.sleep(5000);
 		}
 		mu.updateGroupLastSyncTimeToNow(groupId);
 
@@ -350,8 +352,16 @@ MeetupREST.prototype = {
 		while (gr.next() ){
 			gs.debug("About to sync {0} {1} {2}", gr.name, gr.id, gr.last_sync_time);
 			mu.syncMembersForGroup(gr.id, gr.last_sync_time);
+			this.sleep(5000);
 		}
 	},
+
+	sleep: function(ms) {
+		var unixtime_ms = new Date().getTime();
+		while(new Date().getTime() < unixtime_ms + ms) {}
+	},
+
+
 	
 	
 	type: 'MeetupREST'
@@ -360,13 +370,13 @@ MeetupREST.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-27 21:13:42</sys_created_on>
         <sys_id>e4ece2f90feb130046c28b9ae1050e06</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>MeetupREST</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_e4ece2f90feb130046c28b9ae1050e06</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-10-30 12:36:24</sys_updated_on>
+        <sys_updated_on>2018-11-02 15:59:29</sys_updated_on>
     </sys_script_include>
 </record_update>
