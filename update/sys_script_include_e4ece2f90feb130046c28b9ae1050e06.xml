@@ -226,12 +226,14 @@ MeetupREST.prototype = {
 				gs.debug(body.status);
 				gs.debug(body.urlname);
 				
-				mu.createOrUpdateGroup(body.id, body.name, body.urlname, body.status);
+				mu.createOrUpdateGroup(body.id, body.name, body.urlname, body.status, body.country);
 			});
 		}
 	},
 	
-	createOrUpdateGroup: function(id, name, urlname, status) {
+	createOrUpdateGroup: function(id, name, urlname, status, country) {
+		var mu = new MeetupUtils();
+		var country = new mu.getCountry(country);
 		var gr = new GlideRecord("x_snc_dev_meet_group");
 		gr.addQuery("id", id);
 		gr.query();
@@ -244,6 +246,7 @@ MeetupREST.prototype = {
 		gr.setValue('name', name);
 		gr.setValue('url', urlname);
 		gr.setValue(status, status == 'Active');
+		gr.country = country.getUniqueValue();
 		if (existingRecord) {
 			gr.update();
 		} else {
@@ -370,13 +373,13 @@ MeetupREST.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-27 21:13:42</sys_created_on>
         <sys_id>e4ece2f90feb130046c28b9ae1050e06</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>65</sys_mod_count>
         <sys_name>MeetupREST</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_e4ece2f90feb130046c28b9ae1050e06</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-11-02 15:59:29</sys_updated_on>
+        <sys_updated_on>2018-11-05 15:06:46</sys_updated_on>
     </sys_script_include>
 </record_update>

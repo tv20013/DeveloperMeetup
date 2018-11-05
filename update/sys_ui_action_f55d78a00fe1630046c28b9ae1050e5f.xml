@@ -5,7 +5,7 @@
         <client>false</client>
         <client_script_v2/>
         <comments/>
-        <condition>current.group.owner  == gs.getUserID()</condition>
+        <condition>current.group.owner  == gs.getUserID() ||  gs.getUser().hasRole('admin')</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -43,7 +43,7 @@ action.setRedirectURL(gr);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f55d78a00fe1630046c28b9ae1050e5f</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Create Reimbursement Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
@@ -51,7 +51,7 @@ action.setRedirectURL(gr);]]></script>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_ui_action_f55d78a00fe1630046c28b9ae1050e5f</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-10-31 02:21:43</sys_updated_on>
+        <sys_updated_on>2018-11-02 16:51:27</sys_updated_on>
         <table>x_snc_dev_meet_meetup</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

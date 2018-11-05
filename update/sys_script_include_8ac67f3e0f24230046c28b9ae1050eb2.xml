@@ -4,7 +4,7 @@
         <active>true</active>
         <api_name>x_snc_dev_meet.MeetupUtils</api_name>
         <client_callable>false</client_callable>
-        <description/>
+        <description>8ac67f3e0f24230046c28b9ae1050eb2</description>
         <name>MeetupUtils</name>
         <script><![CDATA[var MeetupUtils = Class.create();
 MeetupUtils.prototype = {
@@ -146,19 +146,28 @@ MeetupUtils.prototype = {
 		return false;
 	},
 	
+	getCountry: function(name){
+		var gr = new GlideRecord('core_country');
+		if (!gr.get('name', name) ) {
+			gr.get('iso3166_3', name);
+		}
+		
+		return gr;
+	},
+	
 	type: 'MeetupUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-09-18 22:11:33</sys_created_on>
         <sys_id>8ac67f3e0f24230046c28b9ae1050eb2</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>MeetupUtils</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_script_include_8ac67f3e0f24230046c28b9ae1050eb2</sys_update_name>
-        <sys_updated_by>sklein</sys_updated_by>
-        <sys_updated_on>2018-10-16 20:52:04</sys_updated_on>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-11-05 15:16:54</sys_updated_on>
     </sys_script_include>
 </record_update>
