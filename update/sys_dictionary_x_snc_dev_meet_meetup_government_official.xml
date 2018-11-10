@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="government_official" table="x_snc_dev_meet_group">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="government_official" table="x_snc_dev_meet_meetup">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -35,7 +35,7 @@
         <internal_type display_value="">boolean</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_snc_dev_meet_group</name>
+        <name>x_snc_dev_meet_meetup</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>daveslusher-sn</sys_created_by>
-        <sys_created_on>2018-11-10 17:57:42</sys_created_on>
-        <sys_id>e069fbf30fa96b0046c28b9ae1050e31</sys_id>
+        <sys_created_on>2018-11-10 20:10:30</sys_created_on>
+        <sys_id>14b75c080ff96b0046c28b9ae1050e16</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Government official present?</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
-        <sys_update_name>sys_dictionary_x_snc_dev_meet_group_government_official</sys_update_name>
+        <sys_update_name>sys_dictionary_x_snc_dev_meet_meetup_government_official</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-11-10 17:57:42</sys_updated_on>
+        <sys_updated_on>2018-11-10 20:10:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

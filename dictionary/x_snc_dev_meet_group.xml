@@ -3,7 +3,6 @@
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
         <element label="Current event" max_length="40" name="current_event" type="string"/>
-        <element label="Government official present?" max_length="40" name="government_official" type="boolean"/>
         <element label="ID" max_length="40" name="id" type="string"/>
         <element label="Last sync time" max_length="40" name="last_sync_time" type="glide_date_time"/>
         <element display="true" label="Name" max_length="40" name="name" type="string"/>
