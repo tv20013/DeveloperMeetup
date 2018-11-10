@@ -25,7 +25,11 @@ while (meetup.next()) {
 	attendees.query();
 	meetup.attendee_count = 0;
 	meetup.rsvp_count = 0;
+	meetup.government_official = false;
 	while (attendees.next()) {
+		if (attendees.government_official) {
+			meetup.government_official = true;
+		}
 		if(attendees.status == 'attended'){
 			meetup.attendee_count += 1 + attendees.guests;
 		} else {
@@ -46,14 +50,14 @@ while (meetup.next()) {
         <sys_created_by>ajb</sys_created_by>
         <sys_created_on>2018-10-24 11:27:55</sys_created_on>
         <sys_id>801dfa1e0f91e70046c28b9ae1050ecf</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Post Event Attendance</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sysauto_script_801dfa1e0f91e70046c28b9ae1050ecf</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-11-02 14:22:44</sys_updated_on>
+        <sys_updated_on>2018-11-10 18:53:10</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

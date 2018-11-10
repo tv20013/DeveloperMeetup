@@ -5,11 +5,12 @@
   /* widget controller */
   var c = this;
 	
-	this.checkIn = function(attendee_sys_id, member_sys_id, guests, rsvp) {
+	this.checkIn = function(attendee_sys_id, member_sys_id, guests, rsvp, government_official) {
 		c.data.attendee_sys_id = attendee_sys_id;
 		c.data.member_sys_id = member_sys_id;
 		c.data.guests = guests;
 		c.data.rsvp = rsvp;
+		c.data.government_official = government_official;
 		c.server.update();
 	};
 	
@@ -75,6 +76,7 @@
 				if (updateAttendee.get(input.attendee_sys_id) ) {
 					updateAttendee.setValue('guests', input.guests);
 					updateAttendee.setValue('status', 'attended');
+					updateAttendee.setValue('government_official', true);					
 					updateAttendee.update();
 				}
 			} else {
@@ -84,6 +86,7 @@
 				updateAttendee.setValue('guests', input.guests);
 				updateAttendee.setValue('rsvp', 'yes');
 				updateAttendee.setValue('status', 'attended');
+				updateAttendee.setValue('government_official', true);					
 				updateAttendee.insert();				
 			}	
 		}
@@ -135,8 +138,9 @@
 		
 		attendee.status = gr.getValue('status');
 		attendee.guests = parseInt(gr.getValue('guests').toString(), 10);
-		attendee.name =		developer.getValue('name');
 		attendee.sys_id = gr.getUniqueValue();
+		attendee.government_official = gr.getDisplayValue('government_official') == 'true';
+		attendee.name =		developer.getValue('name');
 		attendee.member_sys_id = developer.getUniqueValue();
 		attendee.avatar_url = developer.getValue('photo');
 		attendee.rsvp = true;
@@ -172,14 +176,14 @@ function findAttendee(array, sys_id) {
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-10-20 21:03:49</sys_created_on>
         <sys_id>2eba10d50f15270046c28b9ae1050e38</sys_id>
-        <sys_mod_count>127</sys_mod_count>
+        <sys_mod_count>144</sys_mod_count>
         <sys_name>Meetup Attendee Checkin</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sp_widget_2eba10d50f15270046c28b9ae1050e38</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-10-30 18:10:53</sys_updated_on>
+        <sys_updated_on>2018-11-10 18:47:02</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div ng-if="!data.meetup_id" >
     <div class="h1">
@@ -216,10 +220,10 @@ function findAttendee(array, sys_id) {
         <div><img ng-src="{{attendee.avatar_url}}"  class="item-image" /></div><div class="h1">{{attendee.name}}</div>
       </div>
       <div class="chunk">
-        <div class="h3">Additional Guests: <input ng-disabled="attendee.status == 'attended'"  type="number" min=0 max=5 ng-value="{{attendee.guests}}" ng-model="attendee.guests">
+        <div class="h3">Additional Guests: <input ng-disabled="attendee.status == 'attended'"  type="number" min=0 max=5 ng-value="{{attendee.guests}}" ng-model="attendee.guests" />
         </div>
         <div ng-show="attendee.status != 'attended'" class="text-center">
-          <div class="btn btn-primary btn-lg text-center" ng-click="c.checkIn(attendee.sys_id, attendee.member_sys_id,  attendee.guests, attendee.rsvp)">
+          <div class="btn btn-primary btn-lg text-center" ng-click="c.checkIn(attendee.sys_id, attendee.member_sys_id,  attendee.guests, attendee.rsvp, attendee.government_official)">
             Click here to check in <i class="fa fa-check-circle"></i>
           </div>
         </div>
@@ -227,6 +231,8 @@ function findAttendee(array, sys_id) {
           <button class="btn btn-success btn-lg disabled text-center">
             Already checked in <i class="fa fa-check-circle"></i>
           </button>
+        </div>
+        <div class="h3">Government official?<input ng-disabled="attendee.status == 'attended'"  type="checkbox" ng-model="attendee.government_official" />
         </div>
       </div>
     </div>
