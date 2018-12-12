@@ -5,12 +5,13 @@
   /* widget controller */
   var c = this;
 	
-	this.checkIn = function(attendee_sys_id, member_sys_id, guests, rsvp, government_official) {
+	this.checkIn = function(attendee_sys_id, member_sys_id, guests, rsvp, government_official, checking_in) {
 		c.data.attendee_sys_id = attendee_sys_id;
 		c.data.member_sys_id = member_sys_id;
 		c.data.guests = guests;
 		c.data.rsvp = rsvp;
 		c.data.government_official = government_official;
+		c.data.checking_in = checking_in;
 		c.server.update();
 	};
 	
@@ -71,12 +72,19 @@
 		if (input.searchTerm) {
 			data.searchTerm = input.searchTerm;
 		}		
+		
+		
+		
 		if (input.attendee_sys_id|| input.member_sys_id) {
 			if (input.rsvp == true) {
 				if (updateAttendee.get(input.attendee_sys_id) ) {
 					updateAttendee.setValue('guests', input.guests);
-					updateAttendee.setValue('status', 'attended');
-					updateAttendee.setValue('government_official', true);					
+					if (input.checking_in) {
+						updateAttendee.setValue('status', 'attended');						
+					} else {
+						updateAttendee.setValue('status', 'absent');
+					}
+					updateAttendee.setValue('government_official', input.government_official);					
 					updateAttendee.update();
 				}
 			} else {
@@ -84,9 +92,8 @@
 				updateAttendee.meetup = data.meetup_id;
 				updateAttendee.developer = input.member_sys_id;
 				updateAttendee.setValue('guests', input.guests);
-				updateAttendee.setValue('rsvp', 'yes');
 				updateAttendee.setValue('status', 'attended');
-				updateAttendee.setValue('government_official', true);					
+				updateAttendee.setValue('government_official', input.government_official);					
 				updateAttendee.insert();				
 			}	
 		}
@@ -129,6 +136,7 @@
 	
 	var gr = new GlideRecord('x_snc_dev_meet_attendees');
 	gr.addQuery('meetup', data.meetup_id);
+	gr.addQuery('rsvp', 'yes')
 	gr.orderBy('developer.name');
 	gr.query();
 	
@@ -176,14 +184,14 @@ function findAttendee(array, sys_id) {
         <sys_created_by>daveslusher-sn</sys_created_by>
         <sys_created_on>2018-10-20 21:03:49</sys_created_on>
         <sys_id>2eba10d50f15270046c28b9ae1050e38</sys_id>
-        <sys_mod_count>144</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_name>Meetup Attendee Checkin</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sp_widget_2eba10d50f15270046c28b9ae1050e38</sys_update_name>
         <sys_updated_by>daveslusher-sn</sys_updated_by>
-        <sys_updated_on>2018-11-10 18:47:02</sys_updated_on>
+        <sys_updated_on>2018-12-12 15:11:10</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div ng-if="!data.meetup_id" >
     <div class="h1">
@@ -223,13 +231,13 @@ function findAttendee(array, sys_id) {
         <div class="h3">Additional Guests: <input ng-disabled="attendee.status == 'attended'"  type="number" min=0 max=5 ng-value="{{attendee.guests}}" ng-model="attendee.guests" />
         </div>
         <div ng-show="attendee.status != 'attended'" class="text-center">
-          <div class="btn btn-primary btn-lg text-center" ng-click="c.checkIn(attendee.sys_id, attendee.member_sys_id,  attendee.guests, attendee.rsvp, attendee.government_official)">
+          <div class="btn btn-primary btn-lg text-center" ng-click="c.checkIn(attendee.sys_id, attendee.member_sys_id,  attendee.guests, attendee.rsvp, attendee.government_official, true)">
             Click here to check in <i class="fa fa-check-circle"></i>
           </div>
         </div>
         <div ng-show="attendee.status == 'attended'" class="text-center">
-          <button class="btn btn-success btn-lg disabled text-center">
-            Already checked in <i class="fa fa-check-circle"></i>
+          <button class="btn btn-success btn-lg text-center" ng-click="c.checkIn(attendee.sys_id, attendee.member_sys_id,  attendee.guests, attendee.rsvp, attendee.government_official, false)">
+            Click here to remove check in <i class="fa fa-check-circle"></i>
           </button>
         </div>
         <div class="h3">Government official?<input ng-disabled="attendee.status == 'attended'"  type="checkbox" ng-model="attendee.government_official" />

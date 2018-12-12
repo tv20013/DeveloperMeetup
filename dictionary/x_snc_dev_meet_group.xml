@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Group" max_length="40" name="x_snc_dev_meet_group" type="collection">
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="City" max_length="100" name="city" type="string"/>
         <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
         <element label="Current event" max_length="40" name="current_event" type="string"/>
         <element label="ID" max_length="40" name="id" type="string"/>
         <element label="Last sync time" max_length="40" name="last_sync_time" type="glide_date_time"/>
-        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element display="true" label="Name" max_length="100" name="name" type="string"/>
         <element label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
         <element label="URL" max_length="100" name="url" type="string"/>
         <index name="index">
