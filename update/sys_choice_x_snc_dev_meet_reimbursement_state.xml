@@ -80,6 +80,25 @@
             <dependent_value/>
             <element>state</element>
             <hint/>
+            <inactive>false</inactive>
+            <label>Concur</label>
+            <language>en</language>
+            <name>x_snc_dev_meet_reimbursement</name>
+            <sequence>5</sequence>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-12-20 15:18:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>31c45d700fa26f0046c28b9ae1050e17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-12-20 15:18:58</sys_updated_on>
+            <value>13</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
             <inactive>true</inactive>
             <label>Closed Incomplete</label>
             <language>en</language>

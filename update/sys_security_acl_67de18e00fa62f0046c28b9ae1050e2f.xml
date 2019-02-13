@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Allow write for id in x_snc_dev_meet_group, for users with role x_snc_dev_meet.admin.</description>
+        <name>x_snc_dev_meet_group.id</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>ajb</sys_created_by>
+        <sys_created_on>2018-12-19 17:10:24</sys_created_on>
+        <sys_id>67de18e00fa62f0046c28b9ae1050e2f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_snc_dev_meet_group.id</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_security_acl_67de18e00fa62f0046c28b9ae1050e2f</sys_update_name>
+        <sys_updated_by>ajb</sys_updated_by>
+        <sys_updated_on>2018-12-19 17:23:19</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>
