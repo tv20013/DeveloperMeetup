@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection>x_snc_dev_meet_admin_task</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 12pt;">Hi ${event.group.owner},</span></p>
+<p><span style="font-size: 12pt;">I hope you are getting excited about your Meetup!&nbsp;</span></p>
+<p><span style="font-size: 12pt;">Here are a few things to keep in mind before your event:</span></p>
+<ul>
+<li style="font-size: 12pt;"><span style="font-size: 11px;"><span style="font-size: 12pt;">Make sure to record all of the event attendees in the Developer app.</span></span></li>
+<li style="font-size: 12pt;"><span style="font-size: 11px;"><span style="font-size: 12pt;">If you can, try to take pictures from the event, that way you can post them to your Meetup.com chapter page.</span></span></li>
+<li style="font-size: 12pt;"><span style="font-size: 11px;"><span style="font-size: 12pt;">When you request a reimbursement, please provide a detailed receipt and keep your expenses below $15/person per Meetup up to $500/quarter for your events. You can request a reimbursement through the attendance app.&nbsp;</span></span></li>
+</ul>
+<p><span style="font-size: 12pt;">Please let me know if you need anything from my end in the meantime and thank you for your efforts as an organizer!</span></p>
+<p><span style="font-size: 12pt;">Best,</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Tanvi Gokhale</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Platform Product Marketing Co-op</span></p>
+<p><span style="font-size: 12pt;"><strong><a href="https://www.servicenow.com/">servicenow</a></strong></span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Meetup Approaching</name>
+        <sms_alternate/>
+        <subject>Your ServiceNow Developer Meetup is in Two Days!</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-15 16:46:26</sys_created_on>
+        <sys_id>60cb55c1dbe00c508966ff561d96192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meetup Approaching</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sysevent_email_template_60cb55c1dbe00c508966ff561d96192e</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:46:26</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

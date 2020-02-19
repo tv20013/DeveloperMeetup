@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_ï__status" label="ï»¿Status" language="en" table="x_snc_dev_meet_devattend">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_ï__status</element>
+            <help/>
+            <hint/>
+            <label>ï»¿Status</label>
+            <language>en</language>
+            <name>x_snc_dev_meet_devattend</name>
+            <plural>ï»¿Status</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2019-09-12 17:12:01</sys_created_on>
+            <sys_id>1385ef9edbb77b008966ff561d961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ï»¿Status</sys_name>
+            <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_dev_meet_devattend_u_ï__status_en</sys_update_name>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2019-09-12 17:12:01</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

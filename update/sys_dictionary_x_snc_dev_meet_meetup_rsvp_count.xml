@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>ajb</sys_created_by>
         <sys_created_on>2018-10-24 12:47:31</sys_created_on>
-        <sys_id>99999e990f25e30046c28b9ae1050e4f</sys_id>
+        <sys_id>f36408f7dbc273008966ff561d9619d0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>RSVP Count</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_dev_meet_meetup_rsvp_count</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-11-02 16:33:54</sys_updated_on>
+        <sys_updated_on>2019-06-21 16:49:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

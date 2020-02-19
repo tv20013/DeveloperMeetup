@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sc_cat_item display_value="Request meetup SWAG">0fc808b5db494850f4e6364e9d961988</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-11 15:12:48</sys_created_on>
+        <sys_id>79a980f5db494850f4e6364e9d9619f7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>meetup .Request meetup SWAG</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>io_set_item_79a980f5db494850f4e6364e9d9619f7</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-11 15:12:48</sys_updated_on>
+        <variable_set display_value="meetup ">e664c1d7dba004108966ff561d961921</variable_set>
+    </io_set_item>
+</record_update>

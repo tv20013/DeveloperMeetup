@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>meetup_promoting</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.group","label":"Trigger➛Meetup event Record➛Group","reference":"x_snc_dev_meet_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_snc_dev_meet_meetup","column_name":"group"},{"name":"69124bad-f9b3-4f24-b0af-7288af96e470.Record","label":"2➛Admin Task Record","reference":"x_snc_dev_meet_admin_task","reference_display":"Admin Task","type":"reference","base_type":"reference"},{"name":"69124bad-f9b3-4f24-b0af-7288af96e470.Table","label":"2➛Admin Task Table","reference":"x_snc_dev_meet_admin_task","reference_display":"Admin Task","type":"table_name","base_type":"table_name"},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger➛Meetup event Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_meetup","column_name":"sys_created_by"},{"name":"Created or Updated_1.table_name","label":"Trigger➛Meetup event Table","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"table_name","base_type":"table_name"},{"name":"Created or Updated_1.current.name","label":"Trigger➛Meetup event Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_meetup","column_name":"name"},{"name":"Created or Updated_1.current.date","label":"Trigger➛Meetup event Record➛Date","reference":"","reference_display":"Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_snc_dev_meet_meetup","column_name":"date"},{"name":"Created or Updated_1.current","label":"Trigger➛Meetup event Record","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference"},{"name":"Created or Updated_1.current.agenda","label":"Trigger➛Meetup event Record➛Agenda","reference":"","reference_display":"Agenda","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_meetup","column_name":"agenda"},{"name":"Created or Updated_1.current.description","label":"Trigger➛Meetup event Record➛Description","reference":"","reference_display":"Description","type":"html","base_type":"html","parent_table_name":"x_snc_dev_meet_meetup","column_name":"description"},{"name":"6d838e0a-e51f-46e6-affe-3570beb99eae.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"6d838e0a-e51f-46e6-affe-3570beb99eae.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"6d838e0a-e51f-46e6-affe-3570beb99eae.Record.default_assignee.name","label":"1➛Group Record➛Default assignee➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"6d838e0a-e51f-46e6-affe-3570beb99eae.Record.default_assignee","label":"1➛Group Record➛Default assignee","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user_group","column_name":"default_assignee"}]</label_cache>
+        <latest_snapshot>481f18f7dbba48108966ff561d961919</latest_snapshot>
+        <master_snapshot>c8734d9cdbb8c4108966ff561d96190b</master_snapshot>
+        <name>Meetup Promoting</name>
+        <outputs/>
+        <remote_trigger_id>2b1df4e7dbf08050f4e6364e9d9619bb</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:12:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8c7ad542dbe8cc508966ff561d96191b</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Meetup Promoting</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_flow_8c7ad542dbe8cc508966ff561d96191b</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-03 19:00:05</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8c7ad542dbe8cc508966ff561d96191b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8c7ad542dbe8cc508966ff561d96191b"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_dev_meet_meetup">dateMORETHANsys_created_on@day@after@21^email_to_promote_event=true<item endquery="false" field="date" goto="false" newquery="false" operator="MORETHAN" or="false" value="sys_created_on@day@after@21"/>
+            <item endquery="false" field="email_to_promote_event" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:11:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2b1df4e7dbf08050f4e6364e9d9619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:11:19</sys_updated_on>
+        <table>x_snc_dev_meet_meetup</table>
+    </sys_flow_record_trigger>
+    <sys_hub_flow_component action="delete_multiple" query="flow=8c7ad542dbe8cc508966ff561d96191b^sys_idNOT IN247f91c6dbe8cc508966ff561d96191f,d5cbfc67dbf08050f4e6364e9d96198c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:42</sys_created_on>
+        <sys_id>247f91c6dbe8cc508966ff561d96191f</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-12 21:44:04</sys_updated_on>
+        <ui_id>69124bad-f9b3-4f24-b0af-7288af96e470</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=247f91c6dbe8cc508966ff561d96191f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>247f91c6dbe8cc508966ff561d96191f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:43</sys_created_on>
+        <sys_id>a87f91c6dbe8cc508966ff561d961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:34:43</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">957cdff1531003003bf1d9109ec58753</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>247f91c6dbe8cc508966ff561d96191f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:40</sys_created_on>
+        <sys_id>c4730d9cdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:40</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=247f91c6dbe8cc508966ff561d96191f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:40</sys_created_on>
+        <sys_id>44730d9cdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description=Create an email to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.^description=The agenda is:{{Created or Updated_1.current.description}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}^u_reference_1={{Created or Updated_1.current.group}}^event={{Created or Updated_1.current}}^assigned_to={{6d838e0a-e51f-46e6-affe-3570beb99eae.Record.default_assignee}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:43</sys_created_on>
+        <sys_id>287f91c6dbe8cc508966ff561d961920</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 15:41:55</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value>short_description=Create an email to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.^description=An email has been requested to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.
+
+The agenda is: {{Created or Updated_1.table_name}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}^u_reference_1={{Created or Updated_1.current.group}}^event={{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:40</sys_created_on>
+        <sys_id>80730d9cdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:43</sys_created_on>
+        <sys_id>647f91c6dbe8cc508966ff561d961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:34:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:05:26</sys_created_on>
+        <sys_id>d5cbfc67dbf08050f4e6364e9d96198c</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-12 21:44:04</sys_updated_on>
+        <ui_id>6d838e0a-e51f-46e6-affe-3570beb99eae</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d5cbfc67dbf08050f4e6364e9d96198c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:26</sys_created_on>
+        <sys_id>0c0cf0a7dbf08050f4e6364e9d9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:26</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:05:26</sys_created_on>
+        <sys_id>59cbfc67dbf08050f4e6364e9d96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:05:26</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">79305e810b30030085c083eb37673a85</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:05:26</sys_created_on>
+        <sys_id>95cbfc67dbf08050f4e6364e9d96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:05:26</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">39309e810b30030085c083eb37673a59</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:26</sys_created_on>
+        <sys_id>cc0cf0a7dbf08050f4e6364e9d9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:26</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8c7ad542dbe8cc508966ff561d96191b^sys_idNOT INafcdd946dbe8cc508966ff561d961964"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:27:32</sys_created_on>
+        <sys_id>afcdd946dbe8cc508966ff561d961964</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-03 19:00:05</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=afcdd946dbe8cc508966ff561d961964"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>afcdd946dbe8cc508966ff561d961964</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:27:32</sys_created_on>
+        <sys_id>afcdd946dbe8cc508966ff561d961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:27:32</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>afcdd946dbe8cc508966ff561d961964</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:27:32</sys_created_on>
+        <sys_id>ebcdd946dbe8cc508966ff561d961965</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:11:12</sys_updated_on>
+        <value>dateMORETHANsys_created_on@day@after@21^email_to_promote_event=true</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8c7ad542dbe8cc508966ff561d96191b^sys_idNOT INc07ad542dbe8cc508966ff561d96191c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8c7ad542dbe8cc508966ff561d96191b</id>
+        <name>Meetup Promoting</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:12:50</sys_created_on>
+        <sys_id>c07ad542dbe8cc508966ff561d96191c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:12:50</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=8c7ad542dbe8cc508966ff561d96191b^sys_idNOT IN2bcd1d06dbe8cc508966ff561d9619de,abcdd946dbe8cc508966ff561d96195e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</model>
+        <model_id>8c7ad542dbe8cc508966ff561d96191b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8c7ad542dbe8cc508966ff561d96191b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:27:32</sys_created_on>
+        <sys_id>2bcd1d06dbe8cc508966ff561d9619de</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-03 19:00:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</model>
+        <model_id>8c7ad542dbe8cc508966ff561d96191b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8c7ad542dbe8cc508966ff561d96191b</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:27:32</sys_created_on>
+        <sys_id>abcdd946dbe8cc508966ff561d96195e</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-03 19:00:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8c7ad542dbe8cc508966ff561d96191b^sys_idNOT IN247f91c6dbe8cc508966ff561d96191f,d5cbfc67dbf08050f4e6364e9d96198c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:42</sys_created_on>
+        <sys_id>247f91c6dbe8cc508966ff561d96191f</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-12 21:44:04</sys_updated_on>
+        <ui_id>69124bad-f9b3-4f24-b0af-7288af96e470</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=247f91c6dbe8cc508966ff561d96191f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>247f91c6dbe8cc508966ff561d96191f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:43</sys_created_on>
+        <sys_id>a87f91c6dbe8cc508966ff561d961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:34:43</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">957cdff1531003003bf1d9109ec58753</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>247f91c6dbe8cc508966ff561d96191f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:40</sys_created_on>
+        <sys_id>c4730d9cdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:40</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=247f91c6dbe8cc508966ff561d96191f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:40</sys_created_on>
+        <sys_id>44730d9cdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description=Create an email to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.^description=The agenda is:{{Created or Updated_1.current.description}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}^u_reference_1={{Created or Updated_1.current.group}}^event={{Created or Updated_1.current}}^assigned_to={{6d838e0a-e51f-46e6-affe-3570beb99eae.Record.default_assignee}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:43</sys_created_on>
+        <sys_id>287f91c6dbe8cc508966ff561d961920</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 15:41:55</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value>short_description=Create an email to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.^description=An email has been requested to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.
+
+The agenda is: {{Created or Updated_1.table_name}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}^u_reference_1={{Created or Updated_1.current.group}}^event={{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:40</sys_created_on>
+        <sys_id>80730d9cdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>247f91c6dbe8cc508966ff561d96191f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:34:43</sys_created_on>
+        <sys_id>647f91c6dbe8cc508966ff561d961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:34:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:05:26</sys_created_on>
+        <sys_id>d5cbfc67dbf08050f4e6364e9d96198c</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-12 21:44:04</sys_updated_on>
+        <ui_id>6d838e0a-e51f-46e6-affe-3570beb99eae</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d5cbfc67dbf08050f4e6364e9d96198c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:26</sys_created_on>
+        <sys_id>0c0cf0a7dbf08050f4e6364e9d9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:26</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:05:26</sys_created_on>
+        <sys_id>59cbfc67dbf08050f4e6364e9d96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:05:26</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">79305e810b30030085c083eb37673a85</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:05:26</sys_created_on>
+        <sys_id>95cbfc67dbf08050f4e6364e9d96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:05:26</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">39309e810b30030085c083eb37673a59</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5cbfc67dbf08050f4e6364e9d96198c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:26</sys_created_on>
+        <sys_id>cc0cf0a7dbf08050f4e6364e9d9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:26</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8c7ad542dbe8cc508966ff561d96191b^sys_idNOT INafcdd946dbe8cc508966ff561d961962,ebcdd946dbe8cc508966ff561d96195d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8c7ad542dbe8cc508966ff561d96191b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:27:32</sys_created_on>
+        <sys_id>afcdd946dbe8cc508966ff561d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_8c7ad542dbe8cc508966ff561d96191b_table_name_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:27:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8c7ad542dbe8cc508966ff561d96191b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-18 19:27:32</sys_created_on>
+        <sys_id>ebcdd946dbe8cc508966ff561d96195d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_8c7ad542dbe8cc508966ff561d96191b_current_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-18 19:27:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=8c7ad542dbe8cc508966ff561d96191b^sys_idNOT IN54734d9cdbb8c4108966ff561d961964"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"54734d9cdbb8c4108966ff561d961964","name":"plan"}}</plan>
+        <plan_id>8c7ad542dbe8cc508966ff561d96191b</plan_id>
+        <snapshot>481f18f7dbba48108966ff561d961919</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>54734d9cdbb8c4108966ff561d961964</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:11:19</sys_updated_on>
+        <trigger display_value="">2b1df4e7dbf08050f4e6364e9d9619bb</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>meetup_promoting</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current","label":"Trigger➛Meetup event Record","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference"},{"name":"Created or Updated_1.current.date","label":"Trigger➛Meetup event Record➛Date","reference":"","reference_display":"Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_snc_dev_meet_meetup","column_name":"date"},{"name":"Created or Updated_1.current.name","label":"Trigger➛Meetup event Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_meetup","column_name":"name"},{"name":"Created or Updated_1.table_name","label":"Trigger➛Meetup event Table","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"table_name","base_type":"table_name"},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger➛Meetup event Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_meetup","column_name":"sys_created_by"},{"name":"69124bad-f9b3-4f24-b0af-7288af96e470.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"69124bad-f9b3-4f24-b0af-7288af96e470.Record","label":"1➛Record","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"Created or Updated_1.current.group","label":"Trigger➛Meetup event Record➛Group","reference":"x_snc_dev_meet_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_snc_dev_meet_meetup","column_name":"group"}]</label_cache>
+        <master>true</master>
+        <name>Meetup Promoting</name>
+        <outputs/>
+        <parent_flow display_value="Meetup Promoting">8c7ad542dbe8cc508966ff561d96191b</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>c8734d9cdbb8c4108966ff561d96190b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=c8734d9cdbb8c4108966ff561d96190b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c8734d9cdbb8c4108966ff561d96190b"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=c8734d9cdbb8c4108966ff561d96190b^sys_idNOT IN90734d9cdbb8c4108966ff561d96194a,d80c34a7dbf08050f4e6364e9d961926"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">c8734d9cdbb8c4108966ff561d96190b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>90734d9cdbb8c4108966ff561d96194a</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <ui_id>69124bad-f9b3-4f24-b0af-7288af96e470</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=90734d9cdbb8c4108966ff561d96194a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>90734d9cdbb8c4108966ff561d96194a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>18734d9cdbb8c4108966ff561d96194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=90734d9cdbb8c4108966ff561d96194a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>90734d9cdbb8c4108966ff561d96194a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>94734d9cdbb8c4108966ff561d96194b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description=Create an email to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.^description=The agenda is:{{Created or Updated_1.current.description}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}^u_reference_1={{Created or Updated_1.current.group}}^event={{Created or Updated_1.current}}^assigned_to={{6d838e0a-e51f-46e6-affe-3570beb99eae.Record.default_assignee}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>90734d9cdbb8c4108966ff561d96194a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>d0734d9cdbb8c4108966ff561d96194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">c8734d9cdbb8c4108966ff561d96190b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:27</sys_created_on>
+        <sys_id>d80c34a7dbf08050f4e6364e9d961926</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <ui_id>6d838e0a-e51f-46e6-affe-3570beb99eae</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d80c34a7dbf08050f4e6364e9d961926"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d80c34a7dbf08050f4e6364e9d961926</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:27</sys_created_on>
+        <sys_id>180c34a7dbf08050f4e6364e9d961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:27</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d80c34a7dbf08050f4e6364e9d961926</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:27</sys_created_on>
+        <sys_id>540c34a7dbf08050f4e6364e9d961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:27</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=c8734d9cdbb8c4108966ff561d96190b^sys_idNOT IN1c734d9cdbb8c4108966ff561d96194b"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Meetup Promoting">c8734d9cdbb8c4108966ff561d96190b</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>1c734d9cdbb8c4108966ff561d96194b</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:35</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1c734d9cdbb8c4108966ff561d96194b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>1c734d9cdbb8c4108966ff561d96194b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>94734d9cdbb8c4108966ff561d96194d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>1c734d9cdbb8c4108966ff561d96194b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>d0734d9cdbb8c4108966ff561d96194d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:11:18</sys_updated_on>
+        <value>dateMORETHANsys_created_on@day@after@21^email_to_promote_event=true</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c8734d9cdbb8c4108966ff561d96190b^sys_idNOT INcc734d9cdbb8c4108966ff561d96190b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c8734d9cdbb8c4108966ff561d96190b</id>
+        <name>Meetup Promoting</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>cc734d9cdbb8c4108966ff561d96190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=c8734d9cdbb8c4108966ff561d96190b^sys_idNOT IN58734d9cdbb8c4108966ff561d96193e,8c734d9cdbb8c4108966ff561d96190c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Meetup Promoting">c8734d9cdbb8c4108966ff561d96190b</model>
+        <model_id>c8734d9cdbb8c4108966ff561d96190b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c8734d9cdbb8c4108966ff561d96190b</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>58734d9cdbb8c4108966ff561d96193e</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Meetup Promoting">c8734d9cdbb8c4108966ff561d96190b</model>
+        <model_id>c8734d9cdbb8c4108966ff561d96190b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c8734d9cdbb8c4108966ff561d96190b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>8c734d9cdbb8c4108966ff561d96190c</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=c8734d9cdbb8c4108966ff561d96190b^sys_idNOT IN90734d9cdbb8c4108966ff561d96194a,d80c34a7dbf08050f4e6364e9d961926"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">c8734d9cdbb8c4108966ff561d96190b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>90734d9cdbb8c4108966ff561d96194a</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <ui_id>69124bad-f9b3-4f24-b0af-7288af96e470</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=90734d9cdbb8c4108966ff561d96194a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>90734d9cdbb8c4108966ff561d96194a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>18734d9cdbb8c4108966ff561d96194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=90734d9cdbb8c4108966ff561d96194a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>90734d9cdbb8c4108966ff561d96194a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>94734d9cdbb8c4108966ff561d96194b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description=Create an email to promote {{Created or Updated_1.current.name}} on {{Created or Updated_1.current.date}}.^description=The agenda is:{{Created or Updated_1.current.description}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}^u_reference_1={{Created or Updated_1.current.group}}^event={{Created or Updated_1.current}}^assigned_to={{6d838e0a-e51f-46e6-affe-3570beb99eae.Record.default_assignee}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>90734d9cdbb8c4108966ff561d96194a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>d0734d9cdbb8c4108966ff561d96194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup Promoting">c8734d9cdbb8c4108966ff561d96190b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:27</sys_created_on>
+        <sys_id>d80c34a7dbf08050f4e6364e9d961926</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:16:34</sys_updated_on>
+        <ui_id>6d838e0a-e51f-46e6-affe-3570beb99eae</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d80c34a7dbf08050f4e6364e9d961926"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d80c34a7dbf08050f4e6364e9d961926</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:27</sys_created_on>
+        <sys_id>180c34a7dbf08050f4e6364e9d961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:27</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d80c34a7dbf08050f4e6364e9d961926</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-04 19:06:27</sys_created_on>
+        <sys_id>540c34a7dbf08050f4e6364e9d961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-04 19:06:27</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_c8734d9cdbb8c4108966ff561d96190b^sys_idNOT IN5c734d9cdbb8c4108966ff561d96191d,90734d9cdbb8c4108966ff561d961943"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c8734d9cdbb8c4108966ff561d96190b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>5c734d9cdbb8c4108966ff561d96191d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_c8734d9cdbb8c4108966ff561d96190b_current_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c8734d9cdbb8c4108966ff561d96190b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:41</sys_created_on>
+        <sys_id>90734d9cdbb8c4108966ff561d961943</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_c8734d9cdbb8c4108966ff561d96190b_table_name_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

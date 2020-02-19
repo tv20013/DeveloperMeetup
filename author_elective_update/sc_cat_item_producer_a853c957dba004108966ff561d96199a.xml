@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="DELETE">
+        <active>false</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Meetup SWAG request</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <post_insert_script/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=a853c957dba004108966ff561d96199a&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <redirect_url>generated_record</redirect_url>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <script/>
+        <short_description>Request SWAG for an event</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 14:48:45</sys_created_on>
+        <sys_id>a853c957dba004108966ff561d96199a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Meetup SWAG request</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sc_cat_item_producer_a853c957dba004108966ff561d96199a</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-11 15:44:34</sys_updated_on>
+        <table_name>x_snc_dev_meet_admin_task</table_name>
+        <template display_value="Meetup req SWAG">fc2cfbb1db784c108966ff561d9619e3</template>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="DELETE" query="documentkey=a853c957dba004108966ff561d96199a"/>
+    <fx_price action="DELETE" query="id=a853c957dba004108966ff561d96199a"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>a853c957dba004108966ff561d96199a</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 14:48:45</sys_created_on>
+        <sys_id>f65441d7dba004108966ff561d96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:48:45</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>a853c957dba004108966ff561d96199a</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 14:48:46</sys_created_on>
+        <sys_id>7e5441d7dba004108966ff561d96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:48:46</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</application>
+        <file_path/>
+        <instance_id>6833e2dedbed7f4442b321c4059619fb</instance_id>
+        <instance_name>devprogramdev</instance_name>
+        <name>sc_cat_item_producer_a853c957dba004108966ff561d96199a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_producer"><sc_cat_item_producer action="INSERT_OR_UPDATE"><active>false</active><availability>on_desktop</availability><billable>false</billable><can_cancel>false</can_cancel><category/><cost>0</cost><custom_cart/><delivery_plan/><delivery_plan_script/><delivery_time>1970-01-03 00:00:00</delivery_time><description/><display_price_property>non_zero</display_price_property><entitlement_script/><flow_designer_flow/><group/><hide_sp>false</hide_sp><icon/><ignore_price>false</ignore_price><image/><list_price>0</list_price><location/><mandatory_attachment>false</mandatory_attachment><meta/><mobile_hide_price>false</mobile_hide_price><mobile_picture/><mobile_picture_type>use_desktop_picture</mobile_picture_type><model/><name>Meetup SWAG request</name><no_attachment_v2>false</no_attachment_v2><no_cart>false</no_cart><no_cart_v2>false</no_cart_v2><no_delivery_time_v2>false</no_delivery_time_v2><no_order>false</no_order><no_order_now>false</no_order_now><no_proceed_checkout>false</no_proceed_checkout><no_quantity>false</no_quantity><no_quantity_v2>false</no_quantity_v2><no_search>false</no_search><no_wishlist_v2>false</no_wishlist_v2><omit_price>false</omit_price><order>0</order><ordered_item_link/><picture/><post_insert_script/><preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=a853c957dba004108966ff561d96199a&amp;sysparm_preview=true", "summary");</preview><price>0</price><recurring_frequency/><recurring_price>0</recurring_price><redirect_url>generated_record</redirect_url><request_method/><roles/><sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs><sc_ic_item_staging/><sc_ic_version/><script/><short_description>Request SWAG for an event</short_description><show_variable_help_on_load>false</show_variable_help_on_load><start_closed>false</start_closed><sys_class_name>sc_cat_item_producer</sys_class_name><sys_created_by>andrew.barnes</sys_created_by><sys_created_on>2019-10-22 14:48:45</sys_created_on><sys_id>a853c957dba004108966ff561d96199a</sys_id><sys_mod_count>8</sys_mod_count><sys_name>Meetup SWAG request</sys_name><sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package><sys_policy/><sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope><sys_update_name>sc_cat_item_producer_a853c957dba004108966ff561d96199a</sys_update_name><sys_updated_by>andrew.barnes</sys_updated_by><sys_updated_on>2019-11-11 15:44:34</sys_updated_on><table_name>x_snc_dev_meet_admin_task</table_name><template display_value="Meetup req SWAG">fc2cfbb1db784c108966ff561d9619e3</template><type>item</type><use_sc_layout>true</use_sc_layout><vendor/><view/><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><workflow/></sc_cat_item_producer><sys_translated_text action="delete_multiple" query="documentkey=a853c957dba004108966ff561d96199a"/><fx_price action="delete_multiple" query="id=a853c957dba004108966ff561d96199a"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>price</field><id>a853c957dba004108966ff561d96199a</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>andrew.barnes</sys_created_by><sys_created_on>2019-10-22 14:48:45</sys_created_on><sys_id>f65441d7dba004108966ff561d96198d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>andrew.barnes</sys_updated_by><sys_updated_on>2019-10-22 14:48:45</sys_updated_on><table>sc_cat_item_producer</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>recurring_price</field><id>a853c957dba004108966ff561d96199a</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>andrew.barnes</sys_created_by><sys_created_on>2019-10-22 14:48:46</sys_created_on><sys_id>7e5441d7dba004108966ff561d96198e</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>andrew.barnes</sys_updated_by><sys_updated_on>2019-10-22 14:48:46</sys_updated_on><table>sc_cat_item_producer</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>472809856</payload_hash>
+        <record_name>Meetup SWAG request</record_name>
+        <reverted_from/>
+        <source>586441efdbcbbf00f4e6364e9d9619ff</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-11 15:44:35</sys_created_on>
+        <sys_id>e3e098bddb494850f4e6364e9d96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e5b235fba0000001</sys_recorded_at>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-11 15:44:35</sys_updated_on>
+        <type>Record Producer</type>
+        <update_guid>2fe098bda849485039a58409bcb76f3b</update_guid>
+        <update_guid_history>2fe098bda849485039a58409bcb76f3b:472809856,d12008bd98094850752df52213e9741f:-1201657005,d8fc5b946805445083d181749f2b1285:2100179756,95ac77f106784c104fa67f3986187728:-2007491431,f37b37b1e8784c1026e00f9197b6ab00:-570028154,339ab771f4784c100c962394e0fd64dc:-707340627,3ca3e9575a240410d5b4b3c72e29ed93:1992829927,ed894ddb74a004108eb2f887fac14785:1468688960,b25441d726a004105a81d3b1bd669f95:-1134787182</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Meetup SWAG request">73e098bddb494850f4e6364e9d961972</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-11 15:44:36</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_producer">sc_cat_item_producer</sys_db_object>
+        <sys_id>033f42893dd041c4868469b94af47661</sys_id>
+        <sys_metadata>a853c957dba004108966ff561d96199a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meetup SWAG request</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_parent display_value="Admin Task">a9a6fec3db5844508966ff561d961963</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_scope_delete display_value="">716442a2bac64c55b95b14a8129b9061</sys_scope_delete>
+        <sys_update_name>sc_cat_item_producer_a853c957dba004108966ff561d96199a</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_producer_a853c957dba004108966ff561d96199a">e3e098bddb494850f4e6364e9d96193c</sys_update_version>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-11 15:44:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -48,7 +48,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-27 20:46:52</sys_created_on>
-        <sys_id>8d999e990f25e30046c28b9ae1050e2c</sys_id>
+        <sys_id>a76408f7dbc273008966ff561d961962</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_dev_meet_m2m_member_group</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
@@ -56,7 +56,7 @@
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_dev_meet_m2m_member_group_NULL</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-11-02 16:33:52</sys_updated_on>
+        <sys_updated_on>2019-06-21 16:49:40</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -3,6 +3,7 @@
         <access>package_private</access>
         <active>true</active>
         <api_name>x_snc_dev_meet.MeetupREST</api_name>
+        <caller_access/>
         <client_callable>false</client_callable>
         <description>e4ece2f90feb130046c28b9ae1050e06</description>
         <name>MeetupREST</name>

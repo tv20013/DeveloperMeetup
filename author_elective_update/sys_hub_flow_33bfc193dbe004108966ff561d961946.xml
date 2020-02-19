@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>meetup_organizer_need_help</internal_name>
+        <label_cache>[{"name":"61ff6581-4ec1-4d65-8932-297959353372.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"61ff6581-4ec1-4d65-8932-297959353372.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"Created_1.current","label":"Trigger➛Admin Task Record","reference":"x_snc_dev_meet_admin_task","reference_display":"Admin Task","type":"reference","base_type":"reference"},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer","label":"1➛meetup_organizer","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_event","label":"1➛meetup_event","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need","label":"1➛what_assistance_do_you_need","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Record","label":"2➛Record","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"}]</label_cache>
+        <latest_snapshot>5c83cd9cdbb8c4108966ff561d9619ad</latest_snapshot>
+        <master_snapshot>5c83cd9cdbb8c4108966ff561d9619ad</master_snapshot>
+        <name>Meetup organizer need help</name>
+        <outputs/>
+        <remote_trigger_id>2483cd9cdbb8c4108966ff561d9619e7</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:38:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>33bfc193dbe004108966ff561d961946</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Meetup organizer need help</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_flow_33bfc193dbe004108966ff561d961946</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:45:54</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=33bfc193dbe004108966ff561d961946"/>
+    <sys_variable_value action="DELETE" query="document_key=33bfc193dbe004108966ff561d961946"/>
+    <sys_flow_catalog_trigger action="DELETE">
+        <active>true</active>
+        <catalog_item/>
+        <name/>
+        <run_flow_in>background</run_flow_in>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2483cd9cdbb8c4108966ff561d9619e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+    </sys_flow_catalog_trigger>
+    <sys_hub_flow_component action="DELETE" query="flow=33bfc193dbe004108966ff561d961946^sys_idNOT IN47c15517dbe004108966ff561d96196e,8bc15517dbe004108966ff561d96196a"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>47c15517dbe004108966ff561d96196e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <ui_id>18e39e5f-0dd2-4e76-85a4-efa6dab91f6b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=47c15517dbe004108966ff561d96196e"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>47c15517dbe004108966ff561d96196e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>0883cd9cdbb8c4108966ff561d96197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>47c15517dbe004108966ff561d96196e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>cbc15517dbe004108966ff561d96196f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">957cdff1531003003bf1d9109ec58753</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=47c15517dbe004108966ff561d96196e"/>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>8483cd9cdbb8c4108966ff561d96197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>4bc15517dbe004108966ff561d96196f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 18:43:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value>short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>c083cd9cdbb8c4108966ff561d96197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>87c15517dbe004108966ff561d96196f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>8bc15517dbe004108966ff561d96196a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <ui_id>a8d78547-625d-48e8-bb97-0baa28609682</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=8bc15517dbe004108966ff561d96196a"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>4c83cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <value>400ac51fdba004108966ff561d961953</value>
+        <variable display_value="">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>87c15517dbe004108966ff561d96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <value>400ac51fdba004108966ff561d961953</value>
+        <variable display_value="">9de09916c31332002841b63b12d3ae1b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>8883cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <value>0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b</value>
+        <variable display_value="">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>c3c15517dbe004108966ff561d96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <value>0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b</value>
+        <variable display_value="">7de09916c31332002841b63b12d3ae1b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=8bc15517dbe004108966ff561d96196a"/>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>cbc15517dbe004108966ff561d96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>8083cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>43c15517dbe004108966ff561d96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>0883cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>8fc15517dbe004108966ff561d96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>4483cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="DELETE" query="flow=33bfc193dbe004108966ff561d961946^sys_idNOT IN47c15517dbe004108966ff561d961968"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>47c15517dbe004108966ff561d961968</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=47c15517dbe004108966ff561d961968"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=33bfc193dbe004108966ff561d961946^sys_idNOT IN7bbfc193dbe004108966ff561d961946"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>33bfc193dbe004108966ff561d961946</id>
+        <name>Meetup organizer need help</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:38:32</sys_created_on>
+        <sys_id>7bbfc193dbe004108966ff561d961946</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:38:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="DELETE" query="model=33bfc193dbe004108966ff561d961946^sys_idNOT IN0bc11dd3dbe004108966ff561d96192b,4bc15517dbe004108966ff561d96195f"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</model>
+        <model_id>33bfc193dbe004108966ff561d961946</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:29</sys_created_on>
+        <sys_id>0bc11dd3dbe004108966ff561d96192b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</model>
+        <model_id>33bfc193dbe004108966ff561d961946</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:29</sys_created_on>
+        <sys_id>4bc15517dbe004108966ff561d96195f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="DELETE" query="flow=33bfc193dbe004108966ff561d961946^sys_idNOT IN47c15517dbe004108966ff561d96196e,8bc15517dbe004108966ff561d96196a"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>47c15517dbe004108966ff561d96196e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <ui_id>18e39e5f-0dd2-4e76-85a4-efa6dab91f6b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=47c15517dbe004108966ff561d96196e"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>47c15517dbe004108966ff561d96196e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>0883cd9cdbb8c4108966ff561d96197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>47c15517dbe004108966ff561d96196e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>cbc15517dbe004108966ff561d96196f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">957cdff1531003003bf1d9109ec58753</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=47c15517dbe004108966ff561d96196e"/>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>8483cd9cdbb8c4108966ff561d96197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>4bc15517dbe004108966ff561d96196f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 18:43:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value>short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>c083cd9cdbb8c4108966ff561d96197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>47c15517dbe004108966ff561d96196e</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>87c15517dbe004108966ff561d96196f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>8bc15517dbe004108966ff561d96196a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <ui_id>a8d78547-625d-48e8-bb97-0baa28609682</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=8bc15517dbe004108966ff561d96196a"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>4c83cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <value>400ac51fdba004108966ff561d961953</value>
+        <variable display_value="">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>87c15517dbe004108966ff561d96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <value>400ac51fdba004108966ff561d961953</value>
+        <variable display_value="">9de09916c31332002841b63b12d3ae1b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>8883cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <value>0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b</value>
+        <variable display_value="">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8bc15517dbe004108966ff561d96196a</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>c3c15517dbe004108966ff561d96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <value>0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b</value>
+        <variable display_value="">7de09916c31332002841b63b12d3ae1b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=8bc15517dbe004108966ff561d96196a"/>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>cbc15517dbe004108966ff561d96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>8083cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>43c15517dbe004108966ff561d96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>0883cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>8fc15517dbe004108966ff561d96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>8bc15517dbe004108966ff561d96196a</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:57</sys_created_on>
+        <sys_id>4483cd9cdbb8c4108966ff561d96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946^sys_idNOT IN07c15517dbe004108966ff561d961966,cfc11dd3dbe004108966ff561d96192f"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:30</sys_created_on>
+        <sys_id>07c15517dbe004108966ff561d961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946_table_name_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:30</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 15:47:29</sys_created_on>
+        <sys_id>cfc11dd3dbe004108966ff561d96192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Item</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946_request_item_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:47:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=33bfc193dbe004108966ff561d961946^sys_idNOT INe883cd9cdbb8c4108966ff561d9619e7"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>33bfc193dbe004108966ff561d961946</plan_id>
+        <snapshot>5c83cd9cdbb8c4108966ff561d9619ad</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e883cd9cdbb8c4108966ff561d9619e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <trigger display_value="">2483cd9cdbb8c4108966ff561d9619e7</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>meetup_organizer_need_help</internal_name>
+        <label_cache>[{"name":"61ff6581-4ec1-4d65-8932-297959353372.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"61ff6581-4ec1-4d65-8932-297959353372.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"Created_1.current","label":"Trigger➛Admin Task Record","reference":"x_snc_dev_meet_admin_task","reference_display":"Admin Task","type":"reference","base_type":"reference"},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer","label":"1➛meetup_organizer","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_event","label":"1➛meetup_event","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need","label":"1➛what_assistance_do_you_need","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Record","label":"2➛Record","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"}]</label_cache>
+        <master>true</master>
+        <name>Meetup organizer need help</name>
+        <outputs/>
+        <parent_flow display_value="Meetup organizer need help">33bfc193dbe004108966ff561d961946</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5c83cd9cdbb8c4108966ff561d9619ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=5c83cd9cdbb8c4108966ff561d9619ad"/>
+    <sys_variable_value action="DELETE" query="document_key=5c83cd9cdbb8c4108966ff561d9619ad"/>
+    <sys_hub_flow_component action="DELETE" query="flow=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN9883cd9cdbb8c4108966ff561d9619d2,ec83cd9cdbb8c4108966ff561d9619d6"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">5c83cd9cdbb8c4108966ff561d9619ad</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>9883cd9cdbb8c4108966ff561d9619d2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <ui_id>a8d78547-625d-48e8-bb97-0baa28609682</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=9883cd9cdbb8c4108966ff561d9619d2"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9883cd9cdbb8c4108966ff561d9619d2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>9483cd9cdbb8c4108966ff561d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <value>400ac51fdba004108966ff561d961953</value>
+        <variable display_value="">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9883cd9cdbb8c4108966ff561d9619d2</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>d083cd9cdbb8c4108966ff561d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <value>0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b</value>
+        <variable display_value="">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=9883cd9cdbb8c4108966ff561d9619d2"/>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>9883cd9cdbb8c4108966ff561d9619d2</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>d883cd9cdbb8c4108966ff561d9619d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>9883cd9cdbb8c4108966ff561d9619d2</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>5083cd9cdbb8c4108966ff561d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>9883cd9cdbb8c4108966ff561d9619d2</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>9c83cd9cdbb8c4108966ff561d9619d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">5c83cd9cdbb8c4108966ff561d9619ad</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>ec83cd9cdbb8c4108966ff561d9619d6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <ui_id>18e39e5f-0dd2-4e76-85a4-efa6dab91f6b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=ec83cd9cdbb8c4108966ff561d9619d6"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ec83cd9cdbb8c4108966ff561d9619d6</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>6483cd9cdbb8c4108966ff561d9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=ec83cd9cdbb8c4108966ff561d9619d6"/>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>ec83cd9cdbb8c4108966ff561d9619d6</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>e083cd9cdbb8c4108966ff561d9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>ec83cd9cdbb8c4108966ff561d9619d6</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>2083cd9cdbb8c4108966ff561d9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="DELETE" query="flow=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN6883cd9cdbb8c4108966ff561d9619d8"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">5c83cd9cdbb8c4108966ff561d9619ad</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>6883cd9cdbb8c4108966ff561d9619d8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:59</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=6883cd9cdbb8c4108966ff561d9619d8"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN5083cd9cdbb8c4108966ff561d9619ae"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>5c83cd9cdbb8c4108966ff561d9619ad</id>
+        <name>Meetup organizer need help</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>5083cd9cdbb8c4108966ff561d9619ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="DELETE" query="model=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN1083cd9cdbb8c4108966ff561d9619af,1483cd9cdbb8c4108966ff561d9619c8"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Meetup organizer need help">5c83cd9cdbb8c4108966ff561d9619ad</model>
+        <model_id>5c83cd9cdbb8c4108966ff561d9619ad</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>1083cd9cdbb8c4108966ff561d9619af</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Meetup organizer need help">5c83cd9cdbb8c4108966ff561d9619ad</model>
+        <model_id>5c83cd9cdbb8c4108966ff561d9619ad</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>1483cd9cdbb8c4108966ff561d9619c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="DELETE" query="flow=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN9883cd9cdbb8c4108966ff561d9619d2,ec83cd9cdbb8c4108966ff561d9619d6"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">5c83cd9cdbb8c4108966ff561d9619ad</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>9883cd9cdbb8c4108966ff561d9619d2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <ui_id>a8d78547-625d-48e8-bb97-0baa28609682</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=9883cd9cdbb8c4108966ff561d9619d2"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9883cd9cdbb8c4108966ff561d9619d2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>9483cd9cdbb8c4108966ff561d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <value>400ac51fdba004108966ff561d961953</value>
+        <variable display_value="">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9883cd9cdbb8c4108966ff561d9619d2</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>d083cd9cdbb8c4108966ff561d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <value>0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b</value>
+        <variable display_value="">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=9883cd9cdbb8c4108966ff561d9619d2"/>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>9883cd9cdbb8c4108966ff561d9619d2</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>d883cd9cdbb8c4108966ff561d9619d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>9883cd9cdbb8c4108966ff561d9619d2</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>5083cd9cdbb8c4108966ff561d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>9883cd9cdbb8c4108966ff561d9619d2</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>9c83cd9cdbb8c4108966ff561d9619d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Meetup organizer need help">5c83cd9cdbb8c4108966ff561d9619ad</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>ec83cd9cdbb8c4108966ff561d9619d6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <ui_id>18e39e5f-0dd2-4e76-85a4-efa6dab91f6b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=ec83cd9cdbb8c4108966ff561d9619d6"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ec83cd9cdbb8c4108966ff561d9619d6</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>6483cd9cdbb8c4108966ff561d9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <value>x_snc_dev_meet_admin_task</value>
+        <variable display_value="">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=ec83cd9cdbb8c4108966ff561d9619d6"/>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>ec83cd9cdbb8c4108966ff561d9619d6</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>e083cd9cdbb8c4108966ff561d9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>ec83cd9cdbb8c4108966ff561d9619d6</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>2083cd9cdbb8c4108966ff561d9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN1083cd9cdbb8c4108966ff561d9619b6,5c83cd9cdbb8c4108966ff561d9619cc"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>1083cd9cdbb8c4108966ff561d9619b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad_table_name_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:18:58</sys_created_on>
+        <sys_id>5c83cd9cdbb8c4108966ff561d9619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Item</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad_request_item_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:18:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</application>
+        <file_path/>
+        <instance_id>6833e2dedbed7f4442b321c4059619fb</instance_id>
+        <instance_name>devprogramdev</instance_name>
+        <name>sys_hub_flow_33bfc193dbe004108966ff561d961946</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;internal_name&gt;meetup_organizer_need_help&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"61ff6581-4ec1-4d65-8932-297959353372.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"61ff6581-4ec1-4d65-8932-297959353372.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"Created_1.current","label":"Trigger➛Admin Task Record","reference":"x_snc_dev_meet_admin_task","reference_display":"Admin Task","type":"reference","base_type":"reference"},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer","label":"1➛meetup_organizer","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_event","label":"1➛meetup_event","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need","label":"1➛what_assistance_do_you_need","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Record","label":"2➛Record","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"}]&lt;/label_cache&gt;&lt;latest_snapshot&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/latest_snapshot&gt;&lt;master_snapshot&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/master_snapshot&gt;&lt;name&gt;Meetup organizer need help&lt;/name&gt;&lt;outputs/&gt;&lt;remote_trigger_id&gt;2483cd9cdbb8c4108966ff561d9619e7&lt;/remote_trigger_id&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:38:32&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;33bfc193dbe004108966ff561d961946&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Meetup organizer need help&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Developer Meetup" source="x_snc_dev_meet"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_33bfc193dbe004108966ff561d961946&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-30 18:45:54&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=33bfc193dbe004108966ff561d961946"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=33bfc193dbe004108966ff561d961946"/&gt;&lt;sys_flow_catalog_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;catalog_item/&gt;&lt;name/&gt;&lt;run_flow_in&gt;background&lt;/run_flow_in&gt;&lt;sys_class_name&gt;sys_flow_catalog_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:59&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;2483cd9cdbb8c4108966ff561d9619e7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;/sys_flow_catalog_trigger&gt;&lt;sys_hub_flow_component action="delete_multiple" query="flow=33bfc193dbe004108966ff561d961946^sys_idNOT IN47c15517dbe004108966ff561d96196e,8bc15517dbe004108966ff561d96196a"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Task"&gt;2b3a6335531003003bf1d9109ec58759&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;47c15517dbe004108966ff561d96196e&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;18e39e5f-0dd2-4e76-85a4-efa6dab91f6b&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=47c15517dbe004108966ff561d96196e"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;47c15517dbe004108966ff561d96196e&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;0883cd9cdbb8c4108966ff561d96197d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_dev_meet_admin_task&lt;/value&gt;&lt;variable display_value=""&gt;e73a6335531003003bf1d9109ec5875c&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;47c15517dbe004108966ff561d96196e&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;cbc15517dbe004108966ff561d96196f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_dev_meet_admin_task&lt;/value&gt;&lt;variable display_value=""&gt;957cdff1531003003bf1d9109ec58753&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=47c15517dbe004108966ff561d96196e"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8483cd9cdbb8c4108966ff561d96197d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value&gt;short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;4bc15517dbe004108966ff561d96196f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-23 18:43:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775&lt;/table&gt;&lt;value&gt;short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;c083cd9cdbb8c4108966ff561d96197d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;87c15517dbe004108966ff561d96196f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;8bc15517dbe004108966ff561d96196a&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;a8d78547-625d-48e8-bb97-0baa28609682&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=8bc15517dbe004108966ff561d96196a"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;4c83cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;value&gt;400ac51fdba004108966ff561d961953&lt;/value&gt;&lt;variable display_value=""&gt;bb0ba3abc31013002841b63b12d3aef1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;87c15517dbe004108966ff561d96196c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;value&gt;400ac51fdba004108966ff561d961953&lt;/value&gt;&lt;variable display_value=""&gt;9de09916c31332002841b63b12d3ae1b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8883cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;value&gt;0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b&lt;/value&gt;&lt;variable display_value=""&gt;7b0ba3abc31013002841b63b12d3aef7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;c3c15517dbe004108966ff561d96196c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;value&gt;0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b&lt;/value&gt;&lt;variable display_value=""&gt;7de09916c31332002841b63b12d3ae1b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=8bc15517dbe004108966ff561d96196a"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;cbc15517dbe004108966ff561d96196b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8083cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;43c15517dbe004108966ff561d96196c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;0883cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;8fc15517dbe004108966ff561d96196b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;4483cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=33bfc193dbe004108966ff561d961946^sys_idNOT IN47c15517dbe004108966ff561d961968"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/flow&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_class_name&gt;sys_hub_trigger_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;47c15517dbe004108966ff561d961968&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=47c15517dbe004108966ff561d961968"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=33bfc193dbe004108966ff561d961946^sys_idNOT IN7bbfc193dbe004108966ff561d961946"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;33bfc193dbe004108966ff561d961946&lt;/id&gt;&lt;name&gt;Meetup organizer need help&lt;/name&gt;&lt;sys_class_name&gt;sys_flow_cat_variable_model&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:38:32&lt;/sys_created_on&gt;&lt;sys_id&gt;7bbfc193dbe004108966ff561d961946&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:38:32&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=33bfc193dbe004108966ff561d961946^sys_idNOT IN0bc11dd3dbe004108966ff561d96192b,4bc15517dbe004108966ff561d96195f"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/model&gt;&lt;model_id&gt;33bfc193dbe004108966ff561d961946&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:29&lt;/sys_created_on&gt;&lt;sys_id&gt;0bc11dd3dbe004108966ff561d96192b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/model&gt;&lt;model_id&gt;33bfc193dbe004108966ff561d961946&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;true&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:29&lt;/sys_created_on&gt;&lt;sys_id&gt;4bc15517dbe004108966ff561d96195f&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=33bfc193dbe004108966ff561d961946^sys_idNOT IN47c15517dbe004108966ff561d96196e,8bc15517dbe004108966ff561d96196a"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Task"&gt;2b3a6335531003003bf1d9109ec58759&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;47c15517dbe004108966ff561d96196e&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;18e39e5f-0dd2-4e76-85a4-efa6dab91f6b&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=47c15517dbe004108966ff561d96196e"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;47c15517dbe004108966ff561d96196e&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;0883cd9cdbb8c4108966ff561d96197d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_dev_meet_admin_task&lt;/value&gt;&lt;variable display_value=""&gt;e73a6335531003003bf1d9109ec5875c&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;47c15517dbe004108966ff561d96196e&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;cbc15517dbe004108966ff561d96196f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_dev_meet_admin_task&lt;/value&gt;&lt;variable display_value=""&gt;957cdff1531003003bf1d9109ec58753&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=47c15517dbe004108966ff561d96196e"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8483cd9cdbb8c4108966ff561d96197d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value&gt;short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;4bc15517dbe004108966ff561d96196f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-23 18:43:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775&lt;/table&gt;&lt;value&gt;short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;c083cd9cdbb8c4108966ff561d96197d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;47c15517dbe004108966ff561d96196e&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;87c15517dbe004108966ff561d96196f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_3f9b1ff1531003003bf1d9109ec58775&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;8bc15517dbe004108966ff561d96196a&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;a8d78547-625d-48e8-bb97-0baa28609682&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=8bc15517dbe004108966ff561d96196a"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;4c83cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;value&gt;400ac51fdba004108966ff561d961953&lt;/value&gt;&lt;variable display_value=""&gt;bb0ba3abc31013002841b63b12d3aef1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;87c15517dbe004108966ff561d96196c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;value&gt;400ac51fdba004108966ff561d961953&lt;/value&gt;&lt;variable display_value=""&gt;9de09916c31332002841b63b12d3ae1b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8883cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;value&gt;0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b&lt;/value&gt;&lt;variable display_value=""&gt;7b0ba3abc31013002841b63b12d3aef7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;8bc15517dbe004108966ff561d96196a&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;c3c15517dbe004108966ff561d96196c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;value&gt;0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b&lt;/value&gt;&lt;variable display_value=""&gt;7de09916c31332002841b63b12d3ae1b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=8bc15517dbe004108966ff561d96196a"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;cbc15517dbe004108966ff561d96196b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8083cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;43c15517dbe004108966ff561d96196c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;0883cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;8fc15517dbe004108966ff561d96196b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_22f0b88cc3c632002841b63b12d3aeff&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;8bc15517dbe004108966ff561d96196a&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:57&lt;/sys_created_on&gt;&lt;sys_id&gt;4483cd9cdbb8c4108966ff561d96197b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:57&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946^sys_idNOT IN07c15517dbe004108966ff561d961966,cfc11dd3dbe004108966ff561d96192f"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:30&lt;/sys_created_on&gt;&lt;sys_id&gt;07c15517dbe004108966ff561d961966&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Table Name&lt;/sys_name&gt;&lt;sys_package display_value="Developer Meetup" source="x_snc_dev_meet"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946_table_name_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:30&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 15:47:29&lt;/sys_created_on&gt;&lt;sys_id&gt;cfc11dd3dbe004108966ff561d96192f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Request Item&lt;/sys_name&gt;&lt;sys_package display_value="Developer Meetup" source="x_snc_dev_meet"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_33bfc193dbe004108966ff561d961946_request_item_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 15:47:29&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=33bfc193dbe004108966ff561d961946^sys_idNOT INe883cd9cdbb8c4108966ff561d9619e7"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.RunAlways&lt;/binding_strategy&gt;&lt;plan/&gt;&lt;plan_id&gt;33bfc193dbe004108966ff561d961946&lt;/plan_id&gt;&lt;snapshot&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/snapshot&gt;&lt;sys_class_name&gt;sys_flow_trigger_plan&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:59&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;e883cd9cdbb8c4108966ff561d9619e7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;2483cd9cdbb8c4108966ff561d9619e7&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;internal_name&gt;meetup_organizer_need_help&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"61ff6581-4ec1-4d65-8932-297959353372.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"61ff6581-4ec1-4d65-8932-297959353372.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"e0839999-dd8f-4e6f-b961-5c1839aceeac.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"Created_1.current","label":"Trigger➛Admin Task Record","reference":"x_snc_dev_meet_admin_task","reference_display":"Admin Task","type":"reference","base_type":"reference"},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer","label":"1➛meetup_organizer","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.meetup_event","label":"1➛meetup_event","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference","column_name":""},{"name":"a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need","label":"1➛what_assistance_do_you_need","reference":"","reference_display":"","type":"string","base_type":"string","column_name":""},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Record","label":"2➛Record","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"18e39e5f-0dd2-4e76-85a4-efa6dab91f6b.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Meetup organizer need help&lt;/name&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Meetup organizer need help"&gt;33bfc193dbe004108966ff561d961946&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5c83cd9cdbb8c4108966ff561d9619ad"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=5c83cd9cdbb8c4108966ff561d9619ad"/&gt;&lt;sys_hub_flow_component action="delete_multiple" query="flow=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN9883cd9cdbb8c4108966ff561d9619d2,ec83cd9cdbb8c4108966ff561d9619d6"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent display_value="Get Catalog Variables"&gt;22f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;330ba3abc31013002841b63b12d3aee8&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;a8d78547-625d-48e8-bb97-0baa28609682&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=9883cd9cdbb8c4108966ff561d9619d2"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9483cd9cdbb8c4108966ff561d9619d4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;value&gt;400ac51fdba004108966ff561d961953&lt;/value&gt;&lt;variable display_value=""&gt;bb0ba3abc31013002841b63b12d3aef1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;d083cd9cdbb8c4108966ff561d9619d4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;value&gt;0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b&lt;/value&gt;&lt;variable display_value=""&gt;7b0ba3abc31013002841b63b12d3aef7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=9883cd9cdbb8c4108966ff561d9619d2"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;d883cd9cdbb8c4108966ff561d9619d3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;5083cd9cdbb8c4108966ff561d9619d4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9c83cd9cdbb8c4108966ff561d9619d3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Task"&gt;2b3a6335531003003bf1d9109ec58759&lt;/action_type&gt;&lt;action_type_parent display_value="Create Task"&gt;3f9b1ff1531003003bf1d9109ec58775&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2b3a6335531003003bf1d9109ec58759&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;18e39e5f-0dd2-4e76-85a4-efa6dab91f6b&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ec83cd9cdbb8c4108966ff561d9619d6"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;6483cd9cdbb8c4108966ff561d9619d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_dev_meet_admin_task&lt;/value&gt;&lt;variable display_value=""&gt;e73a6335531003003bf1d9109ec5875c&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=ec83cd9cdbb8c4108966ff561d9619d6"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;e083cd9cdbb8c4108966ff561d9619d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value&gt;short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;2083cd9cdbb8c4108966ff561d9619d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN6883cd9cdbb8c4108966ff561d9619d8"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/flow&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_class_name&gt;sys_hub_trigger_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;6883cd9cdbb8c4108966ff561d9619d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:59&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=6883cd9cdbb8c4108966ff561d9619d8"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN5083cd9cdbb8c4108966ff561d9619ae"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/id&gt;&lt;name&gt;Meetup organizer need help&lt;/name&gt;&lt;sys_class_name&gt;sys_flow_cat_variable_model&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;5083cd9cdbb8c4108966ff561d9619ae&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN1083cd9cdbb8c4108966ff561d9619af,1483cd9cdbb8c4108966ff561d9619c8"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Meetup organizer need help"&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/model&gt;&lt;model_id&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;1083cd9cdbb8c4108966ff561d9619af&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Meetup organizer need help"&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/model&gt;&lt;model_id&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;1483cd9cdbb8c4108966ff561d9619c8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN9883cd9cdbb8c4108966ff561d9619d2,ec83cd9cdbb8c4108966ff561d9619d6"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent display_value="Get Catalog Variables"&gt;22f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;330ba3abc31013002841b63b12d3aee8&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;a8d78547-625d-48e8-bb97-0baa28609682&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=9883cd9cdbb8c4108966ff561d9619d2"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9483cd9cdbb8c4108966ff561d9619d4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;value&gt;400ac51fdba004108966ff561d961953&lt;/value&gt;&lt;variable display_value=""&gt;bb0ba3abc31013002841b63b12d3aef1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;d083cd9cdbb8c4108966ff561d9619d4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;value&gt;0da445d7dba004108966ff561d9619ec,dea7819bdba004108966ff561d96191b,68aac15fdba004108966ff561d96197b&lt;/value&gt;&lt;variable display_value=""&gt;7b0ba3abc31013002841b63b12d3aef7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=9883cd9cdbb8c4108966ff561d9619d2"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;d883cd9cdbb8c4108966ff561d9619d3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;5083cd9cdbb8c4108966ff561d9619d4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;9883cd9cdbb8c4108966ff561d9619d2&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9c83cd9cdbb8c4108966ff561d9619d3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Task"&gt;2b3a6335531003003bf1d9109ec58759&lt;/action_type&gt;&lt;action_type_parent display_value="Create Task"&gt;3f9b1ff1531003003bf1d9109ec58775&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2b3a6335531003003bf1d9109ec58759&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Meetup organizer need help"&gt;5c83cd9cdbb8c4108966ff561d9619ad&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;18e39e5f-0dd2-4e76-85a4-efa6dab91f6b&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ec83cd9cdbb8c4108966ff561d9619d6"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;6483cd9cdbb8c4108966ff561d9619d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;value&gt;x_snc_dev_meet_admin_task&lt;/value&gt;&lt;variable display_value=""&gt;e73a6335531003003bf1d9109ec5875c&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=ec83cd9cdbb8c4108966ff561d9619d6"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;e083cd9cdbb8c4108966ff561d9619d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value&gt;short_description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}}is requesting assistance with a meetup.^description={{a8d78547-625d-48e8-bb97-0baa28609682.meetup_organizer}} is running an event in {{a8d78547-625d-48e8-bb97-0baa28609682.meetup_event}}. 
+They need this assistance: {{a8d78547-625d-48e8-bb97-0baa28609682.what_assistance_do_you_need}}^assignment_group={"display":"Meetup intern","value":"43b4b08bdbe0c0108966ff561d961974"}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;ec83cd9cdbb8c4108966ff561d9619d6&lt;/id&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;2083cd9cdbb8c4108966ff561d9619d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad^sys_idNOT IN1083cd9cdbb8c4108966ff561d9619b6,5c83cd9cdbb8c4108966ff561d9619cc"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;1083cd9cdbb8c4108966ff561d9619b6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Table Name&lt;/sys_name&gt;&lt;sys_package display_value="Developer Meetup" source="x_snc_dev_meet"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad_table_name_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-25 17:18:58&lt;/sys_created_on&gt;&lt;sys_id&gt;5c83cd9cdbb8c4108966ff561d9619cc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Request Item&lt;/sys_name&gt;&lt;sys_package display_value="Developer Meetup" source="x_snc_dev_meet"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_5c83cd9cdbb8c4108966ff561d9619ad_request_item_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-25 17:18:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2132807642</payload_hash>
+        <record_name>Meetup organizer need help</record_name>
+        <reverted_from/>
+        <source>586441efdbcbbf00f4e6364e9d9619ff</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:45:55</sys_created_on>
+        <sys_id>f6578f71dbb44c108966ff561d9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e1dfd14600000001</sys_recorded_at>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:45:55</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>32578f715ab44c10dcd62a9a7c35f8ec</update_guid>
+        <update_guid_history>32578f715ab44c10dcd62a9a7c35f8ec:-2132807642,b48301dc0eb8c410078f10b0ddf75434:-919075139,d883cd9ce6b8c410c9772ecc29e237a2:1471204120,6eb3cfaf3ae044104a199f5128fd4c50:-954913054,93c15517ece004107f0f774eff107487:475848108,f7bfc1933ce00410b87d701a68879b49:491999737</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-07 13:55:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>126a5028f00e40c888d415bbcfa1c710</sys_id>
+        <sys_metadata>33bfc193dbe004108966ff561d961946</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meetup organizer need help</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_scope_delete display_value="">716442a2bac64c55b95b14a8129b9061</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_33bfc193dbe004108966ff561d961946</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_33bfc193dbe004108966ff561d961946">f6578f71dbb44c108966ff561d9619ec</sys_update_version>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-07 13:55:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

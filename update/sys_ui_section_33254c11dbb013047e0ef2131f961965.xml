@@ -126,6 +126,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>role</element>
+            <position>9</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2019-12-05 15:33:13</sys_created_on>
+            <sys_id>cf743751dbe188508966ff561d96196b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_attendees" sys_domain="global" view="Default view">33254c11dbb013047e0ef2131f961965</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2019-12-05 15:33:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

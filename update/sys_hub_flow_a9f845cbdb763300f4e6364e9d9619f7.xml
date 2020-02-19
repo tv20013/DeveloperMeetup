@@ -1,0 +1,3108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Take email, look for open reimbursement, move attachment</description>
+        <internal_name>attach_receipt</internal_name>
+        <label_cache>[{"name":"5d5f8f12-eecb-4750-839a-99bf15dcde32.Table","label":"2➛Reimbursement Table","reference":"x_snc_dev_meet_reimbursement","reference_display":"Reimbursement","type":"table_name","base_type":"table_name"},{"name":"5d5f8f12-eecb-4750-839a-99bf15dcde32.Record","label":"2➛Reimbursement Record","reference":"x_snc_dev_meet_reimbursement","reference_display":"Reimbursement","type":"reference","base_type":"reference"},{"name":"e0b9839e-d277-4308-9fa4-0138b917712f.Record.number","label":"2➛Reimbursement Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_reimbursement","column_name":"number"},{"name":"91fd80b5-51e6-44bf-b05e-c89d4b5b2e0e.Record.u_user","label":"1➛Google Account Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"u_google_account","column_name":"u_user"},{"name":"e0b9839e-d277-4308-9fa4-0138b917712f.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"e0b9839e-d277-4308-9fa4-0138b917712f.Record","label":"2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"Inbound Email_1.from_address","label":"Trigger➛From address","type":"string_full_utf8","base_type":"string_full_utf8"},{"name":"91fd80b5-51e6-44bf-b05e-c89d4b5b2e0e.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"91fd80b5-51e6-44bf-b05e-c89d4b5b2e0e.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"Inbound Email_1.inbound_email","label":"Trigger➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"42932e7a-1dd3-4117-93f6-f4893edf19ee.header_value","label":"1➛Header value","reference_display":"Header value","type":"string","base_type":"string"},{"name":"dc825fb2-eaa0-4902-80f3-a8e38d067bff.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"dc825fb2-eaa0-4902-80f3-a8e38d067bff.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"dc825fb2-eaa0-4902-80f3-a8e38d067bff.Record.u_user","label":"1➛Google Account Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"u_google_account","column_name":"u_user"},{"name":"5d5f8f12-eecb-4750-839a-99bf15dcde32.Record.number","label":"2➛Reimbursement Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_reimbursement","column_name":"number"}]</label_cache>
+        <latest_snapshot>53c3dd0bdbb233008966ff561d961917</latest_snapshot>
+        <master_snapshot>d12fcdc7dbb63300f4e6364e9d96190c</master_snapshot>
+        <name>Attach Receipt</name>
+        <outputs/>
+        <remote_trigger_id>f52fcdc7dbb63300f4e6364e9d9619a3</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:40:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a9f845cbdb763300f4e6364e9d9619f7</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Attach Receipt</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_flow_a9f845cbdb763300f4e6364e9d9619f7</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=a9f845cbdb763300f4e6364e9d9619f7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a9f845cbdb763300f4e6364e9d9619f7"/>
+    <sys_flow_email_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <email_conditions table="sys_email">subjectLIKEReimbursement<item endquery="false" field="subject" goto="false" newquery="false" operator="LIKE" or="false" value="Reimbursement"/>
+        </email_conditions>
+        <event_name>email.read</event_name>
+        <name/>
+        <order/>
+        <stop_condition_evaluation>true</stop_condition_evaluation>
+        <sys_class_name>sys_flow_email_trigger</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f52fcdc7dbb63300f4e6364e9d9619a3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <target_table/>
+    </sys_flow_email_trigger>
+    <sys_hub_flow_component action="delete_multiple" query="flow=a9f845cbdb763300f4e6364e9d9619f7^sys_idNOT IN453dcdc3dbb63300f4e6364e9d96197a,8d3dcdc3dbb63300f4e6364e9d961976,97839d03dbf63300f4e6364e9d96190b,f1b291cfdbb63300f4e6364e9d9619e1"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post a Message">41ca0f433be0030057a4a2e334efc474</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>41ca0f433be0030057a4a2e334efc474</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>453dcdc3dbb63300f4e6364e9d96197a</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:56</sys_updated_on>
+        <ui_id>aeeeae61-2e24-4e63-a198-833f8f01c42e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=453dcdc3dbb63300f4e6364e9d96197a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>0d2f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <value>https://hooks.slack.com/services/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</value>
+        <variable display_value="">cdca0f433be0030057a4a2e334efc476</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:20:29</sys_created_on>
+        <sys_id>4712dd4fdbb63300f4e6364e9d96191a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <value/>
+        <variable display_value="">0dca0f433be0030057a4a2e334efc483</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>492f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <value>#platform-dev-advocacy</value>
+        <variable display_value="">85ca0f433be0030057a4a2e334efc49a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>893dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <value>https://hooks.slack.com/services/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</value>
+        <variable display_value="">59e6e24b3ba0030057a4a2e334efc4fe</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>c53dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <value>#platform-dev-advocacy</value>
+        <variable display_value="">25e6ea4b3ba0030057a4a2e334efc478</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=453dcdc3dbb63300f4e6364e9d96197a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_channel</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>c52f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_channel</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>453dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d3b4e24b3ba0030057a4a2e334efc4e4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_message</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>052f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value>New attachment added to Reimbursement  : {{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_message</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>813dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d3b4e24b3ba0030057a4a2e334efc4e4</table>
+        <value>New attachment added to Reimbursement {{e0b9839e-d277-4308-9fa4-0138b917712f.Record.number}} : </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_webhook_url</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>412f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_webhook_url</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>cd3dcdc3dbb63300f4e6364e9d961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d3b4e24b3ba0030057a4a2e334efc4e4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Move Email Attachments to Record">bd8fcd48a73133008299b39f087901fc</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>bd8fcd48a73133008299b39f087901fc</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>8d3dcdc3dbb63300f4e6364e9d961976</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:56</sys_updated_on>
+        <ui_id>f4fa235a-b934-4008-bc69-c593b6e7ed0f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8d3dcdc3dbb63300f4e6364e9d961976"/>
+    <sys_element_mapping action="delete_multiple" query="id=8d3dcdc3dbb63300f4e6364e9d961976"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>053dcdc3dbb63300f4e6364e9d961978</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_731fc148a73133008299b39f087901a4</table>
+        <value>{{Inbound Email_1.inbound_email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>8d2f8dc7dbb63300f4e6364e9d9619cc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:19:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{Inbound Email_1.inbound_email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>c53dcdc3dbb63300f4e6364e9d961978</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_731fc148a73133008299b39f087901a4</table>
+        <value>{{e0b9839e-d277-4308-9fa4-0138b917712f.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>412f8dc7dbb63300f4e6364e9d9619cd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>97839d03dbf63300f4e6364e9d96190b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:55</sys_updated_on>
+        <ui_id>dc825fb2-eaa0-4902-80f3-a8e38d067bff</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=97839d03dbf63300f4e6364e9d96190b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>97839d03dbf63300f4e6364e9d96190b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>13839d03dbf63300f4e6364e9d96190d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <value>u_google_account</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=97839d03dbf63300f4e6364e9d96190b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>97839d03dbf63300f4e6364e9d96190b</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>db839d03dbf63300f4e6364e9d96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>u_email={{Inbound Email_1.from_address}}^ORu_user.email={{Inbound Email_1.from_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>97839d03dbf63300f4e6364e9d96190b</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>9f839d03dbf63300f4e6364e9d96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:23:08</sys_created_on>
+        <sys_id>f1b291cfdbb63300f4e6364e9d9619e1</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:56</sys_updated_on>
+        <ui_id>5d5f8f12-eecb-4750-839a-99bf15dcde32</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f1b291cfdbb63300f4e6364e9d9619e1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f1b291cfdbb63300f4e6364e9d9619e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>9f839d03dbf63300f4e6364e9d96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <value>x_snc_dev_meet_reimbursement</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f1b291cfdbb63300f4e6364e9d9619e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:23:08</sys_created_on>
+        <sys_id>f5b291cfdbb63300f4e6364e9d9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:23:08</sys_updated_on>
+        <value>x_snc_dev_meet_reimbursement</value>
+        <variable display_value="">79305e810b30030085c083eb37673a85</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f1b291cfdbb63300f4e6364e9d9619e1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>f1b291cfdbb63300f4e6364e9d9619e1</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>5b839d03dbf63300f4e6364e9d96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>{{dc825fb2-eaa0-4902-80f3-a8e38d067bff.Record.u_user}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>f1b291cfdbb63300f4e6364e9d9619e1</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>1f839d03dbf63300f4e6364e9d96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>f1b291cfdbb63300f4e6364e9d9619e1</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:23:08</sys_created_on>
+        <sys_id>71b291cfdbb63300f4e6364e9d9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:23:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b93f42810b30030085c083eb37673a63</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=a9f845cbdb763300f4e6364e9d9619f7^sys_idNOT IN813dcdc3dbb63300f4e6364e9d961969"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <name>Inbound Email</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>813dcdc3dbb63300f4e6364e9d961969</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=813dcdc3dbb63300f4e6364e9d961969"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>813dcdc3dbb63300f4e6364e9d961969</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>453dcdc3dbb63300f4e6364e9d96196a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:17:56</sys_updated_on>
+        <value/>
+        <variable display_value="">b914874853132300eb7c0a1806dc34b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>813dcdc3dbb63300f4e6364e9d961969</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>813dcdc3dbb63300f4e6364e9d96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <value/>
+        <variable display_value="">60b307c7c7312300f4eba1425a97637e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>813dcdc3dbb63300f4e6364e9d961969</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>cd3dcdc3dbb63300f4e6364e9d96196a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:10:44</sys_updated_on>
+        <value>subjectLIKEReimbursement</value>
+        <variable display_value="">18010347c7312300f4eba1425a9763f7</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a9f845cbdb763300f4e6364e9d9619f7^sys_idNOT IN65f845cbdb763300f4e6364e9d9619f9"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a9f845cbdb763300f4e6364e9d9619f7</id>
+        <name>Attach Receipt</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:40:31</sys_created_on>
+        <sys_id>65f845cbdb763300f4e6364e9d9619f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:40:31</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=a9f845cbdb763300f4e6364e9d9619f7^sys_idNOT IN343dcdc3dbb63300f4e6364e9d961954,7c3d8dc3dbb63300f4e6364e9d961924,7c3dcdc3dbb63300f4e6364e9d961958,b03dcdc3dbb63300f4e6364e9d96194b,b43dcdc3dbb63300f4e6364e9d96195d,f83dcdc3dbb63300f4e6364e9d96194f,fc3dcdc3dbb63300f4e6364e9d961961"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</model>
+        <model_id>a9f845cbdb763300f4e6364e9d9619f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>343dcdc3dbb63300f4e6364e9d961954</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</model>
+        <model_id>a9f845cbdb763300f4e6364e9d9619f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:01</sys_created_on>
+        <sys_id>7c3d8dc3dbb63300f4e6364e9d961924</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</model>
+        <model_id>a9f845cbdb763300f4e6364e9d9619f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>7c3dcdc3dbb63300f4e6364e9d961958</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</model>
+        <model_id>a9f845cbdb763300f4e6364e9d9619f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>b03dcdc3dbb63300f4e6364e9d96194b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</model>
+        <model_id>a9f845cbdb763300f4e6364e9d9619f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>b43dcdc3dbb63300f4e6364e9d96195d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</model>
+        <model_id>a9f845cbdb763300f4e6364e9d9619f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>f83dcdc3dbb63300f4e6364e9d96194f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</model>
+        <model_id>a9f845cbdb763300f4e6364e9d9619f7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>fc3dcdc3dbb63300f4e6364e9d961961</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=a9f845cbdb763300f4e6364e9d9619f7^sys_idNOT IN453dcdc3dbb63300f4e6364e9d96197a,8d3dcdc3dbb63300f4e6364e9d961976,97839d03dbf63300f4e6364e9d96190b,f1b291cfdbb63300f4e6364e9d9619e1"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post a Message">41ca0f433be0030057a4a2e334efc474</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>41ca0f433be0030057a4a2e334efc474</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>453dcdc3dbb63300f4e6364e9d96197a</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:56</sys_updated_on>
+        <ui_id>aeeeae61-2e24-4e63-a198-833f8f01c42e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=453dcdc3dbb63300f4e6364e9d96197a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>0d2f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <value>https://hooks.slack.com/services/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</value>
+        <variable display_value="">cdca0f433be0030057a4a2e334efc476</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:20:29</sys_created_on>
+        <sys_id>4712dd4fdbb63300f4e6364e9d96191a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <value/>
+        <variable display_value="">0dca0f433be0030057a4a2e334efc483</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>492f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <value>#platform-dev-advocacy</value>
+        <variable display_value="">85ca0f433be0030057a4a2e334efc49a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>893dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <value>https://hooks.slack.com/services/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</value>
+        <variable display_value="">59e6e24b3ba0030057a4a2e334efc4fe</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>453dcdc3dbb63300f4e6364e9d96197a</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>c53dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <value>#platform-dev-advocacy</value>
+        <variable display_value="">25e6ea4b3ba0030057a4a2e334efc478</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=453dcdc3dbb63300f4e6364e9d96197a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_channel</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>c52f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_channel</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>453dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d3b4e24b3ba0030057a4a2e334efc4e4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_message</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>052f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value>New attachment added to Reimbursement  : {{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_message</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>813dcdc3dbb63300f4e6364e9d961995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d3b4e24b3ba0030057a4a2e334efc4e4</table>
+        <value>New attachment added to Reimbursement {{e0b9839e-d277-4308-9fa4-0138b917712f.Record.number}} : </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_webhook_url</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>412f8dc7dbb63300f4e6364e9d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_webhook_url</field>
+        <id>453dcdc3dbb63300f4e6364e9d96197a</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>cd3dcdc3dbb63300f4e6364e9d961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d3b4e24b3ba0030057a4a2e334efc4e4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Move Email Attachments to Record">bd8fcd48a73133008299b39f087901fc</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>bd8fcd48a73133008299b39f087901fc</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>8d3dcdc3dbb63300f4e6364e9d961976</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:56</sys_updated_on>
+        <ui_id>f4fa235a-b934-4008-bc69-c593b6e7ed0f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8d3dcdc3dbb63300f4e6364e9d961976"/>
+    <sys_element_mapping action="delete_multiple" query="id=8d3dcdc3dbb63300f4e6364e9d961976"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>053dcdc3dbb63300f4e6364e9d961978</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_731fc148a73133008299b39f087901a4</table>
+        <value>{{Inbound Email_1.inbound_email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>8d2f8dc7dbb63300f4e6364e9d9619cc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:19:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{Inbound Email_1.inbound_email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:03</sys_created_on>
+        <sys_id>c53dcdc3dbb63300f4e6364e9d961978</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_731fc148a73133008299b39f087901a4</table>
+        <value>{{e0b9839e-d277-4308-9fa4-0138b917712f.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>8d3dcdc3dbb63300f4e6364e9d961976</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:30</sys_created_on>
+        <sys_id>412f8dc7dbb63300f4e6364e9d9619cd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>97839d03dbf63300f4e6364e9d96190b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:55</sys_updated_on>
+        <ui_id>dc825fb2-eaa0-4902-80f3-a8e38d067bff</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=97839d03dbf63300f4e6364e9d96190b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>97839d03dbf63300f4e6364e9d96190b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>13839d03dbf63300f4e6364e9d96190d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <value>u_google_account</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=97839d03dbf63300f4e6364e9d96190b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>97839d03dbf63300f4e6364e9d96190b</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>db839d03dbf63300f4e6364e9d96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>u_email={{Inbound Email_1.from_address}}^ORu_user.email={{Inbound Email_1.from_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>97839d03dbf63300f4e6364e9d96190b</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>9f839d03dbf63300f4e6364e9d96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:23:08</sys_created_on>
+        <sys_id>f1b291cfdbb63300f4e6364e9d9619e1</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:27:56</sys_updated_on>
+        <ui_id>5d5f8f12-eecb-4750-839a-99bf15dcde32</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f1b291cfdbb63300f4e6364e9d9619e1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f1b291cfdbb63300f4e6364e9d9619e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>9f839d03dbf63300f4e6364e9d96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <value>x_snc_dev_meet_reimbursement</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f1b291cfdbb63300f4e6364e9d9619e1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:23:08</sys_created_on>
+        <sys_id>f5b291cfdbb63300f4e6364e9d9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:23:08</sys_updated_on>
+        <value>x_snc_dev_meet_reimbursement</value>
+        <variable display_value="">79305e810b30030085c083eb37673a85</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f1b291cfdbb63300f4e6364e9d9619e1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>f1b291cfdbb63300f4e6364e9d9619e1</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>5b839d03dbf63300f4e6364e9d96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>{{dc825fb2-eaa0-4902-80f3-a8e38d067bff.Record.u_user}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>f1b291cfdbb63300f4e6364e9d9619e1</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:47</sys_created_on>
+        <sys_id>1f839d03dbf63300f4e6364e9d96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>f1b291cfdbb63300f4e6364e9d9619e1</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:23:08</sys_created_on>
+        <sys_id>71b291cfdbb63300f4e6364e9d9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:23:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b93f42810b30030085c083eb37673a63</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7^sys_idNOT IN303dcdc3dbb63300f4e6364e9d96194a,303dcdc3dbb63300f4e6364e9d96194f,343dcdc3dbb63300f4e6364e9d961961,783dcdc3dbb63300f4e6364e9d961953,7c3dcdc3dbb63300f4e6364e9d961965,b03dcdc3dbb63300f4e6364e9d961958,f83dcdc3dbb63300f4e6364e9d96195c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>303dcdc3dbb63300f4e6364e9d96194a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Inbound Email</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7_inbound_email_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>303dcdc3dbb63300f4e6364e9d96194f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Target Table</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7_target_table_name_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>343dcdc3dbb63300f4e6364e9d961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Target Record</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7_target_record_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>783dcdc3dbb63300f4e6364e9d961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Body Text</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7_body_text_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>7c3dcdc3dbb63300f4e6364e9d961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>From address</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7_from_address_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>b03dcdc3dbb63300f4e6364e9d961958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Subject</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7_subject_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 20:59:02</sys_created_on>
+        <sys_id>f83dcdc3dbb63300f4e6364e9d96195c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a9f845cbdb763300f4e6364e9d9619f7_user_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 20:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=a9f845cbdb763300f4e6364e9d9619f7^sys_idNOT IN312fcdc7dbb63300f4e6364e9d9619a4"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"312fcdc7dbb63300f4e6364e9d9619a4","name":"plan"}}</plan>
+        <plan_id>a9f845cbdb763300f4e6364e9d9619f7</plan_id>
+        <snapshot>53c3dd0bdbb233008966ff561d961917</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>312fcdc7dbb63300f4e6364e9d9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:34</sys_updated_on>
+        <trigger display_value="">f52fcdc7dbb63300f4e6364e9d9619a3</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Take email, look for open reimbursement, move attachment</description>
+        <internal_name>attach_receipt</internal_name>
+        <label_cache>[{"name":"e0b9839e-d277-4308-9fa4-0138b917712f.Record.number","label":"2➛Reimbursement Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_dev_meet_reimbursement","column_name":"number"},{"name":"91fd80b5-51e6-44bf-b05e-c89d4b5b2e0e.Record.u_user","label":"1➛Google Account Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"u_google_account","column_name":"u_user"},{"name":"e0b9839e-d277-4308-9fa4-0138b917712f.Table","label":"2➛Reimbursement Table","reference":"x_snc_dev_meet_reimbursement","reference_display":"Reimbursement","type":"table_name","base_type":"table_name"},{"name":"e0b9839e-d277-4308-9fa4-0138b917712f.Record","label":"2➛Reimbursement Record","reference":"x_snc_dev_meet_reimbursement","reference_display":"Reimbursement","type":"reference","base_type":"reference"},{"name":"Inbound Email_1.from_address","label":"Trigger➛From address","type":"string_full_utf8","base_type":"string_full_utf8"},{"name":"91fd80b5-51e6-44bf-b05e-c89d4b5b2e0e.Table","label":"1➛Google Account Table","reference":"u_google_account","reference_display":"Google Account","type":"table_name","base_type":"table_name"},{"name":"91fd80b5-51e6-44bf-b05e-c89d4b5b2e0e.Record","label":"1➛Google Account Record","reference":"u_google_account","reference_display":"Google Account","type":"reference","base_type":"reference"},{"name":"Inbound Email_1.inbound_email","label":"Trigger➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"42932e7a-1dd3-4117-93f6-f4893edf19ee.header_value","label":"1➛Header value","reference_display":"Header value","type":"string","base_type":"string"}]</label_cache>
+        <master>true</master>
+        <name>Attach Receipt</name>
+        <outputs/>
+        <parent_flow display_value="Attach Receipt">a9f845cbdb763300f4e6364e9d9619f7</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>d12fcdc7dbb63300f4e6364e9d96190c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=d12fcdc7dbb63300f4e6364e9d96190c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d12fcdc7dbb63300f4e6364e9d96190c"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=d12fcdc7dbb63300f4e6364e9d96190c^sys_idNOT IN88939d03dbf63300f4e6364e9d9619b7,c8939d03dbf63300f4e6364e9d9619b3,e92fcdc7dbb63300f4e6364e9d96195d,ed2fcdc7dbb63300f4e6364e9d961960"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>88939d03dbf63300f4e6364e9d9619b7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>5d5f8f12-eecb-4750-839a-99bf15dcde32</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=88939d03dbf63300f4e6364e9d9619b7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>88939d03dbf63300f4e6364e9d9619b7</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>04939d03dbf63300f4e6364e9d9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <value>x_snc_dev_meet_reimbursement</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=88939d03dbf63300f4e6364e9d9619b7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>88939d03dbf63300f4e6364e9d9619b7</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>cc939d03dbf63300f4e6364e9d9619b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>{{dc825fb2-eaa0-4902-80f3-a8e38d067bff.Record.u_user}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>88939d03dbf63300f4e6364e9d9619b7</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>80939d03dbf63300f4e6364e9d9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>c8939d03dbf63300f4e6364e9d9619b3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>dc825fb2-eaa0-4902-80f3-a8e38d067bff</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c8939d03dbf63300f4e6364e9d9619b3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c8939d03dbf63300f4e6364e9d9619b3</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>44939d03dbf63300f4e6364e9d9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <value>u_google_account</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c8939d03dbf63300f4e6364e9d9619b3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>c8939d03dbf63300f4e6364e9d9619b3</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>00939d03dbf63300f4e6364e9d9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>u_email={{Inbound Email_1.from_address}}^ORu_user.email={{Inbound Email_1.from_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>c8939d03dbf63300f4e6364e9d9619b3</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>c0939d03dbf63300f4e6364e9d9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Move Email Attachments to Record">bd8fcd48a73133008299b39f087901fc</action_type>
+        <action_type_parent display_value="Move Email Attachments to Record">731fc148a73133008299b39f087901a4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>bd8fcd48a73133008299b39f087901fc</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>e92fcdc7dbb63300f4e6364e9d96195d</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>f4fa235a-b934-4008-bc69-c593b6e7ed0f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e92fcdc7dbb63300f4e6364e9d96195d"/>
+    <sys_element_mapping action="delete_multiple" query="id=e92fcdc7dbb63300f4e6364e9d96195d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_record</field>
+        <id>e92fcdc7dbb63300f4e6364e9d96195d</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>a92fcdc7dbb63300f4e6364e9d96195e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{Inbound Email_1.inbound_email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>e92fcdc7dbb63300f4e6364e9d96195d</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>6d2fcdc7dbb63300f4e6364e9d96195e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post a Message">41ca0f433be0030057a4a2e334efc474</action_type>
+        <action_type_parent display_value="Post a Message">d3b4e24b3ba0030057a4a2e334efc4e4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>41ca0f433be0030057a4a2e334efc474</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>ed2fcdc7dbb63300f4e6364e9d961960</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>aeeeae61-2e24-4e63-a198-833f8f01c42e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ed2fcdc7dbb63300f4e6364e9d961960"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed2fcdc7dbb63300f4e6364e9d961960</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>2d2fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <value>#platform-dev-advocacy</value>
+        <variable display_value="">85ca0f433be0030057a4a2e334efc49a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed2fcdc7dbb63300f4e6364e9d961960</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>ed2fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <value>https://hooks.slack.com/services/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</value>
+        <variable display_value="">cdca0f433be0030057a4a2e334efc476</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ed2fcdc7dbb63300f4e6364e9d961960"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_channel</field>
+        <id>ed2fcdc7dbb63300f4e6364e9d961960</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>a92fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_message</field>
+        <id>ed2fcdc7dbb63300f4e6364e9d961960</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>e52fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value>New attachment added to Reimbursement  : {{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_webhook_url</field>
+        <id>ed2fcdc7dbb63300f4e6364e9d961960</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>252fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=d12fcdc7dbb63300f4e6364e9d96190c^sys_idNOT INe12fcdc7dbb63300f4e6364e9d961963"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <name>Inbound Email</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>e12fcdc7dbb63300f4e6364e9d961963</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:52</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e12fcdc7dbb63300f4e6364e9d961963"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e12fcdc7dbb63300f4e6364e9d961963</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>252fcdc7dbb63300f4e6364e9d961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <value/>
+        <variable display_value="">60b307c7c7312300f4eba1425a97637e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e12fcdc7dbb63300f4e6364e9d961963</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>612fcdc7dbb63300f4e6364e9d961964</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:12:30</sys_updated_on>
+        <value>subjectLIKEReimbursement</value>
+        <variable display_value="">18010347c7312300f4eba1425a9763f7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e12fcdc7dbb63300f4e6364e9d961963</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>ad2fcdc7dbb63300f4e6364e9d961963</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <value/>
+        <variable display_value="">b914874853132300eb7c0a1806dc34b5</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d12fcdc7dbb63300f4e6364e9d96190c^sys_idNOT INd52fcdc7dbb63300f4e6364e9d96190c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d12fcdc7dbb63300f4e6364e9d96190c</id>
+        <name>Attach Receipt</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>d52fcdc7dbb63300f4e6364e9d96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=d12fcdc7dbb63300f4e6364e9d96190c^sys_idNOT IN112fcdc7dbb63300f4e6364e9d96193c,552fcdc7dbb63300f4e6364e9d96191c,592fcdc7dbb63300f4e6364e9d961935,592fcdc7dbb63300f4e6364e9d961942,912fcdc7dbb63300f4e6364e9d96192f,d92fcdc7dbb63300f4e6364e9d96190d,e12fcdc7dbb63300f4e6364e9d961949"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</model>
+        <model_id>d12fcdc7dbb63300f4e6364e9d96190c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>112fcdc7dbb63300f4e6364e9d96193c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</model>
+        <model_id>d12fcdc7dbb63300f4e6364e9d96190c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>552fcdc7dbb63300f4e6364e9d96191c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</model>
+        <model_id>d12fcdc7dbb63300f4e6364e9d96190c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>592fcdc7dbb63300f4e6364e9d961935</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</model>
+        <model_id>d12fcdc7dbb63300f4e6364e9d96190c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>592fcdc7dbb63300f4e6364e9d961942</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</model>
+        <model_id>d12fcdc7dbb63300f4e6364e9d96190c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>912fcdc7dbb63300f4e6364e9d96192f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</model>
+        <model_id>d12fcdc7dbb63300f4e6364e9d96190c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>d92fcdc7dbb63300f4e6364e9d96190d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</model>
+        <model_id>d12fcdc7dbb63300f4e6364e9d96190c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>e12fcdc7dbb63300f4e6364e9d961949</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=d12fcdc7dbb63300f4e6364e9d96190c^sys_idNOT IN88939d03dbf63300f4e6364e9d9619b7,c8939d03dbf63300f4e6364e9d9619b3,e92fcdc7dbb63300f4e6364e9d96195d,ed2fcdc7dbb63300f4e6364e9d961960"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>88939d03dbf63300f4e6364e9d9619b7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>5d5f8f12-eecb-4750-839a-99bf15dcde32</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=88939d03dbf63300f4e6364e9d9619b7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>88939d03dbf63300f4e6364e9d9619b7</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>04939d03dbf63300f4e6364e9d9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <value>x_snc_dev_meet_reimbursement</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=88939d03dbf63300f4e6364e9d9619b7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>88939d03dbf63300f4e6364e9d9619b7</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>cc939d03dbf63300f4e6364e9d9619b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>{{dc825fb2-eaa0-4902-80f3-a8e38d067bff.Record.u_user}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>88939d03dbf63300f4e6364e9d9619b7</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>80939d03dbf63300f4e6364e9d9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>c8939d03dbf63300f4e6364e9d9619b3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>dc825fb2-eaa0-4902-80f3-a8e38d067bff</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c8939d03dbf63300f4e6364e9d9619b3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c8939d03dbf63300f4e6364e9d9619b3</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>44939d03dbf63300f4e6364e9d9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <value>u_google_account</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c8939d03dbf63300f4e6364e9d9619b3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>c8939d03dbf63300f4e6364e9d9619b3</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>00939d03dbf63300f4e6364e9d9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>u_email={{Inbound Email_1.from_address}}^ORu_user.email={{Inbound Email_1.from_address}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>c8939d03dbf63300f4e6364e9d9619b3</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:26:50</sys_created_on>
+        <sys_id>c0939d03dbf63300f4e6364e9d9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Move Email Attachments to Record">bd8fcd48a73133008299b39f087901fc</action_type>
+        <action_type_parent display_value="Move Email Attachments to Record">731fc148a73133008299b39f087901a4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>bd8fcd48a73133008299b39f087901fc</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>e92fcdc7dbb63300f4e6364e9d96195d</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>f4fa235a-b934-4008-bc69-c593b6e7ed0f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e92fcdc7dbb63300f4e6364e9d96195d"/>
+    <sys_element_mapping action="delete_multiple" query="id=e92fcdc7dbb63300f4e6364e9d96195d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_record</field>
+        <id>e92fcdc7dbb63300f4e6364e9d96195d</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>a92fcdc7dbb63300f4e6364e9d96195e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{Inbound Email_1.inbound_email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>e92fcdc7dbb63300f4e6364e9d96195d</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>6d2fcdc7dbb63300f4e6364e9d96195e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bd8fcd48a73133008299b39f087901fc</table>
+        <value>{{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post a Message">41ca0f433be0030057a4a2e334efc474</action_type>
+        <action_type_parent display_value="Post a Message">d3b4e24b3ba0030057a4a2e334efc4e4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>41ca0f433be0030057a4a2e334efc474</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Attach Receipt">d12fcdc7dbb63300f4e6364e9d96190c</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>ed2fcdc7dbb63300f4e6364e9d961960</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:51</sys_updated_on>
+        <ui_id>aeeeae61-2e24-4e63-a198-833f8f01c42e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ed2fcdc7dbb63300f4e6364e9d961960"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed2fcdc7dbb63300f4e6364e9d961960</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>2d2fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <value>#platform-dev-advocacy</value>
+        <variable display_value="">85ca0f433be0030057a4a2e334efc49a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed2fcdc7dbb63300f4e6364e9d961960</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>ed2fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <value>https://hooks.slack.com/services/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</value>
+        <variable display_value="">cdca0f433be0030057a4a2e334efc476</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ed2fcdc7dbb63300f4e6364e9d961960"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_channel</field>
+        <id>ed2fcdc7dbb63300f4e6364e9d961960</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>a92fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_message</field>
+        <id>ed2fcdc7dbb63300f4e6364e9d961960</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>e52fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:26:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value>New attachment added to Reimbursement  : {{5d5f8f12-eecb-4750-839a-99bf15dcde32.Record.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_webhook_url</field>
+        <id>ed2fcdc7dbb63300f4e6364e9d961960</id>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:33</sys_created_on>
+        <sys_id>252fcdc7dbb63300f4e6364e9d961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_41ca0f433be0030057a4a2e334efc474</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c^sys_idNOT IN212fcdc7dbb63300f4e6364e9d96194e,252fcdc7dbb63300f4e6364e9d961947,512fcdc7dbb63300f4e6364e9d96193a,912fcdc7dbb63300f4e6364e9d961912,992fcdc7dbb63300f4e6364e9d961933,992fcdc7dbb63300f4e6364e9d961940,d12fcdc7dbb63300f4e6364e9d96192d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>212fcdc7dbb63300f4e6364e9d96194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Target Record</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c_target_record_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>252fcdc7dbb63300f4e6364e9d961947</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c_user_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>512fcdc7dbb63300f4e6364e9d96193a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Inbound Email</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c_inbound_email_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:12:30</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>912fcdc7dbb63300f4e6364e9d961912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Body Text</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c_body_text_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>992fcdc7dbb63300f4e6364e9d961933</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Subject</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c_subject_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>992fcdc7dbb63300f4e6364e9d961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>From address</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c_from_address_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-07-26 21:07:32</sys_created_on>
+        <sys_id>d12fcdc7dbb63300f4e6364e9d96192d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Target Table</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d12fcdc7dbb63300f4e6364e9d96190c_target_table_name_en</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-07-26 21:07:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

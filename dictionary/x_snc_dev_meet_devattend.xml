@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="devday" max_length="40" name="x_snc_dev_meet_devattend" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Developer" label="Developer" max_length="40" name="u_developer" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" max_length="40" name="u_first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="id" max_length="40" name="u_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="ï»¿Status" max_length="40" name="u_ï__status" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" max_length="40" name="u_last_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Meetup" label="Meetup" max_length="40" name="u_meetup" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=RSVP" label="RSVP" max_length="40" name="u_rsvp" type="string"/>
+    </element>
+</database>

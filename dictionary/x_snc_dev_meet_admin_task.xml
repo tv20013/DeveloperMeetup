@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Admin Task" max_length="40" name="x_snc_dev_meet_admin_task" sizeclass="129" type="collection">
+        <element label="Event" max_length="32" name="event" reference="x_snc_dev_meet_meetup" type="reference"/>
+        <element attributes="encode_utf8=false" label="Group" max_length="32" name="u_reference_1" reference="x_snc_dev_meet_group" type="reference"/>
+    </element>
+</database>

@@ -4,6 +4,7 @@
         <element label="Government official" max_length="40" name="government_official" type="boolean"/>
         <element default="0" label="Guests" max_length="40" name="guests" type="integer"/>
         <element label="Meetup" mandatory="true" max_length="32" name="meetup" reference="x_snc_dev_meet_meetup" type="reference"/>
+        <element default="a994b751dbe188508966ff561d9619e0" label="Role" max_length="4000" name="role" reference="x_snc_dev_meet_attendee_type" type="glide_list"/>
         <element choice="3" default="no" label="RSVP" mandatory="true" max_length="10" name="rsvp" type="string">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="100" value="no"/>

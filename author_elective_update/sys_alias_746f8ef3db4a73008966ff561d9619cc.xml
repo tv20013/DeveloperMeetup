@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="DELETE">
+        <connection_type>sys_connection</connection_type>
+        <id>x_snc_dev_meet.devprod</id>
+        <multiple_connections>false</multiple_connections>
+        <name>devprod</name>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 02:56:43</sys_created_on>
+        <sys_id>746f8ef3db4a73008966ff561d9619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_dev_meet.devprod</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_alias_746f8ef3db4a73008966ff561d9619cc</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 02:56:43</sys_updated_on>
+        <type>connection</type>
+    </sys_alias>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</application>
+        <file_path/>
+        <instance_id>6833e2dedbed7f4442b321c4059619fb</instance_id>
+        <instance_name>devprogramdev</instance_name>
+        <name>sys_alias_746f8ef3db4a73008966ff561d9619cc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias"><sys_alias action="INSERT_OR_UPDATE"><connection_type>sys_connection</connection_type><id>x_snc_dev_meet.devprod</id><multiple_connections>false</multiple_connections><name>devprod</name><sys_class_name>sys_alias</sys_class_name><sys_created_by>andrew.barnes</sys_created_by><sys_created_on>2019-06-22 02:56:43</sys_created_on><sys_id>746f8ef3db4a73008966ff561d9619cc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_dev_meet.devprod</sys_name><sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package><sys_policy/><sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope><sys_update_name>sys_alias_746f8ef3db4a73008966ff561d9619cc</sys_update_name><sys_updated_by>andrew.barnes</sys_updated_by><sys_updated_on>2019-06-22 02:56:43</sys_updated_on><type>connection</type></sys_alias></record_update>]]></payload>
+        <payload_hash>-1062706665</payload_hash>
+        <record_name>x_snc_dev_meet.devprod</record_name>
+        <reverted_from/>
+        <source>1b0bd03bdb0673008966ff561d96195b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 02:56:43</sys_created_on>
+        <sys_id>c76f8ef3db4a73008966ff561d9619d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16b7d1d59430000001</sys_recorded_at>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 02:56:43</sys_updated_on>
+        <type>Connection &amp; Credential Aliases</type>
+        <update_guid>036f8ef3b24a730042ccf98b164172d0</update_guid>
+        <update_guid_history>036f8ef3b24a730042ccf98b164172d0:-1062706665</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 02:59:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_alias">sys_alias</sys_db_object>
+        <sys_id>108743e57620417c8889ae92595e3690</sys_id>
+        <sys_metadata>746f8ef3db4a73008966ff561d9619cc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_dev_meet.devprod</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_scope_delete display_value="">716442a2bac64c55b95b14a8129b9061</sys_scope_delete>
+        <sys_update_name>sys_alias_746f8ef3db4a73008966ff561d9619cc</sys_update_name>
+        <sys_update_version display_value="sys_alias_746f8ef3db4a73008966ff561d9619cc">c76f8ef3db4a73008966ff561d9619d0</sys_update_version>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 02:59:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
