@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="INSERT_OR_UPDATE">
+        <create_roles/>
+        <description/>
+        <display_title>false</display_title>
+        <internal_name>meetup</internal_name>
+        <layout>normal</layout>
+        <name/>
+        <order>100</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-22 14:49:36</sys_created_on>
+        <sys_id>e664c1d7dba004108966ff561d961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>meetup </sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>item_option_new_set_e664c1d7dba004108966ff561d961921</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:49:36</sys_updated_on>
+        <title>meetup </title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+</record_update>

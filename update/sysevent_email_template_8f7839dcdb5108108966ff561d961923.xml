@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection>x_snc_dev_meet_admin_task</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">Hi ${opened_by.first_name},<br /></span></p>
+<p><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">I want to officially thank you for your interest in becoming a ServiceNow Developer Meetup Organize! I would like to talk with you about your vision for your group and what is involved in becoming a Meetup organizer. Please send me three times this week you would be available to meet to discuss this so that we can arrange a meeting.</span></p>
+<p><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">Please do not hesitate to contact me with any questions or with feedback on how I can best support you. I look forward to working with you!</span></p>
+<p><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">Best,</span></p>
+<p><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">${assigned_to.name}<br /></span></p>
+<p><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">${assigned_to.title}<br /></span></p>
+<p><span style="font-size: 10pt;">&nbsp;<span style="font-family: verdana, geneva, sans-serif;"><a style="text-decoration: none;" href="https://www.servicenow.com/"><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">servicen</span><span style="color: #70ad47; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">o</span><span style="color: #000000; background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">w</span></a></span></span></p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Potential meetup org meeting</name>
+        <sms_alternate/>
+        <subject>ServiceNow Meetup  Chapter</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-19 17:49:43</sys_created_on>
+        <sys_id>8f7839dcdb5108108966ff561d961923</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Potential meetup org meeting</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sysevent_email_template_8f7839dcdb5108108966ff561d961923</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-19 18:44:45</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">41c7a296db213300f4e6364e9d961975</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-09-12 16:50:07</sys_created_on>
+        <sys_id>ee806b5adbb77b008966ff561d9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-09-12 16:50:07</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

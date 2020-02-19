@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_dev_meet.MeetupUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>8ac67f3e0f24230046c28b9ae1050eb2</description>
+        <name>MeetupUtils</name>
+        <script><![CDATA[var MeetupUtils = Class.create();
+MeetupUtils.prototype = {
+	initialize: function() {
+	},
+
+	getDuration: function(event_time, compare_time) {
+		var regexDays = /(\d+) Days?/;
+		var regexHours = /(\d+) Hours?/;
+		var regexMinutes = /(\d+) Minutes?/;
+
+		var results= {"days": 0, "hours": 0, "minutes":0};
+		var matches;
+
+		var eventTimeGDT = new GlideDateTime(event_time);
+		var compareTimeGDT = new GlideDateTime(compare_time);
+		var duration = GlideDateTime.subtract(compareTimeGDT, eventTimeGDT);
+		var string = duration.getDisplayValue();
+		matches = string.match(regexDays);
+		if (matches) {		
+			results.days = matches[1];
+		} 
+		matches = string.match(regexHours);
+		if (matches) {		
+			results.hours = matches[1];
+		} 
+		matches = string.match(regexMinutes);
+		if (matches) {		
+			results.minutes = matches[1];
+		} 
+
+
+		return results;
+
+	},
+
+	isItTimeToSyncEvent: function(eventJSON, last_sync_time){
+		var answer = false;
+		var now = new GlideDateTime();
+
+		var lastSyncJSON = this.getDuration(now.getDisplayValue(), last_sync_time);
+		if (typeof eventJSON.days === "undefined" ) {
+			answer = true;
+		} else if (eventJSON.days >= 7 ) {
+			if (lastSyncJSON.days >= 7) {
+				answer=true;
+			}
+		} else 	if (eventJSON.days < 7 && eventJSON.days >= 1) {
+			if (lastSyncJSON.days >= 1 ) {
+				answer = true;
+			}
+		} else if (eventJSON.hours > 3) {
+			if (lastSyncJSON.hours > 6 ) {
+				answer = true;
+			}
+		} else if (eventJSON.hours <= 3 ) {
+			if (lastSyncJSON.minutes > 10 ) {
+				answer = true;
+			}
+		}
+
+		return answer;
+	},
+
+	/* Given a Reimbursement Glide Record, return an array of sys_ids of other 
+	   reimbursement records in that same quarter for that same group
+	*/
+	getOtherReimbursementsInQuarter: function(reimbursementGR){
+		var reimbursementArray = [];
+		var meetupTime = new GlideDateTime(reimbursementGR.event.getRefRecord().event_time);
+		var group = reimbursementGR.event.getRefRecord().group;
+		var beginningOfQuarter = gs.beginningOfThisQuarter();
+		var endOfQuarter = gs.endOfThisQuarter();
+		var quartersAgo = 0;
+
+		do {	   
+			beginningOfQuarter = new GlideDateTime( gs.quartersAgoStart(quartersAgo));
+			endOfQuarter = new GlideDateTime(gs.quartersAgoEnd(quartersAgo));
+			quartersAgo++;
+			if (quartersAgo > 8) {
+				return [];
+			}
+		} while ( !( beginningOfQuarter.before(meetupTime) 
+					&& meetupTime.before(endOfQuarter )) );
+
+		var gr = new GlideRecord('x_snc_dev_meet_reimbursement');
+		gr.addQuery('event.event_time', '>', beginningOfQuarter);
+		gr.addQuery('event.event_time', '<', endOfQuarter);
+		gr.addQuery('sys_id', '!=', reimbursementGR.getUniqueValue());
+
+		gr.addQuery('event.group', group);
+		gr.query();
+
+		while (gr.next() ) {
+			reimbursementArray.push(gr.getUniqueValue());
+		}
+
+		return reimbursementArray;
+
+	},
+
+	calcMaxReimbursement: function(reimbursementGR){
+		// maxQuarterly is Maximum Quarterly reimbursement and defined in property
+		var maxQuarterly = gs.getProperty("x_snc_dev_meet.max_reimbursement.quarterly");
+
+		// perPerson is Maximum Per Person and defined in property
+		var perPerson = gs.getProperty("x_snc_dev_meet.max_reimbursement.per_person");
+		var maxByAttendees = perPerson * reimbursementGR.attendees;
+
+		var otherReimbursements = this.getOtherReimbursementsInQuarter(reimbursementGR).toString();
+
+		var otherReimbursementSUM = new GlideAggregate("x_snc_dev_meet_reimbursement");
+		otherReimbursementSUM.addAggregate('SUM','reimbursement_amount');
+		otherReimbursementSUM.groupBy('event.group');
+		otherReimbursementSUM.addQuery('sys_id','IN',otherReimbursements);
+		otherReimbursementSUM.query();
+
+		var sumReimbursementThisQuarter = 0;
+		if(otherReimbursementSUM.next()){
+			sumReimbursementThisQuarter = otherReimbursementSUM.getAggregate('SUM','reimbursement_amount');
+		}
+
+		var quarterlyRemaining = maxQuarterly - sumReimbursementThisQuarter;
+
+		// reimbursementAmount is max reimbursement amount
+		var reimbursementAmount = Math.min(reimbursementGR.reimbursement_requested, maxByAttendees, quarterlyRemaining);
+		return reimbursementAmount;
+	},
+
+	hasAttachments: function(reimbursementGR) {
+		var attachmentGR = new GlideRecord('sys_attachment');
+		attachmentGR.addQuery('table_sys_id',reimbursementGR.sys_id);
+		attachmentGR.setLimit(1); // limit query to one record, since we are just looking for a true/false
+		attachmentGR.query();
+
+		if(attachmentGR.next()){
+			return true;
+		}
+		return false;
+	},
+	
+	getCountry: function(name){
+		var gr = new GlideRecord('core_country');
+		if (!gr.get('name', name) ) {
+			gr.get('iso3166_3', name);
+		}
+		
+		return gr;
+	},
+	
+	type: 'MeetupUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-09-18 22:11:33</sys_created_on>
+        <sys_id>8ac67f3e0f24230046c28b9ae1050eb2</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>MeetupUtils</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_script_include_8ac67f3e0f24230046c28b9ae1050eb2</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-11-05 15:16:54</sys_updated_on>
+    </sys_script_include>
+</record_update>

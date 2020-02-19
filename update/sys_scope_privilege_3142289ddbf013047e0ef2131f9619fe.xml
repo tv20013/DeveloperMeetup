@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_scope_privilege">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
     <sys_scope_privilege action="INSERT_OR_UPDATE">
         <operation>execute</operation>
         <source_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</source_scope>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection>x_snc_dev_meet_admin_task</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 12pt;">Hi ${event.group.owner},</span></p>
+<p><span style="font-size: 12pt;">I saw that you have an upcoming Meetup scheduled for&nbsp; ${event.date} which is very exciting! Would you like us to send out a promotional email to the developers in your community in order to create buzz for your event?</span></p>
+<p><span style="font-size: 12pt;">Please let me know, and then I will send you a draft of the email. Thank you for your efforts as an organizer!<!-- p--></span></p>
+<p><span style="font-size: 12pt;">Best,</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Tanvi Gokhale</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Platform Product Marketing Co-op</span></p>
+<p><span style="font-size: 12pt;"><strong><a href="https://www.servicenow.com/">servicenow</a></strong> </span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Meetup Finalized (over 21 days away)</name>
+        <sms_alternate/>
+        <subject>ServiceNow ${event.group.name}  </subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-15 16:22:58</sys_created_on>
+        <sys_id>a8b4194ddba00c508966ff561d96195e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Meetup Finalized (over 21 days away)</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sysevent_email_template_a8b4194ddba00c508966ff561d96195e</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:47:29</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

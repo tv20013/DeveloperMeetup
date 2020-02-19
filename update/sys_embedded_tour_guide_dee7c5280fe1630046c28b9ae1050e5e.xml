@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_guide">
+    <sys_embedded_tour_guide action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_parameters/>
+        <autolaunch_order>0</autolaunch_order>
+        <context>x_snc_dev_meet_reimbursement</context>
+        <description>Show Meetup Organizers how to submit Reimbursement Requests</description>
+        <has_concl>true</has_concl>
+        <has_intro>true</has_intro>
+        <name>Meetup Reimbursement Intro</name>
+        <options/>
+        <roles>x_snc_dev_meet.organizer</roles>
+        <sp_page/>
+        <sp_portal/>
+        <status>published</status>
+        <sys_class_name>sys_embedded_tour_guide</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-10-31 02:41:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dee7c5280fe1630046c28b9ae1050e5e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Meetup Reimbursement Intro</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_embedded_tour_guide_dee7c5280fe1630046c28b9ae1050e5e</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-10-31 03:08:52</sys_updated_on>
+        <type>platform</type>
+    </sys_embedded_tour_guide>
+</record_update>

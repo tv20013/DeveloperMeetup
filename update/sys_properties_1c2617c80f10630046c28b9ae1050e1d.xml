@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>urlname (which is really a component of the total URL) for the account that owns the meetup groups.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_dev_meet.urlname</name>
+        <read_roles/>
+        <suffix>urlname</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-08-28 20:28:47</sys_created_on>
+        <sys_id>1c2617c80f10630046c28b9ae1050e1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_dev_meet.urlname</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_properties_1c2617c80f10630046c28b9ae1050e1d</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-08-28 20:28:47</sys_updated_on>
+        <type>string</type>
+        <value>ServiceNowDevProgram</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=1c2617c80f10630046c28b9ae1050e1d"/>
+</record_update>

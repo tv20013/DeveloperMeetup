@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Request assistance">400ac51fdba004108966ff561d961953</sc_cat_item>
+        <sc_category display_value="Meetup requests">134cdb54db054450f4e6364e9d961974</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-11-07 14:45:02</sys_created_on>
+        <sys_id>98fc5b94db054450f4e6364e9d961987</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meetup requests.Request assistance</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sc_cat_item_category_98fc5b94db054450f4e6364e9d961987</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-07 14:45:02</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

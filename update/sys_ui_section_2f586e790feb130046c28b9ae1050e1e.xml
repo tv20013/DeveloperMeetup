@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="2f586e790feb130046c28b9ae1050e1e" sys_domain="global" table="x_snc_dev_meet_group" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>d2b0790bdb36c4108966ff561d961959</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>1</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>9ab0790bdb36c4108966ff561d961959</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_event</element>
+            <position>2</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>1eb0790bdb36c4108966ff561d961959</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>9eb0790bdb36c4108966ff561d961959</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>url</element>
+            <position>4</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>12b0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>organizer</element>
+            <position>5</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>92b0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mu_organizers</element>
+            <position>6</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>16b0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>96b0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>id</element>
+            <position>8</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>1ab0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_sync_time</element>
+            <position>9</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>9ab0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>country</element>
+            <position>10</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>1eb0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <position>11</position>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-02-10 19:45:23</sys_created_on>
+            <sys_id>9eb0790bdb36c4108966ff561d96195a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_dev_meet_group" sys_domain="global" view="Default view">2f586e790feb130046c28b9ae1050e1e</sys_ui_section>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-02-10 19:45:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_dev_meet_group</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-27 20:49:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2f586e790feb130046c28b9ae1050e1e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_dev_meet_group</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+            <sys_update_name>sys_ui_section_2f586e790feb130046c28b9ae1050e1e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-27 20:49:44</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

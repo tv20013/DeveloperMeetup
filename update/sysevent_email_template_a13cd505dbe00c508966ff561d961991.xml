@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection>x_snc_dev_meet_admin_task</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 12pt;">Hi ${event.group.owner},</span></p>
+<p><span style="font-size: 12pt;">I am checking in to see when you would like to schedule and organize your next event for the&nbsp; ${event.group.city} chapter. We encourage all Meetup chapters to schedule at least one event every quarter in order to keep their developer community engaged so let me know some dates that might work for you!</span></p>
+<p><span style="font-size: 12pt;">Please let me know if you have any questions.</span></p>
+<p><span style="font-size: 12pt;">Best,</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Tanvi Gokhale</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Platform Product Marketing Co-op</span></p>
+<p><span style="font-size: 12pt;"><strong><a href="https://www.servicenow.com/">servicenow</a></strong></span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Need to Schedule a Quarterly Meetup (1Q)</name>
+        <sms_alternate/>
+        <subject>Inquiring About Your Next ServiceNow Developer Meetup </subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-15 16:50:47</sys_created_on>
+        <sys_id>a13cd505dbe00c508966ff561d961991</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Need to Schedule a Quarterly Meetup (1Q)</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sysevent_email_template_a13cd505dbe00c508966ff561d961991</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:56:25</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

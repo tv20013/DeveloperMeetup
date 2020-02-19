@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="rsvp_count" label="RSVP Count" language="en" table="x_snc_dev_meet_meetup">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>rsvp_count</element>
+            <help/>
+            <hint/>
+            <label>RSVP Count</label>
+            <language>en</language>
+            <name>x_snc_dev_meet_meetup</name>
+            <plural>RSVP Counts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>ajb</sys_created_by>
+            <sys_created_on>2018-10-24 12:47:32</sys_created_on>
+            <sys_id>b76408f7dbc273008966ff561d9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>RSVP Count</sys_name>
+            <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_dev_meet_meetup_rsvp_count_en</sys_update_name>
+            <sys_updated_by>ajb</sys_updated_by>
+            <sys_updated_on>2018-10-24 12:47:32</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

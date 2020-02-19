@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_rest_message_fn_parameters">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
     <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
         <name>key</name>
         <rest_message_function display_value="GET Event">e6768891dbb013047e0ef2131f96194e</rest_message_function>
@@ -7,15 +6,15 @@
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-12 02:18:07</sys_created_on>
         <sys_id>68288de1db7453047e0ef2131f9619a6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>key</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sys_rest_message_fn_parameters_68288de1db7453047e0ef2131f9619a6</sys_update_name>
-        <sys_updated_by>alex</sys_updated_by>
-        <sys_updated_on>2018-03-12 02:18:28</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-27 20:24:04</sys_updated_on>
         <type>string</type>
-        <value>4e564044522e234028360262caa</value>
+        <value>xyz</value>
     </sys_rest_message_fn_parameters>
 </record_update>

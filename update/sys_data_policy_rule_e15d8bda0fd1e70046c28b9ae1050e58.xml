@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>event</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>ajb</sys_created_by>
+        <sys_created_on>2018-10-24 12:38:22</sys_created_on>
+        <sys_data_policy display_value="Make event required">513d87da0fd1e70046c28b9ae1050e3c</sys_data_policy>
+        <sys_id>e15d8bda0fd1e70046c28b9ae1050e58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>event</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_data_policy_rule_e15d8bda0fd1e70046c28b9ae1050e58</sys_update_name>
+        <sys_updated_by>ajb</sys_updated_by>
+        <sys_updated_on>2018-10-24 12:38:22</sys_updated_on>
+        <table>x_snc_dev_meet_reimbursement</table>
+    </sys_data_policy_rule>
+</record_update>

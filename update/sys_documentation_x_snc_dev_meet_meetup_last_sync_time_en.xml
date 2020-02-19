@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="last_sync_time" label="Last sync time" language="en" table="x_snc_dev_meet_meetup">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>last_sync_time</element>
+            <help/>
+            <hint/>
+            <label>Last sync time</label>
+            <language>en</language>
+            <name>x_snc_dev_meet_meetup</name>
+            <plural>Last sync times</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>daveslusher-sn</sys_created_by>
+            <sys_created_on>2018-09-19 00:59:37</sys_created_on>
+            <sys_id>f36408f7dbc273008966ff561d9619cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Last sync time</sys_name>
+            <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_dev_meet_meetup_last_sync_time_en</sys_update_name>
+            <sys_updated_by>daveslusher-sn</sys_updated_by>
+            <sys_updated_on>2018-09-19 00:59:37</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

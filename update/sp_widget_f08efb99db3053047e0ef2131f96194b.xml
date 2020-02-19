@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_widget">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($filter, $location,$rootScope,$scope,$timeout,spUtil,$window) {
   /* widget controller */
   var c = this;
+	
 	
 	$scope.checkIn = function(){
 		//spUtil.addTrivialMessage(c.data.attendee.sys_id);
@@ -25,28 +25,34 @@
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>false</has_preview>
+        <has_preview>true</has_preview>
         <id>checkin</id>
         <internal>false</internal>
         <link/>
         <name>Checkin</name>
-        <option_schema/>
+        <option_schema>[{"name":"data_sys_id","section":"other","default_value":"36a8f6450f94e30046c28b9ae1050e5d","label":"","type":"string"}]</option_schema>
         <public>true</public>
         <roles/>
         <script><![CDATA[data.attendee={};
 data.isLoaded = false;
 
+var event_sysid = '36a8f6450f94e30046c28b9ae1050e5d';
+var event_meetup_id = '251686411';
+		
+	
+var eventGR = new GlideRecord('x_snc_dev_meet_meetup');
+eventGR.get(event_sysid);
 
 if ($sp.getParameter("sys_id") && data.isLoaded){
-	loadAttendee($sp.getParameter("sys_id"));
+	loadAttendee(event_sysid);
 }
 
 if ($sp.getParameter("sys_id") && !input && !data.isLoaded) {
-	loadAttendee($sp.getParameter("sys_id"));
+	loadAttendee(event_meetup_id);
 	return;
 } 
 if ($sp.getParameter("sys_id") && input.attendee.status=="Attended" ) {
-	checkIn($sp.getParameter("sys_id"));
+	checkIn();
 } 
 
 
@@ -54,11 +60,14 @@ if ($sp.getParameter("sys_id") && input.attendee.status=="Attended" ) {
 function loadAttendee(sys_id){
 	var attendee = new GlideRecord('x_snc_dev_meet_attendees');
 	attendee.get(sys_id);
+
 	data.attendee.name=attendee.developer.name.getDisplayValue();
 	data.attendee.picture=attendee.developer.photo.getDisplayValue();
 	data.attendee.status=attendee.status.getDisplayValue();
 	data.attendee.sys_id=attendee.sys_id.getDisplayValue();
 	data.attendee.guests=attendee.guests.getDisplayValue();
+	data.meetup = {};
+	data.meetup.name = eventGR.getValue('name');
 	data.isLoaded = true;
 }
 
@@ -92,15 +101,18 @@ function checkIn(sys_id){
         <sys_created_by>alex</sys_created_by>
         <sys_created_on>2018-03-11 20:56:29</sys_created_on>
         <sys_id>f08efb99db3053047e0ef2131f96194b</sys_id>
-        <sys_mod_count>140</sys_mod_count>
+        <sys_mod_count>149</sys_mod_count>
         <sys_name>Checkin</sys_name>
         <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
         <sys_policy/>
         <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
         <sys_update_name>sp_widget_f08efb99db3053047e0ef2131f96194b</sys_update_name>
-        <sys_updated_by>toddv</sys_updated_by>
-        <sys_updated_on>2018-03-13 14:27:12</sys_updated_on>
-        <template><![CDATA[<div class="container">
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-08-31 21:30:07</sys_updated_on>
+        <template><![CDATA[<h1>
+  {{data.meetup.name}}
+</h1>
+<div class="container">
   <div class="row">
     <div class="col-xs-3"><img ng-src="{{data.attendee.picture}}"  class="item-image" /></div>
     <div class="col-xs-9 h1 text-center">{{data.attendee.name}}</div>

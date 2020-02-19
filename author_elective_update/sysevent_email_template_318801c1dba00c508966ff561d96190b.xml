@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="DELETE">
+        <collection>x_snc_dev_meet_admin_task</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 12pt;">Hi ${event.group.owner},</span></p>
+<p><span style="font-size: 12pt;">I want to officially welcome you to the ServiceNow Developer Meetup Organizer group! Please see the <a title="Developer Meetup Organizer guide" href="https://devprogramdev.service-now.com/kb_view.do?sysparm_article=KB0011104">Developer Meetup Organizer guide</a> for tips and tricks on how to get started. You will also receive a separate email from ${event.group.owner} which will explain the process of creating your chapter&rsquo;s Meetup page.</span></p>
+<p><span style="font-size: 12pt;">Once you set a date for your first Meetup, I will reach out to you and if you want we can help you create buzz about your event by sending out a promotional email to the developers in your area.</span></p>
+<p><span style="font-size: 12pt;">Please do not hesitate to contact me with any questions or with feedback on how I can best support you. I look forward to working with you!</span></p>
+<p><span style="font-size: 12pt;">Best,</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Tanvi Gokhale</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Platform Product Marketing Co-op</span></p>
+<p dir="ltr"><span style="font-size: 12pt;"><a title="servicenow" href="https://www.servicenow.com/">servicenow</a></span></p>
+<p><br /><br /></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>New organizer is onboarded</name>
+        <sms_alternate/>
+        <subject>${event.group.name} Chapter</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-15 16:12:12</sys_created_on>
+        <sys_id>318801c1dba00c508966ff561d96190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New organizer is onboarded</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sysevent_email_template_318801c1dba00c508966ff561d96190b</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:12:12</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</application>
+        <file_path/>
+        <instance_id>6833e2dedbed7f4442b321c4059619fb</instance_id>
+        <instance_name>devprogramdev</instance_name>
+        <name>sysevent_email_template_318801c1dba00c508966ff561d96190b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sysevent_email_template"&gt;&lt;sysevent_email_template action="INSERT_OR_UPDATE"&gt;&lt;collection&gt;x_snc_dev_meet_admin_task&lt;/collection&gt;&lt;email_layout/&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;Hi ${event.group.owner},&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;I want to officially welcome you to the ServiceNow Developer Meetup Organizer group! Please see the &lt;a title="Developer Meetup Organizer guide" href="https://devprogramdev.service-now.com/kb_view.do?sysparm_article=KB0011104"&gt;Developer Meetup Organizer guide&lt;/a&gt; for tips and tricks on how to get started. You will also receive a separate email from ${event.group.owner} which will explain the process of creating your chapter&amp;rsquo;s Meetup page.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;Once you set a date for your first Meetup, I will reach out to you and if you want we can help you create buzz about your event by sending out a promotional email to the developers in your area.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;Please do not hesitate to contact me with any questions or with feedback on how I can best support you. I look forward to working with you!&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;Best,&lt;/span&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;span style="font-size: 12pt;"&gt;Tanvi Gokhale&lt;/span&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;span style="font-size: 12pt;"&gt;Platform Product Marketing Co-op&lt;/span&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;span style="font-size: 12pt;"&gt;&lt;a title="servicenow" href="https://www.servicenow.com/"&gt;servicenow&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;New organizer is onboarded&lt;/name&gt;&lt;sms_alternate/&gt;&lt;subject&gt;${event.group.name} Chapter&lt;/subject&gt;&lt;sys_class_name&gt;sysevent_email_template&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andrew.barnes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-15 16:12:12&lt;/sys_created_on&gt;&lt;sys_id&gt;318801c1dba00c508966ff561d96190b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;New organizer is onboarded&lt;/sys_name&gt;&lt;sys_package display_value="Developer Meetup" source="x_snc_dev_meet"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Developer Meetup"&gt;beeb33c5db7013047e0ef2131f961962&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_template_318801c1dba00c508966ff561d96190b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;andrew.barnes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-15 16:12:12&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;/sysevent_email_template&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1358526266</payload_hash>
+        <record_name>New organizer is onboarded</record_name>
+        <reverted_from/>
+        <source>586441efdbcbbf00f4e6364e9d9619ff</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-15 16:12:12</sys_created_on>
+        <sys_id>7054ddc5dba00c508966ff561d96199f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dd030f44e0000001</sys_recorded_at>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:12:12</sys_updated_on>
+        <type>Email Template</type>
+        <update_guid>b854ddc5cda00c5093745d6ecc228d9e</update_guid>
+        <update_guid_history>b854ddc5cda00c5093745d6ecc228d9e:1358526266</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-15 16:23:19</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_template">sysevent_email_template</sys_db_object>
+        <sys_id>092d0306dbf64071a2d5ed8e7c1d0a91</sys_id>
+        <sys_metadata>318801c1dba00c508966ff561d96190b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New organizer is onboarded</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_parent display_value="Admin Task">a9a6fec3db5844508966ff561d961963</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_scope_delete display_value="">716442a2bac64c55b95b14a8129b9061</sys_scope_delete>
+        <sys_update_name>sysevent_email_template_318801c1dba00c508966ff561d96190b</sys_update_name>
+        <sys_update_version display_value="sysevent_email_template_318801c1dba00c508966ff561d96190b">7054ddc5dba00c508966ff561d96199f</sys_update_version>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:23:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

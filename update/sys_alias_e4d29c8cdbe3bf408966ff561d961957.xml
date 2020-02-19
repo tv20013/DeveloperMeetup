@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="INSERT_OR_UPDATE">
+        <connection_type>http_connection</connection_type>
+        <id>x_snc_dev_meet.Meetup_Integration</id>
+        <multiple_connections>false</multiple_connections>
+        <name>Meetup_Integration</name>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-08-23 15:50:12</sys_created_on>
+        <sys_id>e4d29c8cdbe3bf408966ff561d961957</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_snc_dev_meet.Meetup_Integration</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_alias_e4d29c8cdbe3bf408966ff561d961957</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-08-23 15:50:46</sys_updated_on>
+        <type>credential</type>
+    </sys_alias>
+</record_update>

@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>48hr_before_a_meetup</internal_name>
+        <label_cache>[{"name":"a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.mu_organizers","label":"3➛Meetup event Record➛Group➛Organizers","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_snc_dev_meet_group","column_name":"mu_organizers"},{"name":"f09439e5-df2b-4698-a4cc-2068853bf930.Table","label":"1➛Group Role Table","reference":"sys_group_has_role","reference_display":"Group Role","type":"table_name","base_type":"table_name"},{"name":"f09439e5-df2b-4698-a4cc-2068853bf930.Record","label":"1➛Group Role Record","reference":"sys_group_has_role","reference_display":"Group Role","type":"reference","base_type":"reference"},{"name":"a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.email","label":"3➛Meetup event Record➛Group➛Owner➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"fad82a0f-eb90-47e4-bbfd-bc150c33ccef.email","label":"3.1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"a6a8cba1-4a80-484f-8970-b5aae3817678.item","label":"3➛Meetup event Record","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference"},{"name":"ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer"},{"name":"ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Table","label":"2➛Meetup event Table","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"table_name","base_type":"table_name"},{"name":"ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Records","label":"2➛Meetup event Records","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"records","base_type":"records"},{"name":"a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.email","label":"3➛Meetup event Record➛Group➛Organizer➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"9efdf7ab-7c86-4b74-b935-b7401b3c6c75.Records","label":"1➛Records","reference_display":"Records","type":"records","base_type":"records"},{"name":"9efdf7ab-7c86-4b74-b935-b7401b3c6c75.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"9efdf7ab-7c86-4b74-b935-b7401b3c6c75.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer"},{"name":"c8565eba-2030-4b88-9af0-9f286ce7fa71.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"c8565eba-2030-4b88-9af0-9f286ce7fa71.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"}]</label_cache>
+        <latest_snapshot>e293c1dcdbb8c4108966ff561d9619be</latest_snapshot>
+        <master_snapshot>e293c1dcdbb8c4108966ff561d9619be</master_snapshot>
+        <name>48hr before a meetup</name>
+        <outputs/>
+        <remote_trigger_id>a293c1dcdbb8c4108966ff561d9619e8</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 19:44:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9da1576fdb244410f4e6364e9d9619c5</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>48hr before a meetup</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_flow_9da1576fdb244410f4e6364e9d9619c5</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=9da1576fdb244410f4e6364e9d9619c5"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9da1576fdb244410f4e6364e9d9619c5"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <run_period/>
+        <run_start>2019-10-25 17:19:24</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a293c1dcdbb8c4108966ff561d9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:24</sys_updated_on>
+        <time>1970-01-01 13:00:00</time>
+        <timer_type>11</timer_type>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Trigger:a293c1dcdbb8c4108966ff561d9619e8</name>
+        <run_as display_value="Andrew Barnes">ca33847fdbc27300f4e6364e9d961916</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2019-10-25 17:19:24</run_start>
+        <run_time>1970-01-01 13:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('a293c1dcdbb8c4108966ff561d9619e8');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:24</sys_created_on>
+        <sys_id>e693c1dcdbb8c4108966ff561d9619e8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-05 16:07:08</sys_updated_on>
+        <trigger display_value="">a293c1dcdbb8c4108966ff561d9619e8</trigger>
+        <upgrade_safe>false</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_hub_flow_component action="delete_multiple" query="flow=9da1576fdb244410f4e6364e9d9619c5^sys_idNOT IN380bd7a7db644410f4e6364e9d9619d7,780bd7a7db644410f4e6364e9d9619da,c0c50731dbb44c108966ff561d961997,f80bd7a7db644410f4e6364e9d9619d2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <order>3.1</order>
+        <parent_ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>380bd7a7db644410f4e6364e9d9619d7</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>fad82a0f-eb90-47e4-bbfd-bc150c33ccef</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=380bd7a7db644410f4e6364e9d9619d7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>1693c1dcdbb8c4108966ff561d961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <value/>
+        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>bc0bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>Reminder 48 hours before</value>
+        <variable display_value="">b21241160b100300d97d8bf637673a4a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>d693c1dcdbb8c4108966ff561d961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <value>Reminder 48 hours before</value>
+        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f80bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value/>
+        <variable display_value="">c71241160b100300d97d8bf637673a55</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=380bd7a7db644410f4e6364e9d9619d7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>b40bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:28:38</sys_updated_on>
+        <table>var__m_sys_hub_action_input_98c181d20b100300d97d8bf637673ab5</table>
+        <value>&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 11pt; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Hi&amp;nbsp;&lt;/span&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="9337b7d0-0f06-4374-ae11-5b058a4c1c59" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.first_name}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="9337b7d0-0f06-4374-ae11-5b058a4c1c59" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.first_name}}"&gt;2➛Meetup event Record➛Group➛Owner➛First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;u&gt;,&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;I hope you are getting excited about your&amp;nbsp;Meetup!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Here are a few things to keep in mind before your event:&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul style="margin-bottom: 0in; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff; margin-top: 0in;" type="disc"&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Make sure to record all of the event attendees in the Developer Meetup attendance app on the Check-in page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;If you can, try to take pictures from the event, that way you can post them to your&amp;nbsp;Meetup.com chapter page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;When you request a reimbursement, please provide a detailed receipt and keep your expenses below $15/person per&amp;nbsp;Meetup&amp;nbsp;up to $500/quarter for your events. You can request a reimbursement through the attendance app.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Please let me know if you need anything from my end in the meantime and thank you for organizing this event for your chapter!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; color: black; font-family: verdana, geneva, sans-serif;"&gt;Best,&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="bae3ba2f-30eb-40d6-b2b3-98a387dd94c7" data-pillvalue="{{f09439e5-df2b-4698-a4cc-2068853bf930.Record.default_assignee.name}}"&gt;1➛Group Record➛Default assignee➛Name&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="80146447-8d20-44ae-871c-62b11b038dee" data-pillvalue="{{f09439e5-df2b-4698-a4cc-2068853bf930.Record.default_assignee.title}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="80146447-8d20-44ae-871c-62b11b038dee" data-pillvalue="{{f09439e5-df2b-4698-a4cc-2068853bf930.Record.default_assignee.title}}"&gt;1➛Group Record➛Default assignee➛Title&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span id="docs-internal-guid-f87f5bb1-7fff-4f70-5b61-fcacaba34082" style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;a href="https://www.servicenow.com/"&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;servicen&lt;/span&gt;&lt;span style="color: #70ad47; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;o&lt;/span&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;w&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>de93c1dcdbb8c4108966ff561d961978</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-01 17:28:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-family: verdana, geneva, sans-serif; font-size: 12pt;"&gt;&lt;span style="color: black;"&gt;Hi&amp;nbsp;&lt;span class="data_pill " contenteditable="false" data-pillid="c4354e63-e164-4c36-a461-6aa209cf8a13" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.first_name}}"&gt;3➛Meetup event Record➛Group➛Organizer➛First name&lt;/span&gt;&lt;/span&gt;&lt;u&gt;,&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;I hope you are getting excited about your&amp;nbsp;Meetup!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Here are a few things to keep in mind before your event:&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul style="margin-bottom: 0in; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff; margin-top: 0in;" type="disc"&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Make sure to record all of the event attendees in the Developer Meetup attendance app on the &lt;a href="sp?id=meetup_home"&gt;Check-in page&lt;/a&gt;.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;If you can, try to take pictures from the event, that way you can post them to your&amp;nbsp;Meetup.com chapter page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;When you request a reimbursement, please provide a detailed receipt and keep your expenses below $15/person per&amp;nbsp;Meetup&amp;nbsp;up to $500/quarter for your events. You can request a reimbursement through&amp;nbsp;&lt;/span&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="d97e41b9-3561-4252-9eac-cd82ff382896" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.link}}"&gt;3➛Meetup event Record➛Link&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Please let me know if you need anything from my end in the meantime and thank you for organizing this event for your chapter!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&amp;nbsp;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; color: black; font-family: verdana, geneva, sans-serif;"&gt;Best,&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;1➛Group Record➛Default assignee➛Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;1➛Group Record➛Default assignee➛Title&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span id="docs-internal-guid-f87f5bb1-7fff-4f70-5b61-fcacaba34082" style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;a href="https://www.servicenow.com/"&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;servicen&lt;/span&gt;&lt;span style="color: #70ad47; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;o&lt;/span&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;w&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>780bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_98c181d20b100300d97d8bf637673ab5</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>9293c1dcdbb8c4108966ff561d961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f00bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_98c181d20b100300d97d8bf637673ab5</table>
+        <value>{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>1e93c1dcdbb8c4108966ff561d961978</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:57:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.email}} {{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.mu_organizers}} </value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">b00bd7a7db644410f4e6364e9d9619da</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>780bd7a7db644410f4e6364e9d9619da</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=780bd7a7db644410f4e6364e9d9619da"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>780bd7a7db644410f4e6364e9d9619da</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f40bd7a7db644410f4e6364e9d9619dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>{{ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Records}}</value>
+        <variable display_value="">19df9109c32632002841b63b12d3aed6</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:38:54</sys_created_on>
+        <sys_id>c0c50731dbb44c108966ff561d961997</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>c8565eba-2030-4b88-9af0-9f286ce7fa71</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c0c50731dbb44c108966ff561d961997"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:38:54</sys_created_on>
+        <sys_id>04c50731dbb44c108966ff561d961999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:38:54</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">39309e810b30030085c083eb37673a59</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:40:58</sys_created_on>
+        <sys_id>5e36cb31dbb44c108966ff561d9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:40:58</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:40:58</sys_created_on>
+        <sys_id>9a36cb31dbb44c108966ff561d9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:40:58</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:38:54</sys_created_on>
+        <sys_id>c4c50731dbb44c108966ff561d961999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:38:54</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">79305e810b30030085c083eb37673a85</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f80bd7a7db644410f4e6364e9d9619d2</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>ae083cd6-53a9-4658-a47e-84cc07ec9a3c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f80bd7a7db644410f4e6364e9d9619d2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>1a93c1dcdbb8c4108966ff561d961976</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>3c0bd7a7db644410f4e6364e9d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>event_timeLESSTHANdate@day@after@2^event_timeMORETHANdate@day@after@1</value>
+        <variable display_value="">0507ee090b30030085c083eb37673a2e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>5693c1dcdbb8c4108966ff561d961976</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 19:26:51</sys_updated_on>
+        <value>event_time&gt;javascript:gs.endOfToday()^event_timeRELATIVELE@dayofweek@ahead@2</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b50</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>fc0bd7a7db644410f4e6364e9d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">3807ee090b30030085c083eb37673a08</variable>
+    </sys_variable_value>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=9da1576fdb244410f4e6364e9d9619c5^sys_idNOT IN340bd7a7db644410f4e6364e9d9619bd"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>340bd7a7db644410f4e6364e9d9619bd</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=340bd7a7db644410f4e6364e9d9619bd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>340bd7a7db644410f4e6364e9d9619bd</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>b40bd7a7db644410f4e6364e9d9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>1970-01-01 08:00:00</value>
+        <variable display_value="">3ad4edc0c32222002841b63b12d3aee5</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=9da1576fdb244410f4e6364e9d9619c5^sys_idNOT INa5a1576fdb244410f4e6364e9d9619c6"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>9da1576fdb244410f4e6364e9d9619c5</id>
+        <name>48hr before a meetup</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 19:44:33</sys_created_on>
+        <sys_id>a5a1576fdb244410f4e6364e9d9619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 19:44:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=9da1576fdb244410f4e6364e9d9619c5^sys_idNOT IN380bd7a7db644410f4e6364e9d9619d7,c0c50731dbb44c108966ff561d961997,f80bd7a7db644410f4e6364e9d9619d2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <order>3.1</order>
+        <parent_ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>380bd7a7db644410f4e6364e9d9619d7</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>fad82a0f-eb90-47e4-bbfd-bc150c33ccef</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=380bd7a7db644410f4e6364e9d9619d7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>1693c1dcdbb8c4108966ff561d961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <value/>
+        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>bc0bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>Reminder 48 hours before</value>
+        <variable display_value="">b21241160b100300d97d8bf637673a4a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>d693c1dcdbb8c4108966ff561d961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <value>Reminder 48 hours before</value>
+        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>380bd7a7db644410f4e6364e9d9619d7</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f80bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value/>
+        <variable display_value="">c71241160b100300d97d8bf637673a55</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=380bd7a7db644410f4e6364e9d9619d7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>b40bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:28:38</sys_updated_on>
+        <table>var__m_sys_hub_action_input_98c181d20b100300d97d8bf637673ab5</table>
+        <value>&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 11pt; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Hi&amp;nbsp;&lt;/span&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="9337b7d0-0f06-4374-ae11-5b058a4c1c59" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.first_name}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="9337b7d0-0f06-4374-ae11-5b058a4c1c59" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.first_name}}"&gt;2➛Meetup event Record➛Group➛Owner➛First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;u&gt;,&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;I hope you are getting excited about your&amp;nbsp;Meetup!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Here are a few things to keep in mind before your event:&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul style="margin-bottom: 0in; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff; margin-top: 0in;" type="disc"&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Make sure to record all of the event attendees in the Developer Meetup attendance app on the Check-in page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;If you can, try to take pictures from the event, that way you can post them to your&amp;nbsp;Meetup.com chapter page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;When you request a reimbursement, please provide a detailed receipt and keep your expenses below $15/person per&amp;nbsp;Meetup&amp;nbsp;up to $500/quarter for your events. You can request a reimbursement through the attendance app.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Please let me know if you need anything from my end in the meantime and thank you for organizing this event for your chapter!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; color: black; font-family: verdana, geneva, sans-serif;"&gt;Best,&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="bae3ba2f-30eb-40d6-b2b3-98a387dd94c7" data-pillvalue="{{f09439e5-df2b-4698-a4cc-2068853bf930.Record.default_assignee.name}}"&gt;1➛Group Record➛Default assignee➛Name&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="80146447-8d20-44ae-871c-62b11b038dee" data-pillvalue="{{f09439e5-df2b-4698-a4cc-2068853bf930.Record.default_assignee.title}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="80146447-8d20-44ae-871c-62b11b038dee" data-pillvalue="{{f09439e5-df2b-4698-a4cc-2068853bf930.Record.default_assignee.title}}"&gt;1➛Group Record➛Default assignee➛Title&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span id="docs-internal-guid-f87f5bb1-7fff-4f70-5b61-fcacaba34082" style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;a href="https://www.servicenow.com/"&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;servicen&lt;/span&gt;&lt;span style="color: #70ad47; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;o&lt;/span&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;w&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>de93c1dcdbb8c4108966ff561d961978</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-01 17:28:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-family: verdana, geneva, sans-serif; font-size: 12pt;"&gt;&lt;span style="color: black;"&gt;Hi&amp;nbsp;&lt;span class="data_pill " contenteditable="false" data-pillid="c4354e63-e164-4c36-a461-6aa209cf8a13" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.first_name}}"&gt;3➛Meetup event Record➛Group➛Organizer➛First name&lt;/span&gt;&lt;/span&gt;&lt;u&gt;,&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;I hope you are getting excited about your&amp;nbsp;Meetup!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Here are a few things to keep in mind before your event:&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul style="margin-bottom: 0in; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff; margin-top: 0in;" type="disc"&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Make sure to record all of the event attendees in the Developer Meetup attendance app on the &lt;a href="sp?id=meetup_home"&gt;Check-in page&lt;/a&gt;.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;If you can, try to take pictures from the event, that way you can post them to your&amp;nbsp;Meetup.com chapter page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;When you request a reimbursement, please provide a detailed receipt and keep your expenses below $15/person per&amp;nbsp;Meetup&amp;nbsp;up to $500/quarter for your events. You can request a reimbursement through&amp;nbsp;&lt;/span&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="d97e41b9-3561-4252-9eac-cd82ff382896" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.link}}"&gt;3➛Meetup event Record➛Link&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Please let me know if you need anything from my end in the meantime and thank you for organizing this event for your chapter!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&amp;nbsp;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; color: black; font-family: verdana, geneva, sans-serif;"&gt;Best,&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;1➛Group Record➛Default assignee➛Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;1➛Group Record➛Default assignee➛Title&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span id="docs-internal-guid-f87f5bb1-7fff-4f70-5b61-fcacaba34082" style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;a href="https://www.servicenow.com/"&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;servicen&lt;/span&gt;&lt;span style="color: #70ad47; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;o&lt;/span&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;w&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>780bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_98c181d20b100300d97d8bf637673ab5</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>9293c1dcdbb8c4108966ff561d961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f00bd7a7db644410f4e6364e9d9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_98c181d20b100300d97d8bf637673ab5</table>
+        <value>{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>380bd7a7db644410f4e6364e9d9619d7</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>1e93c1dcdbb8c4108966ff561d961978</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:57:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.email}} {{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.mu_organizers}} </value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:38:54</sys_created_on>
+        <sys_id>c0c50731dbb44c108966ff561d961997</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>c8565eba-2030-4b88-9af0-9f286ce7fa71</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c0c50731dbb44c108966ff561d961997"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:38:54</sys_created_on>
+        <sys_id>04c50731dbb44c108966ff561d961999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:38:54</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">39309e810b30030085c083eb37673a59</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:40:58</sys_created_on>
+        <sys_id>5e36cb31dbb44c108966ff561d9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:40:58</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:40:58</sys_created_on>
+        <sys_id>9a36cb31dbb44c108966ff561d9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:40:58</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c0c50731dbb44c108966ff561d961997</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:38:54</sys_created_on>
+        <sys_id>c4c50731dbb44c108966ff561d961999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:38:54</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">79305e810b30030085c083eb37673a85</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f80bd7a7db644410f4e6364e9d9619d2</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>ae083cd6-53a9-4658-a47e-84cc07ec9a3c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f80bd7a7db644410f4e6364e9d9619d2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>1a93c1dcdbb8c4108966ff561d961976</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:22</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>3c0bd7a7db644410f4e6364e9d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>event_timeLESSTHANdate@day@after@2^event_timeMORETHANdate@day@after@1</value>
+        <variable display_value="">0507ee090b30030085c083eb37673a2e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:22</sys_created_on>
+        <sys_id>5693c1dcdbb8c4108966ff561d961976</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 19:26:51</sys_updated_on>
+        <value>event_time&gt;javascript:gs.endOfToday()^event_timeRELATIVELE@dayofweek@ahead@2</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b50</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f80bd7a7db644410f4e6364e9d9619d2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>fc0bd7a7db644410f4e6364e9d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">3807ee090b30030085c083eb37673a08</variable>
+    </sys_variable_value>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=9da1576fdb244410f4e6364e9d9619c5^sys_idNOT IN780bd7a7db644410f4e6364e9d9619da"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">b00bd7a7db644410f4e6364e9d9619da</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</flow>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>780bd7a7db644410f4e6364e9d9619da</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:11</sys_updated_on>
+        <ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=780bd7a7db644410f4e6364e9d9619da"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>780bd7a7db644410f4e6364e9d9619da</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-23 20:25:28</sys_created_on>
+        <sys_id>f40bd7a7db644410f4e6364e9d9619dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-23 20:25:28</sys_updated_on>
+        <value>{{ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Records}}</value>
+        <variable display_value="">19df9109c32632002841b63b12d3aed6</variable>
+    </sys_variable_value>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9da1576fdb244410f4e6364e9d9619c5^sys_idNOT IN6a93c1dcdbb8c4108966ff561d9619e9"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"6a93c1dcdbb8c4108966ff561d9619e9","name":"plan"}}</plan>
+        <plan_id>9da1576fdb244410f4e6364e9d9619c5</plan_id>
+        <snapshot>e293c1dcdbb8c4108966ff561d9619be</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>6a93c1dcdbb8c4108966ff561d9619e9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <trigger display_value="">a293c1dcdbb8c4108966ff561d9619e8</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>48hr_before_a_meetup</internal_name>
+        <label_cache>[{"name":"ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Records","label":"2➛Meetup event Records","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"records","base_type":"records"},{"name":"ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Table","label":"2➛Meetup event Table","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"table_name","base_type":"table_name"},{"name":"ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer"},{"name":"a6a8cba1-4a80-484f-8970-b5aae3817678.item","label":"3➛Meetup event Record","reference":"x_snc_dev_meet_meetup","reference_display":"Meetup event","type":"reference","base_type":"reference"},{"name":"fad82a0f-eb90-47e4-bbfd-bc150c33ccef.email","label":"3.1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.owner.email","label":"3➛Meetup event Record➛Group➛Owner➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"f09439e5-df2b-4698-a4cc-2068853bf930.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"f09439e5-df2b-4698-a4cc-2068853bf930.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"}]</label_cache>
+        <master>true</master>
+        <name>48hr before a meetup</name>
+        <outputs/>
+        <parent_flow display_value="48hr before a meetup">9da1576fdb244410f4e6364e9d9619c5</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e293c1dcdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=e293c1dcdbb8c4108966ff561d9619be"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e293c1dcdbb8c4108966ff561d9619be"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=e293c1dcdbb8c4108966ff561d9619be^sys_idNOT IN2293c1dcdbb8c4108966ff561d9619c1,aa93c1dcdbb8c4108966ff561d9619c8,ae93c1dcdbb8c4108966ff561d9619cc,f6360f31dbb44c108966ff561d96193e"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">b00bd7a7db644410f4e6364e9d9619da</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2293c1dcdbb8c4108966ff561d9619c1</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=2293c1dcdbb8c4108966ff561d9619c1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>2293c1dcdbb8c4108966ff561d9619c1</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>6293c1dcdbb8c4108966ff561d9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value>{{ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Records}}</value>
+        <variable display_value="">19df9109c32632002841b63b12d3aed6</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>aa93c1dcdbb8c4108966ff561d9619c8</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>ae083cd6-53a9-4658-a47e-84cc07ec9a3c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=aa93c1dcdbb8c4108966ff561d9619c8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>aa93c1dcdbb8c4108966ff561d9619c8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2693c1dcdbb8c4108966ff561d9619ca</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 19:26:59</sys_updated_on>
+        <value>event_time&gt;javascript:gs.endOfToday()^event_timeRELATIVELE@dayofweek@ahead@2</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b50</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>aa93c1dcdbb8c4108966ff561d9619c8</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>e693c1dcdbb8c4108966ff561d9619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <order>3.1</order>
+        <parent_ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>ae93c1dcdbb8c4108966ff561d9619cc</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>fad82a0f-eb90-47e4-bbfd-bc150c33ccef</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ae93c1dcdbb8c4108966ff561d9619cc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ae93c1dcdbb8c4108966ff561d9619cc</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2693c1dcdbb8c4108966ff561d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value>Reminder 48 hours before</value>
+        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ae93c1dcdbb8c4108966ff561d9619cc</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>6293c1dcdbb8c4108966ff561d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value/>
+        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ae93c1dcdbb8c4108966ff561d9619cc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>ae93c1dcdbb8c4108966ff561d9619cc</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2e93c1dcdbb8c4108966ff561d9619ce</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-01 17:28:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-family: verdana, geneva, sans-serif; font-size: 12pt;"&gt;&lt;span style="color: black;"&gt;Hi&amp;nbsp;&lt;span class="data_pill " contenteditable="false" data-pillid="c4354e63-e164-4c36-a461-6aa209cf8a13" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.first_name}}"&gt;3➛Meetup event Record➛Group➛Organizer➛First name&lt;/span&gt;&lt;/span&gt;&lt;u&gt;,&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;I hope you are getting excited about your&amp;nbsp;Meetup!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Here are a few things to keep in mind before your event:&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul style="margin-bottom: 0in; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff; margin-top: 0in;" type="disc"&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Make sure to record all of the event attendees in the Developer Meetup attendance app on the &lt;a href="sp?id=meetup_home"&gt;Check-in page&lt;/a&gt;.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;If you can, try to take pictures from the event, that way you can post them to your&amp;nbsp;Meetup.com chapter page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;When you request a reimbursement, please provide a detailed receipt and keep your expenses below $15/person per&amp;nbsp;Meetup&amp;nbsp;up to $500/quarter for your events. You can request a reimbursement through&amp;nbsp;&lt;/span&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="d97e41b9-3561-4252-9eac-cd82ff382896" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.link}}"&gt;3➛Meetup event Record➛Link&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Please let me know if you need anything from my end in the meantime and thank you for organizing this event for your chapter!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&amp;nbsp;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; color: black; font-family: verdana, geneva, sans-serif;"&gt;Best,&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;1➛Group Record➛Default assignee➛Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;1➛Group Record➛Default assignee➛Title&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span id="docs-internal-guid-f87f5bb1-7fff-4f70-5b61-fcacaba34082" style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;a href="https://www.servicenow.com/"&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;servicen&lt;/span&gt;&lt;span style="color: #70ad47; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;o&lt;/span&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;w&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>ae93c1dcdbb8c4108966ff561d9619cc</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>ee93c1dcdbb8c4108966ff561d9619ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>ae93c1dcdbb8c4108966ff561d9619cc</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>6a93c1dcdbb8c4108966ff561d9619ce</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.email}} {{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.mu_organizers}} </value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:41:00</sys_created_on>
+        <sys_id>f6360f31dbb44c108966ff561d96193e</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>c8565eba-2030-4b88-9af0-9f286ce7fa71</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f6360f31dbb44c108966ff561d96193e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f6360f31dbb44c108966ff561d96193e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:41:00</sys_created_on>
+        <sys_id>36360f31dbb44c108966ff561d961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:41:00</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f6360f31dbb44c108966ff561d96193e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:41:00</sys_created_on>
+        <sys_id>72360f31dbb44c108966ff561d961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:41:00</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=e293c1dcdbb8c4108966ff561d9619be^sys_idNOT IN2a93c1dcdbb8c4108966ff561d9619cf"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2a93c1dcdbb8c4108966ff561d9619cf</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2a93c1dcdbb8c4108966ff561d9619cf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>2a93c1dcdbb8c4108966ff561d9619cf</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2693c1dcdbb8c4108966ff561d9619d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value>1970-01-01 08:00:00</value>
+        <variable display_value="">3ad4edc0c32222002841b63b12d3aee5</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=e293c1dcdbb8c4108966ff561d9619be^sys_idNOT INe693c1dcdbb8c4108966ff561d9619be"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>e293c1dcdbb8c4108966ff561d9619be</id>
+        <name>48hr before a meetup</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>e693c1dcdbb8c4108966ff561d9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=e293c1dcdbb8c4108966ff561d9619be^sys_idNOT INaa93c1dcdbb8c4108966ff561d9619c8,ae93c1dcdbb8c4108966ff561d9619cc,f6360f31dbb44c108966ff561d96193e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>aa93c1dcdbb8c4108966ff561d9619c8</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>ae083cd6-53a9-4658-a47e-84cc07ec9a3c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=aa93c1dcdbb8c4108966ff561d9619c8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>aa93c1dcdbb8c4108966ff561d9619c8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2693c1dcdbb8c4108966ff561d9619ca</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 19:26:59</sys_updated_on>
+        <value>event_time&gt;javascript:gs.endOfToday()^event_timeRELATIVELE@dayofweek@ahead@2</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b50</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>aa93c1dcdbb8c4108966ff561d9619c8</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>e693c1dcdbb8c4108966ff561d9619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value>x_snc_dev_meet_meetup</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <order>3.1</order>
+        <parent_ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>ae93c1dcdbb8c4108966ff561d9619cc</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>fad82a0f-eb90-47e4-bbfd-bc150c33ccef</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ae93c1dcdbb8c4108966ff561d9619cc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ae93c1dcdbb8c4108966ff561d9619cc</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2693c1dcdbb8c4108966ff561d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value>Reminder 48 hours before</value>
+        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ae93c1dcdbb8c4108966ff561d9619cc</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>6293c1dcdbb8c4108966ff561d9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value/>
+        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ae93c1dcdbb8c4108966ff561d9619cc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>ae93c1dcdbb8c4108966ff561d9619cc</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2e93c1dcdbb8c4108966ff561d9619ce</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-11-01 17:28:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-family: verdana, geneva, sans-serif; font-size: 12pt;"&gt;&lt;span style="color: black;"&gt;Hi&amp;nbsp;&lt;span class="data_pill " contenteditable="false" data-pillid="c4354e63-e164-4c36-a461-6aa209cf8a13" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.first_name}}"&gt;3➛Meetup event Record➛Group➛Organizer➛First name&lt;/span&gt;&lt;/span&gt;&lt;u&gt;,&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;I hope you are getting excited about your&amp;nbsp;Meetup!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Here are a few things to keep in mind before your event:&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul style="margin-bottom: 0in; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff; margin-top: 0in;" type="disc"&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;Make sure to record all of the event attendees in the Developer Meetup attendance app on the &lt;a href="sp?id=meetup_home"&gt;Check-in page&lt;/a&gt;.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;If you can, try to take pictures from the event, that way you can post them to your&amp;nbsp;Meetup.com chapter page.&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class="MsoNormal" style="margin: 0px 0px 0px 15px; color: black;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;When you request a reimbursement, please provide a detailed receipt and keep your expenses below $15/person per&amp;nbsp;Meetup&amp;nbsp;up to $500/quarter for your events. You can request a reimbursement through&amp;nbsp;&lt;/span&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="d97e41b9-3561-4252-9eac-cd82ff382896" data-pillvalue="{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.link}}"&gt;3➛Meetup event Record➛Link&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;&amp;nbsp;&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span style="color: black;"&gt;Please let me know if you need anything from my end in the meantime and thank you for organizing this event for your chapter!&lt;/span&gt;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&amp;nbsp;&lt;u&gt;&lt;/u&gt;&lt;u&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; color: black; font-family: verdana, geneva, sans-serif;"&gt;Best,&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="033c8bbb-51ea-472a-b968-d8c9169da84a" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.name}}"&gt;1➛Group Record➛Default assignee➛Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;&lt;span class="data_pill " contenteditable="false" data-pillid="25b1e58f-afb8-4128-bd7d-ec5b1bdfc481" data-pillvalue="{{c8565eba-2030-4b88-9af0-9f286ce7fa71.Record.default_assignee.title}}"&gt;1➛Group Record➛Default assignee➛Title&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&lt;span id="docs-internal-guid-f87f5bb1-7fff-4f70-5b61-fcacaba34082" style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"&gt;&lt;a href="https://www.servicenow.com/"&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;servicen&lt;/span&gt;&lt;span style="color: #70ad47; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;o&lt;/span&gt;&lt;span style="color: #000000; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"&gt;w&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #ffffff;"&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>ae93c1dcdbb8c4108966ff561d9619cc</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>ee93c1dcdbb8c4108966ff561d9619ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>ae93c1dcdbb8c4108966ff561d9619cc</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>6a93c1dcdbb8c4108966ff561d9619ce</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.organizer.email}} {{a6a8cba1-4a80-484f-8970-b5aae3817678.item.group.mu_organizers}} </value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:41:00</sys_created_on>
+        <sys_id>f6360f31dbb44c108966ff561d96193e</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>c8565eba-2030-4b88-9af0-9f286ce7fa71</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f6360f31dbb44c108966ff561d96193e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f6360f31dbb44c108966ff561d96193e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:41:00</sys_created_on>
+        <sys_id>36360f31dbb44c108966ff561d961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:41:00</sys_updated_on>
+        <value>sys_user_group</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f6360f31dbb44c108966ff561d96193e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-30 18:41:00</sys_created_on>
+        <sys_id>72360f31dbb44c108966ff561d961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-30 18:41:00</sys_updated_on>
+        <value>name=meetup intern</value>
+        <variable display_value="">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=e293c1dcdbb8c4108966ff561d9619be^sys_idNOT IN2293c1dcdbb8c4108966ff561d9619c1"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">b00bd7a7db644410f4e6364e9d9619da</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="48hr before a meetup">e293c1dcdbb8c4108966ff561d9619be</flow>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>2293c1dcdbb8c4108966ff561d9619c1</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2020-02-10 18:58:10</sys_updated_on>
+        <ui_id>a6a8cba1-4a80-484f-8970-b5aae3817678</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=2293c1dcdbb8c4108966ff561d9619c1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>2293c1dcdbb8c4108966ff561d9619c1</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-25 17:19:23</sys_created_on>
+        <sys_id>6293c1dcdbb8c4108966ff561d9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-25 17:19:23</sys_updated_on>
+        <value>{{ae083cd6-53a9-4658-a47e-84cc07ec9a3c.Records}}</value>
+        <variable display_value="">19df9109c32632002841b63b12d3aed6</variable>
+    </sys_variable_value>
+</record_update>

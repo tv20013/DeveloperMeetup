@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_step">
+    <sys_embedded_tour_step action="INSERT_OR_UPDATE">
+        <action>false</action>
+        <action_event>next</action_event>
+        <action_target/>
+        <action_target_ref display_value="x_snc_dev_meet_reimbursement.attendees">457a896c0fe1630046c28b9ae1050e9f</action_target_ref>
+        <active>true</active>
+        <content><![CDATA[This field will be auto-populated based on the check-ins from the Meetup Event record.]]></content>
+        <guide display_value="Meetup Reimbursement Intro">dee7c5280fe1630046c28b9ae1050e5e</guide>
+        <implicit>false</implicit>
+        <link/>
+        <name>Step 2</name>
+        <options/>
+        <order>2</order>
+        <placement>right</placement>
+        <step_type>step</step_type>
+        <sys_class_name>sys_embedded_tour_step</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-10-31 02:52:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>997a092c0fe1630046c28b9ae1050e79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Step 2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_embedded_tour_step_997a092c0fe1630046c28b9ae1050e79</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-10-31 02:52:36</sys_updated_on>
+        <target/>
+        <target_ref display_value="x_snc_dev_meet_reimbursement.attendees">457a896c0fe1630046c28b9ae1050e9f</target_ref>
+        <title><![CDATA[Step 2]]></title>
+        <ui_version>dynamic</ui_version>
+        <view/>
+        <window>x_snc_dev_meet_reimbursement.do</window>
+    </sys_embedded_tour_step>
+    <sys_translated_text action="delete_multiple" query="documentkey=997a092c0fe1630046c28b9ae1050e79"/>
+</record_update>

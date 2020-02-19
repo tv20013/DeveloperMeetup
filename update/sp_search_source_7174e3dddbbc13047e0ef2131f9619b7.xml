@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_search_source">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_search_source">
     <sp_search_source action="INSERT_OR_UPDATE">
         <advanced_typeahead_config>true</advanced_typeahead_config>
         <condition table="x_snc_dev_meet_attendees">meetup=e9460091dbb013047e0ef2131f961944^EQ<item endquery="false" field="meetup" goto="false" newquery="false" operator="=" or="false" value="e9460091dbb013047e0ef2131f961944"/>
@@ -24,10 +23,12 @@
 })(query);]]></data_fetch_script>
         <display_fields>rsvp,status</display_fields>
         <enable_typeahead>true</enable_typeahead>
+        <facet_generation_script/>
         <id>attendees</id>
         <is_scripted_source>true</is_scripted_source>
         <name>Attendees</name>
         <page display_value="checkin">e26eff99db3053047e0ef2131f96194c</page>
+        <pagination_supported>false</pagination_supported>
         <primary_display_field>developer</primary_display_field>
         <roles/>
         <search_page_template><![CDATA[<div>

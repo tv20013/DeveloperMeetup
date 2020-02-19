@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="city" label="city" language="en" table="var__m_sys_hub_flow_input_5de94836dbdec0908966ff561d961977">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <help/>
+            <hint/>
+            <label>city</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_5de94836dbdec0908966ff561d961977</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>andrew.barnes</sys_created_by>
+            <sys_created_on>2020-01-15 21:06:15</sys_created_on>
+            <sys_id>55e94836dbdec0908966ff561d961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>city</sys_name>
+            <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_5de94836dbdec0908966ff561d961977_city_en</sys_update_name>
+            <sys_updated_by>andrew.barnes</sys_updated_by>
+            <sys_updated_on>2020-01-15 21:06:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="Admin Tasks">c633fcf4db85c4508966ff561d961995</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>tanvi.gokhale</sys_created_by>
+        <sys_created_on>2019-11-08 15:40:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eb43bcf4db85c4508966ff561d9619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c633fcf4db85c4508966ff561d961995</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_eb43bcf4db85c4508966ff561d9619f7</sys_update_name>
+        <sys_updated_by>tanvi.gokhale</sys_updated_by>
+        <sys_updated_on>2019-11-08 15:40:51</sys_updated_on>
+        <tab display_value="New Tab">a343bcf4db85c4508966ff561d9619f5</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>

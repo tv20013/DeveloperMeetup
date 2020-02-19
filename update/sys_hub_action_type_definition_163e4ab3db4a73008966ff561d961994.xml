@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>meetup_to_devprod</internal_name>
+        <label_cache>[{"name":"{{action.meetup_record}}","label":"action➛meetup record","type":"action","ref":""},{"name":"{{action.meetup_record.description}}","label":"action➛meetup record➛Description","type":"action","ref":""},{"name":"{{action.meetup_record.id}}","label":"action➛meetup record➛ID","type":"action","ref":""},{"name":"{{action.meetup_record.name}}","label":"action➛meetup record➛Name","type":"action","ref":""},{"name":"{{action.meetup_record.event_time}}","label":"action➛meetup record➛Event time","type":"action","ref":""},{"name":"{{action.meetup_record.group.city}}","label":"action➛meetup record➛Group➛City","type":"action","ref":""},{"name":"{{action.meetup_record.link}}","label":"action➛meetup record➛Link","type":"action","ref":""},{"name":"{{step[2a5e37cb-2a65-4b15-bc68-ff02b88d3d72].payload}}","label":"step➛Payload Builder step➛Payload","type":"step","ref":""}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>meetup to devprod</name>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 02:51:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>163e4ab3db4a73008966ff561d961994</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>meetup to devprod</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_163e4ab3db4a73008966ff561d961994</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:48</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=163e4ab3db4a73008966ff561d961994"/>
+    <sys_variable_value action="delete_multiple" query="document_key=163e4ab3db4a73008966ff561d961994"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=163e4ab3db4a73008966ff561d961994^sys_idNOT IN4e729e77db4a73008966ff561d96193f,9a729e77db4a73008966ff561d961958"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="meetup to devprod">163e4ab3db4a73008966ff561d961994</action>
+        <cid>2a5e37cb-2a65-4b15-bc68-ff02b88d3d72</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Payload Builder step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Payload Builder">2429af02b3331300176b051a16a8dcab</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:02</sys_created_on>
+        <sys_id>4e729e77db4a73008966ff561d96193f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Payload Builder step</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_step_instance_4e729e77db4a73008966ff561d96193f</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4e729e77db4a73008966ff561d96193f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4e729e77db4a73008966ff561d96193f</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:03</sys_created_on>
+        <sys_id>9e729e77db4a73008966ff561d961955</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <value>{}</value>
+        <variable display_value="">89cb2b82b3331300176b051a16a8dc32</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4e729e77db4a73008966ff561d96193f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>name_value</field>
+        <id>4e729e77db4a73008966ff561d96193f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:03</sys_created_on>
+        <sys_id>96729e77db4a73008966ff561d961955</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_2429af02b3331300176b051a16a8dcab</table>
+        <value>{"type":"ADV_NV","value":[{"name":"description","value":"{{action.meetup_record.description}}","attributes":{}},{"name":"meetup_id","value":"{{action.meetup_record.id}}","attributes":{"omit_if_empty":false}},{"name":"short_description","value":"{{action.meetup_record.name}}","attributes":{"omit_if_empty":false}},{"name":"start_time","value":"{{action.meetup_record.event_time}}","attributes":{"omit_if_empty":false}},{"name":"timezone","value":"d5e6e9f84f687200b43042fd0210c7b1","attributes":{"omit_if_empty":false}},{"name":"title","value":"{{action.meetup_record.group.city}}ServiceNow Developer Meetup","attributes":{"omit_if_empty":false}},{"name":"type","value":"Meetup","attributes":{"omit_if_empty":false}},{"name":"url","value":"{{action.meetup_record.link}}","attributes":{"omit_if_empty":false}}]}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="meetup to devprod">163e4ab3db4a73008966ff561d961994</action>
+        <cid>c98d5ad0-42c7-4f8c-87bc-aa02471a87aa</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>outbound</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:03</sys_created_on>
+        <sys_id>9a729e77db4a73008966ff561d961958</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>outbound</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_step_instance_9a729e77db4a73008966ff561d961958</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:48</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9a729e77db4a73008966ff561d961958"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>2e729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>post</value>
+        <variable display_value="">e85b7ebf47222200b4fad7527c9a71e3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>3626d23bdb4a73008966ff561d961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>6a729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:48</sys_updated_on>
+        <value>https://devportaluat.service-now.com/app.doapi/now/table/dev_event/</value>
+        <variable display_value="">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>7226d23bdb4a73008966ff561d961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>a2729e77db4a73008966ff561d96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>0ff11a77db4a73008966ff561d96190c</value>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>a6729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>ee729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9a729e77db4a73008966ff561d961958"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>62729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>ea729e77db4a73008966ff561d961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>body</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:48</sys_created_on>
+        <sys_id>a746163bdb4a73008966ff561d961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:48</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{{step[2a5e37cb-2a65-4b15-bc68-ff02b88d3d72].payload}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>2a729e77db4a73008966ff561d961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>26729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>3e26d23bdb4a73008966ff561d961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_method</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>ae729e77db4a73008966ff561d961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>fe26d23bdb4a73008966ff561d961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=9a729e77db4a73008966ff561d961958^sys_idNOT IN62729e77db4a73008966ff561d96197f"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>true</mandatory>
+        <max_length>255</max_length>
+        <model display_value="outbound">9a729e77db4a73008966ff561d961958</model>
+        <model_id>9a729e77db4a73008966ff561d961958</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_9a729e77db4a73008966ff561d961958</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>62729e77db4a73008966ff561d96197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>var__m_sys_hub_step_ext_output_9a729e77db4a73008966ff561d961958</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_step_ext_output_62729e77db4a73008966ff561d96197f</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_input action="delete_multiple" query="model=163e4ab3db4a73008966ff561d961994^sys_idNOT IN035eceb3db4a73008966ff561d9619fa"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>meetup_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>meetup record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="meetup to devprod">163e4ab3db4a73008966ff561d961994</model>
+        <model_id>163e4ab3db4a73008966ff561d961994</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_163e4ab3db4a73008966ff561d961994</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_dev_meet_meetup">x_snc_dev_meet_meetup</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 02:52:04</sys_created_on>
+        <sys_id>035eceb3db4a73008966ff561d9619fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>var__m_sys_hub_action_input_163e4ab3db4a73008966ff561d961994</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_action_input_035eceb3db4a73008966ff561d9619fa</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 02:52:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_step_instance action="delete_multiple" query="action=163e4ab3db4a73008966ff561d961994^sys_idNOT IN4e729e77db4a73008966ff561d96193f,9a729e77db4a73008966ff561d961958"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="meetup to devprod">163e4ab3db4a73008966ff561d961994</action>
+        <cid>2a5e37cb-2a65-4b15-bc68-ff02b88d3d72</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Payload Builder step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Payload Builder">2429af02b3331300176b051a16a8dcab</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:02</sys_created_on>
+        <sys_id>4e729e77db4a73008966ff561d96193f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Payload Builder step</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_step_instance_4e729e77db4a73008966ff561d96193f</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4e729e77db4a73008966ff561d96193f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4e729e77db4a73008966ff561d96193f</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:03</sys_created_on>
+        <sys_id>9e729e77db4a73008966ff561d961955</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <value>{}</value>
+        <variable display_value="">89cb2b82b3331300176b051a16a8dc32</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4e729e77db4a73008966ff561d96193f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>name_value</field>
+        <id>4e729e77db4a73008966ff561d96193f</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:03</sys_created_on>
+        <sys_id>96729e77db4a73008966ff561d961955</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_2429af02b3331300176b051a16a8dcab</table>
+        <value>{"type":"ADV_NV","value":[{"name":"description","value":"{{action.meetup_record.description}}","attributes":{}},{"name":"meetup_id","value":"{{action.meetup_record.id}}","attributes":{"omit_if_empty":false}},{"name":"short_description","value":"{{action.meetup_record.name}}","attributes":{"omit_if_empty":false}},{"name":"start_time","value":"{{action.meetup_record.event_time}}","attributes":{"omit_if_empty":false}},{"name":"timezone","value":"d5e6e9f84f687200b43042fd0210c7b1","attributes":{"omit_if_empty":false}},{"name":"title","value":"{{action.meetup_record.group.city}}ServiceNow Developer Meetup","attributes":{"omit_if_empty":false}},{"name":"type","value":"Meetup","attributes":{"omit_if_empty":false}},{"name":"url","value":"{{action.meetup_record.link}}","attributes":{"omit_if_empty":false}}]}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="meetup to devprod">163e4ab3db4a73008966ff561d961994</action>
+        <cid>c98d5ad0-42c7-4f8c-87bc-aa02471a87aa</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>outbound</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:03</sys_created_on>
+        <sys_id>9a729e77db4a73008966ff561d961958</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>outbound</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_step_instance_9a729e77db4a73008966ff561d961958</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:48</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9a729e77db4a73008966ff561d961958"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>2e729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>post</value>
+        <variable display_value="">e85b7ebf47222200b4fad7527c9a71e3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>3626d23bdb4a73008966ff561d961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>6a729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:48</sys_updated_on>
+        <value>https://devportaluat.service-now.com/app.doapi/now/table/dev_event/</value>
+        <variable display_value="">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>7226d23bdb4a73008966ff561d961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>a2729e77db4a73008966ff561d96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>0ff11a77db4a73008966ff561d96190c</value>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>a6729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9a729e77db4a73008966ff561d961958</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>ee729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9a729e77db4a73008966ff561d961958"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>62729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>ea729e77db4a73008966ff561d961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>body</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:48</sys_created_on>
+        <sys_id>a746163bdb4a73008966ff561d961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:48</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{{step[2a5e37cb-2a65-4b15-bc68-ff02b88d3d72].payload}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>2a729e77db4a73008966ff561d961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>26729e77db4a73008966ff561d96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>3e26d23bdb4a73008966ff561d961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_method</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>ae729e77db4a73008966ff561d961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>9a729e77db4a73008966ff561d961958</id>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:26:11</sys_created_on>
+        <sys_id>fe26d23bdb4a73008966ff561d961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:26:11</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=9a729e77db4a73008966ff561d961958^sys_idNOT IN62729e77db4a73008966ff561d96197f"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>true</mandatory>
+        <max_length>255</max_length>
+        <model display_value="outbound">9a729e77db4a73008966ff561d961958</model>
+        <model_id>9a729e77db4a73008966ff561d961958</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_9a729e77db4a73008966ff561d961958</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 03:10:04</sys_created_on>
+        <sys_id>62729e77db4a73008966ff561d96197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>var__m_sys_hub_step_ext_output_9a729e77db4a73008966ff561d961958</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_hub_step_ext_output_62729e77db4a73008966ff561d96197f</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 03:10:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_163e4ab3db4a73008966ff561d961994^sys_idNOT INcf5eceb3db4a73008966ff561d9619ff"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>meetup_record</element>
+        <help/>
+        <hint/>
+        <label>meetup record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_163e4ab3db4a73008966ff561d961994</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-06-22 02:52:05</sys_created_on>
+        <sys_id>cf5eceb3db4a73008966ff561d9619ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>meetup record</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_163e4ab3db4a73008966ff561d961994_meetup_record_en</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-06-22 02:52:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

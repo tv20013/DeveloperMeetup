@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_rest_message_fn_parameters">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
     <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
         <name>urlname</name>
         <rest_message_function display_value="GET Events">f10785a1db7453047e0ef2131f9619dd</rest_message_function>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_step">
+    <sys_embedded_tour_step action="INSERT_OR_UPDATE">
+        <action>false</action>
+        <action_event>next</action_event>
+        <action_target/>
+        <action_target_ref display_value="x_snc_dev_meet_reimbursementheader.final">208b01ac0fe1630046c28b9ae1050e73</action_target_ref>
+        <active>true</active>
+        <content><![CDATA[You may leave the request in Draft state if you need to return and edit it. When you are finished with it and want to submit it for payment, click Finalize Request. After this is submitted, you can not edit the request but you will be able to read it.]]></content>
+        <guide display_value="Meetup Reimbursement Intro">dee7c5280fe1630046c28b9ae1050e5e</guide>
+        <implicit>false</implicit>
+        <link/>
+        <name>Step 5</name>
+        <options/>
+        <order>5</order>
+        <placement>left</placement>
+        <step_type>step</step_type>
+        <sys_class_name>sys_embedded_tour_step</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2018-10-31 02:57:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a88b01ac0fe1630046c28b9ae1050e81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Step 5</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sys_embedded_tour_step_a88b01ac0fe1630046c28b9ae1050e81</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2018-10-31 02:57:12</sys_updated_on>
+        <target/>
+        <target_ref display_value="x_snc_dev_meet_reimbursementheader.final">208b01ac0fe1630046c28b9ae1050e73</target_ref>
+        <title><![CDATA[Step 5]]></title>
+        <ui_version>dynamic</ui_version>
+        <view/>
+        <window>x_snc_dev_meet_reimbursement.do</window>
+    </sys_embedded_tour_step>
+    <sys_translated_text action="delete_multiple" query="documentkey=a88b01ac0fe1630046c28b9ae1050e81"/>
+</record_update>

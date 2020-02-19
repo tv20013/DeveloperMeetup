@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection>x_snc_dev_meet_admin_task</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 12pt;">Hi ${event.group.owner},</span></p>
+<p><span style="font-size: 12pt;">I saw that you have an upcoming Meetup scheduled for ${event.date} which is very exciting! Can you please add a finalized agenda to your Meetup.com event page? This will help spark interest within your developer community.</span></p>
+<p><span style="font-size: 12pt;">I do want to let you know that we will not be able to send out a promotional email to the developers in your community because it takes us at least three weeks to create and send the email out. However, please let me know if you need anything else from my end before your event.</span></p>
+<p><span style="font-size: 12pt;">Thank you for your efforts as an organizer!<!-- p--> </span></p>
+<p><span style="font-size: 12pt;">Best,</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Tanvi Gokhale</span></p>
+<p dir="ltr"><span style="font-size: 12pt;">Platform Product Marketing Co-op</span></p>
+<p><span style="font-size: 12pt;"><strong><a href="https://www.servicenow.com/">servicenow</a></strong></span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Meetup Not Finalized (under 21 day away)</name>
+        <sms_alternate/>
+        <subject>ServiceNow ${event.group.name}  </subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>andrew.barnes</sys_created_by>
+        <sys_created_on>2019-10-15 16:44:04</sys_created_on>
+        <sys_id>cd1b55c1dbe00c508966ff561d961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Meetup Not Finalized (under 21 day away)</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>sysevent_email_template_cd1b55c1dbe00c508966ff561d961928</sys_update_name>
+        <sys_updated_by>andrew.barnes</sys_updated_by>
+        <sys_updated_on>2019-10-15 16:44:04</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

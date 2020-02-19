@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile_scope">
+    <oauth_entity_profile_scope action="INSERT_OR_UPDATE">
+        <oauth_entity_profile display_value="Meetup API default_profile">b1fb48c4dbe3bf408966ff561d961940</oauth_entity_profile>
+        <oauth_entity_scope display_value="basic">221a4844dbe3bf408966ff561d9619e7</oauth_entity_scope>
+        <sys_class_name>oauth_entity_profile_scope</sys_class_name>
+        <sys_created_by>daveslusher-sn</sys_created_by>
+        <sys_created_on>2019-08-23 15:19:20</sys_created_on>
+        <sys_id>bdfbccc4dbe3bf408966ff561d961988</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b1fb48c4dbe3bf408966ff561d961940</sys_name>
+        <sys_package display_value="Developer Meetup" source="x_snc_dev_meet">beeb33c5db7013047e0ef2131f961962</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Developer Meetup">beeb33c5db7013047e0ef2131f961962</sys_scope>
+        <sys_update_name>oauth_entity_profile_scope_bdfbccc4dbe3bf408966ff561d961988</sys_update_name>
+        <sys_updated_by>daveslusher-sn</sys_updated_by>
+        <sys_updated_on>2019-08-23 15:19:20</sys_updated_on>
+    </oauth_entity_profile_scope>
+</record_update>
